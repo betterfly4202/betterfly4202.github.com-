@@ -1,9 +1,9 @@
 # main text of home
-name: John Doe
-bio: A Man who travels the world eating noodles
+name: chungil lee
+bio: 감성개발자
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: betterfly's twitter
 
 # if it's an external image, update below for true
 # better with square images
@@ -16,7 +16,7 @@ resume: true
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://koppl.in/indigo
+url: https://betterfly88.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -54,11 +54,11 @@ email: myemail@gmail.com
 
 authors:
     johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
+        name: chungil lee
+        bio: 감성개발자의 이야기
         external-image: false
         picture: assets/images/profile.jpg
-        twitter: johndoe
+        twitter: betterfly
     jamesfoster:
         name: James Foster
         bio: A Man who develops software with coffee
