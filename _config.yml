@@ -1,9 +1,9 @@
 # main text of home
 name: chungil lee
-bio: 감성개발자
+bio: 주니어 개발자의 성장과정
 
 # twitter summary info
-description: betterfly's twitter
+description: don't use twitter
 
 # if it's an external image, update below for true
 # better with square images
@@ -34,37 +34,28 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+facebook: dlcnddlf88@nate.com
 # google: mygoogle
-# instagram: myinstagram
+instagram: mr.martine
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: mygithub
+github: betterfly88
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: myemail@gmail.com
+email: betterfly4202@gmail.com
 
 authors:
     johndoe:
         name: chungil lee
-        bio: 감성개발자의 이야기
+        bio: 주니어 개발자의 성장과정
         external-image: false
         picture: assets/images/profile.jpg
-        twitter: betterfly
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
