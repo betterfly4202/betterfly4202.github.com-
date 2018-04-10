@@ -1,5 +1,5 @@
 # main text of home
-name: chungil lee
+name: 효자손 개발자
 bio: 주니어 개발자의 성장과정
 
 # twitter summary info
@@ -51,8 +51,8 @@ github: betterfly88
 email: betterfly4202@gmail.com
 
 authors:
-    johndoe:
-        name: chungil lee
+    chungil:
+        name: 효자손 개발자
         bio: 주니어 개발자의 성장과정
         external-image: false
         picture: assets/images/profile.jpg
