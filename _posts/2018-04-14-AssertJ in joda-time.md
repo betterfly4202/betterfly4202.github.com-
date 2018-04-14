@@ -147,7 +147,7 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
     
         }
     ~~~
-
+    
     - UTC타임과 해당 지역을 비교
     ~~~java
         @Test
@@ -158,7 +158,7 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
             assertThat(utcTime).as("in UTC time").isEqualTo(cestTime);
         }
     ~~~
-    
+        
     - 기준시간 이전 혹은 이후 검증 
     ~~~java
         
@@ -172,7 +172,7 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
         }
     
     ~~~
-
+    
     - 상세 시간을 무시하여 검증
     ~~~java
     
@@ -197,9 +197,9 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
         }
     
     ~~~
-
+    
     - 기준 시간내에 포함여부 검증 
-    <br/> **기준시간.isIn(A, B)** -> 기준시간이 A~B시간 사이에 해당하는지 검증 
+        <br/> **기준시간.isIn(A, B)** -> 기준시간이 A~B시간 사이에 해당하는지 검증 
     ~~~java
     
         @Test
