@@ -133,12 +133,9 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
 ~~~~
 
 
-
 - assertj in jodatime
-
     - 데이터타입을 커스터마이징 하여 원하는 조건으로 비교
     ~~~java
-    
         @Test
         public void 패턴비교(){
             DateTime nowTime = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss").parseDateTime("2018-04-13 00:23:54");
@@ -149,21 +146,17 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
             assertThat(result2).isEqualTo("04월13일 00:23");
     
         }
-    
     ~~~
 
     - UTC타임과 해당 지역을 비교
     ~~~java
-    
         @Test
         public void 타임존(){
             DateTime utcTime = new DateTime(2013, 6, 9, 17, 0, DateTimeZone.UTC);
             DateTime cestTime = new DateTime(2013, 6, 10, 2, 0, DateTimeZone.forID("Asia/Seoul"));
     
             assertThat(utcTime).as("in UTC time").isEqualTo(cestTime);
-    
         }
-
     ~~~
     
     - 기준시간 이전 혹은 이후 검증 
