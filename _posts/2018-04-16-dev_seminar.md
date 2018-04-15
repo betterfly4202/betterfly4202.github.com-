@@ -5,12 +5,15 @@ date: 2018-04-16 00:24
 image: 
 headerImage: true
 tag:
-- tdd
-- assertj
-- joda-time
+- 패스크캠퍼스
+- 개발세미나
+- 프론트엔드
+- 이직
+- 면접
+- 이력관리
 category: blog
 author: betterFLY
-description: assertj 에서 joda-time 사용하기
+description: DEV SEMINAR - Front-end 주니어를 위한 가이드
 ---
 ![메인](/assets/images/180416/1.jpg)
 
@@ -26,13 +29,13 @@ description: assertj 에서 joda-time 사용하기
 
 강연장은 '마루180'이라는 역삼역 1번출구로 나가 도곡동 방향으로 향하는 길에 위치해있다.
 마루180은 아산재단에서 운영하는 스타트업 기업을 상대로 공간을 대관해주는 곳인 것 같다.
-[로비](/assets/images/180416/robby.jpeg)
+![로비](/assets/images/180416/robby.jpeg)
 <figcaption class="caption">건물 로비 카운터에서 볼 수 있는 다양한 스타트업 스티커들</figcaption>
  
-[전경1](/assets/images/180416/outer_1.jpeg)
+![전경1](/assets/images/180416/outer_1.jpeg)
 <figcaption class="caption">귀여운 입구 전경</figcaption>
 
-[전경2](/assets/images/180416/outer_2.jpeg)
+![전경2](/assets/images/180416/outer_2.jpeg)
 
 
 
@@ -56,7 +59,7 @@ description: assertj 에서 joda-time 사용하기
 
 이 말은 항상 이직할 준비를 하라는 메세지라기 보다는, 항상 자신의 이력을 관리하여 자신의 상태를 체크하고 객관적으로 자신을 바라보라는 얘기일 것이다.
 특히 개발자는 하이프 사이클 중 '고원'의 단계를 빗대며, 이를 탈피해야 한다고 강조했다.
-[가트너_하이프사이클](/assets/images/180416/500px-Gartner_Hype_Cycle.svg.png)
+![가트너_하이프사이클](/assets/images/180416/500px-Gartner_Hype_Cycle.svg.png)
 <figcaption class="caption">가트너의 Hype-Cycle</figcaption>
 
 >가트너에서 발표한 기술의 성장 주기 그래프 중 'Plateau of Productivity' 단계는 기술의 성장주기 마지막 단계로 기술이 자리잡아 관망하는 단계로, 개발자에게 이 단계는 더이상 기술적 발전이나 성숙의 단계가 아닌 '정체되는 시기'를 의미하는 것 같다.
