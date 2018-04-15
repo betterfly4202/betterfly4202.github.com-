@@ -133,84 +133,85 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
 ~~~~
 
 
-- assertj in jodatime
-    - 데이터타입을 커스터마이징 하여 원하는 조건으로 비교
-    ~~~java
-        @Test
-        public void 패턴비교(){
-            DateTime nowTime = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss").parseDateTime("2018-04-13 00:23:54");
-            String result = DateTimeFormat.forPattern("aa").withLocale(new Locale("ko")).print(nowTime);
-            assertThat(result).isEqualTo("오전");
+#### AssertJ in joda-time
+
+- 데이터타입을 커스터마이징 하여 원하는 조건으로 비교
+~~~java
+    @Test
+    public void 패턴비교(){
+        DateTime nowTime = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss").parseDateTime("2018-04-13 00:23:54");
+        String result = DateTimeFormat.forPattern("aa").withLocale(new Locale("ko")).print(nowTime);
+        assertThat(result).isEqualTo("오전");
+
+        String result2 = DateTimeFormat.forPattern("MM월dd일 HH:mm").withLocale(new Locale("ko")).print(nowTime);
+        assertThat(result2).isEqualTo("04월13일 00:23");
+
+    }
+~~~
     
-            String result2 = DateTimeFormat.forPattern("MM월dd일 HH:mm").withLocale(new Locale("ko")).print(nowTime);
-            assertThat(result2).isEqualTo("04월13일 00:23");
-    
-        }
-    ~~~
-    
-    - UTC타임과 해당 지역을 비교
-    ~~~java
-        @Test
-        public void 타임존(){
-            DateTime utcTime = new DateTime(2013, 6, 9, 17, 0, DateTimeZone.UTC);
-            DateTime cestTime = new DateTime(2013, 6, 10, 2, 0, DateTimeZone.forID("Asia/Seoul"));
-    
-            assertThat(utcTime).as("in UTC time").isEqualTo(cestTime);
-        }
-    ~~~
+- UTC타임과 해당 지역을 비교
+~~~java
+    @Test
+    public void 타임존(){
+        DateTime utcTime = new DateTime(2013, 6, 9, 17, 0, DateTimeZone.UTC);
+        DateTime cestTime = new DateTime(2013, 6, 10, 2, 0, DateTimeZone.forID("Asia/Seoul"));
+
+        assertThat(utcTime).as("in UTC time").isEqualTo(cestTime);
+    }
+~~~
         
-    - 기준시간 이전 혹은 이후 검증 
-    ~~~java
+- 기준시간 이전 혹은 이후 검증 
+~~~java
+    
+    @Test
+    public void 시간검증_기본(){
+        assertThat(new DateTime("1999-12-30")).isBefore(new DateTime("2000-01-01"));
+        assertThat(new DateTime("2000-01-01")).isAfter(new DateTime("1999-12-30"));
+
+        assertThat(new DateTime("2000-01-01")).isBeforeOrEqualTo(new DateTime("2000-01-01"));
+        assertThat(new DateTime("2000-01-01")).isAfterOrEqualTo(new DateTime("2000-01-01"));
+    }
+
+~~~
+    
+- 상세 시간을 무시하여 검증
+~~~java
+
+    @Test
+    public void 시간무시(){
+        // ... milliseconds
+        DateTime dateTime1 = new DateTime(2000, 1, 1, 0, 0, 1, 0, UTC);
+        DateTime dateTime2 = new DateTime(2000, 1, 1, 0, 0, 1, 456, UTC);
+        assertThat(dateTime1).isEqualToIgnoringMillis(dateTime2);
+        // ... seconds
+        dateTime1 = new DateTime(2000, 1, 1, 23, 50, 0, 0, UTC);
+        dateTime2 = new DateTime(2000, 1, 1, 23, 50, 10, 456, UTC);
+        assertThat(dateTime1).isEqualToIgnoringSeconds(dateTime2);
+        // ... minutes
+        dateTime1 = new DateTime(2000, 1, 1, 23, 50, 0, 0, UTC);
+        dateTime2 = new DateTime(2000, 1, 1, 23, 00, 2, 7, UTC);
+        assertThat(dateTime1).isEqualToIgnoringMinutes(dateTime2);
+        // ... hours
+        dateTime1 = new DateTime(2000, 1, 1, 23, 59, 59, 999, UTC);
+        dateTime2 = new DateTime(2000, 1, 1, 00, 00, 00, 000, UTC);
+        assertThat(dateTime1).isEqualToIgnoringHours(dateTime2);
+    }
+
+~~~
+
+- 기준 시간내에 포함여부 검증 
+    <br/> **기준시간.isIn(A, B)** -> 기준시간이 A~B시간 사이에 해당하는지 검증 
+~~~java
+
+    @Test
+    public void not_in(){
+        assertThat(new DateTime("2000-01-01")).isIn(new DateTime("1999-12-22"), new DateTime("2000-01-01")); //A~B까지의 시간안에 포함
+        assertThat(new DateTime("2000-01-01")).isNotIn(new DateTime("1999-12-31"), new DateTime("2000-01-02")); //B가 기준 날짜보다 크므로 not in 임
         
-        @Test
-        public void 시간검증_기본(){
-            assertThat(new DateTime("1999-12-30")).isBefore(new DateTime("2000-01-01"));
-            assertThat(new DateTime("2000-01-01")).isAfter(new DateTime("1999-12-30"));
-    
-            assertThat(new DateTime("2000-01-01")).isBeforeOrEqualTo(new DateTime("2000-01-01"));
-            assertThat(new DateTime("2000-01-01")).isAfterOrEqualTo(new DateTime("2000-01-01"));
-        }
-    
-    ~~~
-    
-    - 상세 시간을 무시하여 검증
-    ~~~java
-    
-        @Test
-        public void 시간무시(){
-            // ... milliseconds
-            DateTime dateTime1 = new DateTime(2000, 1, 1, 0, 0, 1, 0, UTC);
-            DateTime dateTime2 = new DateTime(2000, 1, 1, 0, 0, 1, 456, UTC);
-            assertThat(dateTime1).isEqualToIgnoringMillis(dateTime2);
-            // ... seconds
-            dateTime1 = new DateTime(2000, 1, 1, 23, 50, 0, 0, UTC);
-            dateTime2 = new DateTime(2000, 1, 1, 23, 50, 10, 456, UTC);
-            assertThat(dateTime1).isEqualToIgnoringSeconds(dateTime2);
-            // ... minutes
-            dateTime1 = new DateTime(2000, 1, 1, 23, 50, 0, 0, UTC);
-            dateTime2 = new DateTime(2000, 1, 1, 23, 00, 2, 7, UTC);
-            assertThat(dateTime1).isEqualToIgnoringMinutes(dateTime2);
-            // ... hours
-            dateTime1 = new DateTime(2000, 1, 1, 23, 59, 59, 999, UTC);
-            dateTime2 = new DateTime(2000, 1, 1, 00, 00, 00, 000, UTC);
-            assertThat(dateTime1).isEqualToIgnoringHours(dateTime2);
-        }
-    
-    ~~~
-    
-    - 기준 시간내에 포함여부 검증 
-        <br/> **기준시간.isIn(A, B)** -> 기준시간이 A~B시간 사이에 해당하는지 검증 
-    ~~~java
-    
-        @Test
-        public void not_in(){
-            assertThat(new DateTime("2000-01-01")).isIn(new DateTime("1999-12-22"), new DateTime("2000-01-01")); //A~B까지의 시간안에 포함
-            assertThat(new DateTime("2000-01-01")).isNotIn(new DateTime("1999-12-31"), new DateTime("2000-01-02")); //B가 기준 날짜보다 크므로 not in 임
-            
-            assertThat(new LocalDateTime("2000-01-01")).isIn("1999-12-31", "2000-01-01").isNotIn("1999-12-31", "2000-01-02");
-        }
-    
-    ~~~
+        assertThat(new LocalDateTime("2000-01-01")).isIn("1999-12-31", "2000-01-01").isNotIn("1999-12-31", "2000-01-02");
+    }
+
+~~~
 
 #### 참고 
 - http://d2.naver.com/helloworld/645609

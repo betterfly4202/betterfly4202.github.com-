@@ -1,0 +1,74 @@
+<html>
+<style>
+  .clock{
+    width: 200px;
+    height: 200px;
+    background : aqua;
+    border-radius: 50%;
+
+    position: relative;
+  }
+  .hand{
+    width: 50%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 50%:
+  }
+  .sec{
+    transform: rotate(60deg);
+    height : 1px;
+  }
+
+  .min{
+    width: 40%;
+    margin-left: 10%;
+
+  }
+
+  .hour{
+    width : 30;
+    margin-left: 20%
+    background : red;
+  }
+</style>
+
+<script>
+  function rotate(){
+    const date = new Date();
+    const sec = date.getSeconds();
+    const min = date.getMinutes();
+    const hour = date.getHours();
+
+    const secEl = document.querySelector(".sec");
+    const minEl = document.querySelector(".min");
+    const hourEl = document.querySelector(".hour");
+    // console.log(sec);
+
+    secEl.style.transform = 'rotate(${sec}deg)';
+    secEl.style.transform = 'rotate(${min}deg)';
+    secEl.style.transform = 'rotate(${hour}deg)';
+
+  }
+
+  function getDegree(num){
+    return (num/60) * 360 + 90;
+  }
+
+  setInterval(rotate,1000);
+</script>
+  <head>
+  </head>
+
+  <body>
+    <div class="clock">
+      <div class="sec hand">
+        <div class="min hand">
+          <div class="hour hand">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
