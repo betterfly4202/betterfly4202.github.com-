@@ -1,7 +1,7 @@
 ---
-title: "'DEV Seminar : 좋았을걸; Front-end' 후기_section 1"
+title: "'DEV Seminar : 좋았을걸; Front-end' 후기_section 2"
 layout: post
-date: 2018-04-16 00:24
+date: 2018-04-17 23:55
 image: 
 headerImage: true
 tag:
@@ -16,9 +16,7 @@ author: betterFLY
 description: DEV SEMINAR - Front-end 주니어를 위한 가이드
 ---
 
-## DEV Seminar
-
-### 섹션2_곧 시니어가 될 주니어를 위한 150분
+### 곧 시니어가 될 주니어를 위한 150분
     - 우아한형제들_김민태 님
     
 > 우아한형제들, 24년차 시니어
