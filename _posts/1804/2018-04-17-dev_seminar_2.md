@@ -130,7 +130,7 @@ description: DEV SEMINAR - Front-end 주니어를 위한 가이드
     
 [![전자동쉐프의라면](https://img.youtube.com/vi/hSDP0by5qq8/0.jpg)](https://www.youtube.com/watch?v=hSDP0by5qq8)
 
-{%전자동쉐프의라면 https://www.youtube.com/watch?v=hSDP0by5qq8%}
+{% youtube https://www.youtube.com/watch?v=hSDP0by5qq8 %}
 
 
 > //TODO : 회사 메일 발송 시스템, 회의실 예약하기 만들자
