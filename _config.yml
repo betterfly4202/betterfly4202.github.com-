@@ -97,6 +97,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-admin
+  - jekyll-youtube
 
 jekyll-mentions:
     base_url: https://github.com

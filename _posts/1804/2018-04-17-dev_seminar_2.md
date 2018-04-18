@@ -132,6 +132,12 @@ description: DEV SEMINAR - Front-end 주니어를 위한 가이드
 
 {% youtube https://www.youtube.com/watch?v=hSDP0by5qq8 %}
 
+<div class="video-container"><iframe 
+     src="https://www.youtube.com/watch?v=hSDP0by5qq8"
+     frameborder="0" 
+     allowfullscreen>
+</iframe></div>
+
 
 > //TODO : 회사 메일 발송 시스템, 회의실 예약하기 만들자
 
