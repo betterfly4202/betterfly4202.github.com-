@@ -130,7 +130,7 @@ description: DEV SEMINAR - Front-end 주니어를 위한 가이드
     
 [![전자동쉐프의라면](https://img.youtube.com/vi/hSDP0by5qq8/0.jpg)](https://www.youtube.com/watch?v=hSDP0by5qq8)
 
-{ % 전자동쉐프의라면 https://www.youtube.com/watch?v=hSDP0by5qq8 % }
+{%전자동쉐프의라면 https://www.youtube.com/watch?v=hSDP0by5qq8%}
 
 
 > //TODO : 회사 메일 발송 시스템, 회의실 예약하기 만들자
@@ -188,7 +188,7 @@ Virtual DOM, jQeury 등을 만들어 본 적 있나?
     - 나에게 잘못된 프레임이 씌워지기 전에 스스로 자기만의 프레임을 갖는 것도 중요하다. 무엇보다 다양한 프레임을 소화할 수 있는 유연함과 인사이트를 갖는 것.
     
 ## 좋은 개발자란?
->(행동이 수반되는)자극을 주는 개발자
+>(행동이 수반되는)자극을 주는 개발자.<br/>
 다른 사람에게 자극 또는 영감을 줄 수 있는 개발자.
 
 ### 그리고 마지막으로 Q&A시간으로 마무리되었다.
