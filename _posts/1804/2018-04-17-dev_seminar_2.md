@@ -128,13 +128,15 @@ description: DEV SEMINAR - Front-end 주니어를 위한 가이드
 - 동료를 위해서 코드를 써라
     - 특히나 프론트엔드 분야는 다른 개발 분야보다 작업의 결과가 브라우저상에 즉각적으로 보여지기 때문에, 이를 적극 활용하여 가까운 동료 뿐만 아니라 오픈소스 등에 기여하며 남을 위한(동료를 위한) 코드를 작성하라
     
-[![전자동쉐프의라면](https://img.youtube.com/vi/hSDP0by5qq8/0.jpg)](https://www.youtube.com/watch?v=hSDP0by5qq8) 
+[![전자동쉐프의라면](https://img.youtube.com/vi/hSDP0by5qq8/0.jpg)](https://www.youtube.com/watch?v=hSDP0by5qq8)
+
+{% 전자동쉐프의라면 https://www.youtube.com/watch?v=hSDP0by5qq8 %}
 
 
 > //TODO : 회사 메일 발송 시스템, 회의실 예약하기 만들자
 
 
-#####회사가 시니어에게 원하는 것은?
+##### 회사가 시니어에게 원하는 것은?
 
 - 월등한 실력과 성과를 낼 수 있는 실력
     - 당장 다음달 월급을 걱정하는 회사라면 이것이 1순위
@@ -205,7 +207,7 @@ Virtual DOM, jQeury 등을 만들어 본 적 있나?
 * 비전공자로서 반드시 갖추어야 할 소프트웨어 기본 지식은 무엇이 있을까
     * 자료구조(스택,큐,리스트)
     * OS(운영체제) 운영체제가 어플리케이션을 어떻게 운영하는지
-    * 네트워크는 가능한 많이, 깊이 알수록 좋음(HTTP protocol , REST client...)
+    * 프론트엔드개발자라면 네트워크는 가능한 많이, 깊이 알수록 좋음(HTTP, protocol , REST client...)
     * 알고리즘
     * 파일시스템
     
