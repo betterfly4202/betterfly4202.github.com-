@@ -13,4 +13,4 @@ author: betterFLY
 description: 코엑스 - 아마존 웹 서비스 세미나
 ---
 
-![AWS](/assets/images/180417/speaker.png)
+![AWS](/assets/images/180419/aws_enterance.jpeg)
