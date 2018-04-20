@@ -13,7 +13,7 @@ author: betterFLY
 description: Amazon Web Service Seminar
 ---
 
-![!AWSOME_DAY_ENTERANCE](/assets/images/180420/awsome_day.jpeg)
+![!AWSOME_DAY_ENTERANCE](/assets/images/180420/aws_summit_main.jpeg)
 {: class="bigger-image" }
 
 # AWS Summit 후기
