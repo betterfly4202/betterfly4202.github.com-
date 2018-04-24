@@ -64,6 +64,3 @@ Hystrix > Fault Tolerance Library
 IRule - 주어진 서버 목록에서 어떤 서버를 선택할 것인가
 IPing - 각 서버가 살아있는가를 검사하여 서버를 사용할지를 검증함
 등 7가지 이유..많음
-
-
-
