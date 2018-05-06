@@ -13,11 +13,11 @@ description: 자바는 call by reference 매커니이다?
 ---
 
 
-포스팅에 앞서 오늘도 역시나 무지함을 꺠닫고 시작한다.
+포스팅에 앞서 오늘도 역시나 무지함을 깨닫고 시작한다.
 
-평소에도 기초가 부족함을 많이 느꼈지만, 최근 인스턴스 또는 객체 간 접근의 흐름이 헷갈리면서 call by reference / call by value 라는 개념이 새삼 혼동되었다.
+평소에도 기초가 부족함을 많이 느꼈지만, 최근 인스턴스 또는 객체 간 접근의 흐름이 헷갈리면서 call by reference / call by value 라는 개념을 확실히 익히기 위해서 업무 중에 기록해 두고 여유가 있을때 포스팅 하기로 했다.
 
-다시금 기초가 부족함을 깨닫고, 포스팅을 하려고 기록해두고 자바에서 이 두 매커니즘이 어떻게 적용되는지 조사를 했다.
+자바에서 이 두 매커니즘이 어떻게 적용되는지 조사를 시작했다.
 
 call by value와 call by reference 를 검색하면 가장 많이 볼 수 있는 C기반의 swap 함수로 그 개념을 이해할 수 있다.
 
@@ -38,7 +38,7 @@ call by value와 call by reference 를 검색하면 가장 많이 볼 수 있는
 
 ```
 
->>결과<br/> a: 10 || b:20
+>결과<br/> a: 10 || b:20
 
 
 너무나 당연한 결과이지만 valSwap함수를 호출했지만 스왑이 이루어지지 않는다. 이를 stack 그림으로 참고해 보면 이해가 쉽다.
@@ -62,18 +62,18 @@ swap 이라는 함수는 호출되지만 각 변수(a,b,temp)가 할당하는 �
  
  ```java
  public class ArgumentAndParameter{
-    public void isArgumentsOrParameter(String val) {
-         System.out.println("this is " + val);
+    public void runFunc(String param) {
+         System.out.println("this is " + param);
      }
-     public static void main(String[] args) {
-         String args = "arguments";
-         isArgumentsOrParameter(args);
+     public static void main(String[] value) {
+         String args = "I am Arguments";
+         runFunc(args);
      }
  }
 
 ```
 
-위 샘플코드에서 isArgumentsOrParameter(String val) 함수에 선언된 변수 val는 **formal-parameter(형식인자)** 즉, Parameter이다. (우리 말로 '매개변수' 라고 표현한다.)
+위 샘플코드에서 runFunc(String param) 함수에 선언된 변수 param은 **formal-parameter(형식인자)** 즉, Parameter이다. (우리 말로 '매개변수' 라고 표현한다.)
 
 그리고 main함수에서 선언한 변수 args는 **actual-parameter(실인자)** 즉, Argument이다. (우리 말로 '인자' 로 표현한다)
 
@@ -102,7 +102,7 @@ swap 이라는 함수는 호출되지만 각 변수(a,b,temp)가 할당하는 �
 
 ```
 
->>결과<br/> a: 20 || b:10
+>결과<br/> a: 20 || b:10
 
 이전과 다른 것은 포인터를 통해 변수에 접근했다. 그 결과 스왑이 정상적으로 이루어졌다.
 
@@ -114,7 +114,7 @@ swap 이라는 함수는 호출되지만 각 변수(a,b,temp)가 할당하는 �
 
 call by value 의 예제처럼 일반적으로 Parameter(매개변수)를 선언하여 사용한다면, 각 매개변수는 저마다 다른 메모리를 참조한다.
 
-하지만 포인터를 통해 생성된 매개변수는 그림과 같이 변수명이 같은 메모리를 참조하게 되어 결과적으로 결과가 스와핑되는 것을 볼 수 있다.
+하지만 포인터를 통해 생성된 매개변수는 그림과 같이 변수명이 같은 메모리를 참조하게 되어 결과적으로 변수 a, b의 결과가 스와핑되는 것을 볼 수 있다.
 
 ---
 
@@ -148,7 +148,7 @@ call by value 의 예제처럼 일반적으로 Parameter(매개변수)를 선언
 ```
 > 결과 : runValue, 1 
 
-위 예제의 결과 a는 당연히 '1'이 출력된다. 너무 당연해서 설명을 하기도 어렵지만, runValue에서 변수 b는 변수 a를 복제한 것이고, 복제한 b 의 값만 변경했기 때문에 a이 결과에 영향을 주지 않는다.
+위 예제의 결과 a는 당연히 '1'이 출력된다. 너무 당연해서 설명을 하기도 어렵지만, runValue에서 변수 b는 변수 a를 복제한 것이고, 복제한 b 의 값만 변경했기 때문에 a의 결과에 영향을 주지 않는다.
 
 
 
@@ -195,15 +195,16 @@ subRef.id를 변경하였는데 ref.id의 결과가 바뀌었다. 여기서 우�
 따라서 위 예제와 같이 **RefClass ref=new RefClass(5)** 를 통해 생성된 RefClass 의 인스턴스는 특정한 메모리를 참조한다.  
 
 그리고 새로운 변수 subRef 는 ref 를 참조한다.
-`
+
+<pre>
     RefClass subRef = ref;
-`
+</pre<
 
 이것은 ref 와 subRef 두 변수가 모두 같은 인스턴스를 **참조** 하고 있다는 것이다.
 
 따라서 subRef를 변경했지만 ref의 id값이 변경되는 것이다.
 
-이처럼 자바의 데이터타입을 보여주는 위 그림 중 Primitive 타입을 제외한 모든 경우 자바는 Call by reference 로 인자가 전달되는 방식을 취한다.
+이처럼 자바의 데이터타입을 보여주는 위 그림 중 Primitive 타입을 제외한 모든 경우 Call by reference 방식을 통해 인자가 전달된다.
 
 
 ---
