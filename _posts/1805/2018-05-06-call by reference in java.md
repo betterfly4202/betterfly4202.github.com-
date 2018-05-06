@@ -1,15 +1,15 @@
 ---
-title: "call by reference in java"
+title: "Call by reference in Java"
 layout: post
 date: 2018-05-06 18:22
 image: 
 headerImage: true
 tag:
-- call by reference
+- Call by reference
 - Call-by-{Value | Reference} 
 category: blog
 author: betterFLY
-description: 자바는 call by reference 매커니이다?
+description: 자바는 call by reference 매커니즘이다?
 sitemap :
   changefreq : daily
   priority : 1.0
