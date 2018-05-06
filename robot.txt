@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /
+Allow: /_posts
+Allow: /_assets
 
 Sitemap: https://betterfly88.github.io/sitemap.xml

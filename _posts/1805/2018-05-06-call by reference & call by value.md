@@ -10,6 +10,9 @@ tag:
 category: blog
 author: betterFLY
 description: 자바는 call by reference 매커니이다?
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 
