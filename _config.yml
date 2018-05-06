@@ -91,6 +91,11 @@ show-author: true
 # do you want some animations?
 animation: true
 
+url: https://betterfly88.github.io/
+plugins:
+  - jekyll-sitemap
+
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
