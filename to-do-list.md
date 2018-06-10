@@ -10,5 +10,5 @@
 - for문에 대한 이해(차이)
 - 나는 무엇을 추구하는 개발자인가, 나게에 개발이란 무엇인가
 - forEach 와 for 문의 차이 및 성능비교
-- vue.js 의 장점 및 
+- vue.js 의 장점 및 react / angular 
 
