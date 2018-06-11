@@ -9,7 +9,7 @@ tag:
 - Session 
 category: blog
 author: betterFLY
-description: About Cache & Cookie & Session...
+description: About Cookie & Session...
 sitemap :
   changefreq : daily
   priority : 1.0
@@ -94,5 +94,5 @@ String user = httpSession.getAttribute("user");
 - 쿠키의 사이즈가 4KB 이상인 경우
 - 해당 클라이언트에 300개 이상의 쿠키가 적재된 경우
 
-위 경우 쿠키의 사용이 제한되는것일 텐데, 이런 클라이언트의 환경이 세션이 저장되는 서버와 연관이 있을까?
+위 경우 쿠키의 사용이 제한되는것일 텐데, 이런 클라이언트의 환경이 세션이 저장되는 서버와 연관이 있을까?...?
 
