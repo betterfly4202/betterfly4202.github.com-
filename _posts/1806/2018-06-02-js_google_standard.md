@@ -15,6 +15,13 @@ sitemap :
   priority : 1.0
 ---
 
+최근 자바스크립트에 미진함을 많이 느끼던 중 과거 스터디원 중 한 분이 구글에서 정의한 자바스크립트 스타일가이드를 언급했던 것이 생각나, 내 블로그에 정리하여 이따금씩 스스로 환기시키기 위해서 기록해 둔다.
+
+해당 내용은 [Early adopter 의 디자인 번역 공장](https://www.vobour.com/%EA%B5%AC%EA%B8%80%EC%9D%80-%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8A%A4%ED%83%80%EC%9D%BC-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%A5%BC-%EB%B0%9C%ED%96%89-%ED%95%A9%EB%8B%88%EB%8B%A4-%EB%8B%A4%EC%9D%8C%EC%9D%80-%EB%AA%87-%EA%B0%80%EC%A7%80-%ED%95%B5%EC%8B%AC)
+의 내용을 발췌했다.
+
+---
+![image](/assets/images/180602/js_style_guide_google.jpeg)
 
 아직 익숙하지 않은 사람들을 위해, 구글은 깨끗하고 이해할 수 있는 코드를 쓰는 데 있어 가장 좋은 lays out을 제시하는 자바 스크립트(JavaScript) 작성을 위한 [스타일 가이드](https://google.github.io/styleguide/jsguide.html)를 내놓았다.
 이러한 규칙은 유효한 JavaScript를 작성하기 위한 어렵고 빠른 규칙이 아니며 원본 파일 전체에 걸쳐 일관되고 매력적인 스타일 선택 사항을 유지하기 위한 규정만 있습니다. 이것은 자바 스크립트에서 특히 흥미 롭습니다. 자바 스크립트는 다양한 스타일 선택을 허용하는 유연하고 관대 한 언어입니다.
