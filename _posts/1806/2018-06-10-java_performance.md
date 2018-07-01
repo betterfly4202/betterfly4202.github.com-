@@ -1,7 +1,7 @@
 ---
 title: "반복문 성능 이야기"
 layout: post
-date: 2018-06-07 17:23
+date: 2018-06-15 20:47
 image: 
 headerImage: true
 tag:
@@ -9,94 +9,168 @@ tag:
 - Session 
 category: blog
 author: betterFLY
-description: About Cookie & Session...
+description:  반복문 비교
 sitemap :
   changefreq : daily
   priority : 1.0
 ---
 
-얼마전 Cache에 대한 정확한 정의를 공부해야 겠다고 생각하던 찰나 중 어떤 평소 즐겨 보는 [창천향로님의 블로그](http://jojoldu.tistory.com/278?category=689637)에서 기술면접 질문을 접하게 되었다.
+뒤늦게 Java Stream에 관심이 생기면서, forEach의 성능에 대한 이슈를 접하게 되었다.
+[for-loop를 Stream.forEach()로 바꾸지 말아야 할 3가지 이유](https://homoefficio.github.io/2016/06/26/for-loop-%EB%A5%BC-Stream-forEach-%EB%A1%9C-%EB%B0%94%EA%BE%B8%EC%A7%80-%EB%A7%90%EC%95%84%EC%95%BC-%ED%95%A0-3%EA%B0%80%EC%A7%80-%EC%9D%B4%EC%9C%A0/)
 
-질문의 내용인 즉슨
+그래서 비교해보았다. 일반적으로 사용하는 반복문
+- While
+- Iterator
+- for
+- for-loop
+- for each
 
+총 5개의 반복문에 대한 이야기이다.
+
+테스트 케이스는 iterator 및 for-each를 위해서 List<Integer>로 정의했으며, 100개의 난수 리스트를 생성하여, 리스트 각 인덱스의 총 합을 반복문으로 구현했다.
+
+우선 시간을 계산해야하니까 결과를 ms으로 반환해주는 시간 측정 메서드이다.
 
 ~~~java
-String user = httpSession.getAttribute("user");
+class TimerUtil {
+    long time;
+
+    public void start(){
+        time = System.nanoTime();
+    }
+
+    public double end(){
+//        System.out.println("compute result : " + (System.nanoTime()-time)/ 1000000.0);
+        return (System.nanoTime()-time)/ 1000000.0;
+    }
+}
 ~~~
-> 질문 1)<br/>
-  여기서 session의 값을 가져오는 key는 "user"입니다. 
-  사용자 A가 접속해도 "user"로 값을 가져오고, 사용자 B가 접속해도 "user"로 가져오는데 어떻게 A와 B가 접속했을때 서로 다른 결과값을 받을수 있나요?
-  
-
-
-> 질문 2)<br/>
-  본인이 만든 프로젝트는 톰캣을 내렸다가 올리면 로그인이 풀리지 않나요? 
-  톰캣을 내렸다가 올려도 로그인이 풀리지 않으려면 어떻게 해야할까요?
-  
-
-
-> 질문 3)<br/>
-  세션은 서버에 저장되고, 쿠키는 클라이언트에 저장된다고 하셨는데, 그럼 쿠키가 안되는 상황에서도 세션은 사용할 수 있나요?
-  
-  
----
-
-질문을 고민하기전에 가장 먼저 **'왜'** 쿠키와 세션이라는 개념이 필요한지 살펴보는 것이 중요할 것 같다.
-
-세션과 쿠키는 네트워크 망에서 서버와 클라이언트가 상호간 통신을 할 때 사용하는 수단을 말한다. 
-이 기술들의 목적은 **"상태 유지"** 에 있다. 웹 환경에서 사용되는 HTTP 프로토콜은 서버와 클라이언트가 통신을 완료하면 연결을 끊어버린다. 
-
-한번의 통신에 요청과 응답을 하나로 묶고 연결을 끊어버리는 프로토콜을 **무상태 프로토콜 (Stateless Protocol)** 이라고 한다. 
-
-그러면 이 무상태 프로토콜이 필요한 이유는 무엇일까?
-
-무상태 프로토콜의 가장 큰 장점은 통신을 하면서 발생하는 수많은 리소스를 절약할 수 있다는 것이다. 
-무상태 프로토콜의 가장 대표적인 프로토콜은 HTTP이며, 주 목적은 웹 상에서 HTML 문서를 서빙하는 것이다.
-
-
-세션과 쿠키는 하는일과 목적은 같지만 저장하는 방법에 따라 둘을 구분 짓는다.
-**쿠키**는 클라이언(사용자) 로에 저장(보관), **세션**은 서버에 저장하므로,
-
-쿠키는 사용자의 민감한 정보를 다루는 것은 매우 위험하고, 쇼핑몰로 예로들면 장바구니에 담는 사용자 쇼핑 기록 정도를 저장시 쿠키를 활용한다라고 말한다.
-
-![쿠키세션비교](/assets/images/180607/compare_with_cookie_session.png)
-
 
 ---
 
-그러면 다시 질문으로 돌아가서, 세션과 쿠키를 적절히 이용한다면 이 질문에 답을 할 수 있지 않을까
+다음은 난수를 저장하는 리스트이다.
 
-부끄럽지만 사실 위 질문 3개를 모두 처리해본 적이 없다. 
-우선 내가 아는 선에서 1번 문제에 대한 답변을 정리해보았다.
+~~~java
+    private static List<Integer> intStream(){
+        List<Integer> arrList = new ArrayList<>();
+        IntStream.range(0, 100)
+                .forEach(i -> arrList.add(generator(100)));
 
-    1. 이것이 질문의 요지에 맞는지 모르겠지만, 기본적으로 사용자가 해당 도메인에 접근시 톰캣(다른 WAS는 확인하지 못했다.)에서 클라이언트 고유의 SESSION ID를 할당해준다.
-    
-    이는 로그인 유무와도 무관하게 모든 사용자에게 부여되는 고유 ID이다. 따라서 "name"이라는 session 키 값에 해당 session id 값을 value로 하여 활용한다면, 유저간에 구분된 결과를 처리할 수 있지 않을까.
-    이를 계속 유지시키기 위한다면 쿠키에 해당 SESSION ID 정보를 저장하여 활용할 수 있을 것이다.
-     
+        return arrList;
+    }
 
-    2. 이부분은 내용이 생소하여 검색을 해보니, 톰캣 내 설정으로 세션을 유지시키는 방법이 가능한 것 같다.
-    톰캣의 server.xml 에 다음의 설정을 추가하자.
-
-~~~xml
-  <Manager className="org.apache.catalina.session.PersistentManager"
-                     saveOnRestart="true"
-                     maxActiveSessions="-1"
-                     minIdleSwap="-1"
-                     maxIdleSwap="-1"
-                     maxIdleBackup="-1">
-              <Store className="org.apache.catalina.session.FileStore" directory="/session" />
-  </Manager>
+    private static int generator(int max){
+        Random random = new Random();
+        return random.nextInt(max);
+    }
 ~~~
 
-**saveOnRestart** 이 부분이 세션을 유지시킬지 설정하는 것이기 떄문에 해당 부분을 false로 저장한다면, 서버 재구동시마다 세션 정보를 저장하지 않도록 처리할 수 있다.
+그리고 각 반복문 내용이다.
+~~~java
+    private static double performanceByWhile(List<Integer> array){
+        /*
+            while
+         */
+        result = 0;
+
+        timer.start();
+        int s=0;
+        while(s<array.size()){
+            result += array.get(s);
+            s++;
+        }
+        return timer.end();
+    }
+
+    private static double performanceByFor(List<Integer> array){
+        /*
+            for
+         */
+        result = 0;
+
+        timer.start();
+        for(int i=0; i<array.size(); i++){
+            result += array.get(i);
+        }
+        return timer.end();
+    }
+
+    private static double performanceByForLoop(List<Integer> array){
+        /*
+            for loop
+         */
+        result = 0;
+
+        timer.start();
+        for(int temp : array){
+            result += temp;
+        }
+        return timer.end();
+    }
+
+    private static double performanceByForEach(List<Integer> array){
+        /*
+            for each
+         */
+        result = 0;
+
+        timer.start();
+        array.forEach((temp) -> {
+            result += temp;
+        });
+
+        return timer.end();
+    }
 
 
-    3. **Q. 세션은 서버에 저장되고, 쿠키는 클라이언트에 저장된다고 하셨는데, 그럼 쿠키가 안되는 상황에서도 세션은 사용할 수 있나요?**
-    음.. 처음 질문을 보고 몇초간 질문의 의도가 파악되지 않아 당혹스러웠다. 쿠키가 안되는 상황.. 이라고하면 위에 표에 있는 쿠키 제한 사항 중
-    - 현재 도메인에 20개 이상의 쿠키를 사용하는 경우
-    - 쿠키의 사이즈가 4KB 이상인 경우
-    - 해당 클라이언트에 300개 이상의 쿠키가 적재된 경우
+    private static double performanceByIterator(List<Integer> array){
+        /*
+            iterator
+         */
+        result = 0;
 
-    위 경우 쿠키의 사용이 제한되는것일 텐데, 이런 클라이언트의 환경이 세션이 저장되는 서버와 연관이 있을까?
+        timer.start();
 
+        Iterator<Integer> itr = array.iterator();
+        while( itr.hasNext() ){
+            result += array.get(itr.next());
+        }
+
+        return timer.end();compare_Repetition.jpeg
+    }
+
+~~~
+
+
+최종적으로 이 모든 과정을 테스트하는 메인 메서드.
+
+~~~java
+    public static void main (String [] args){
+        List<Integer> sumArr = intStream();
+
+        int maxCnt = 10000;
+        double sumTimes = 0;
+        for(int cnt = 0; cnt<maxCnt; cnt++){
+        sumTimes += performanceByFor(sumArr);
+        // sumTimes += performanceByWhile(sumArr);
+        // sumTimes += performanceByIterator(sumArr);
+        // sumTimes += performanceByForLoop(sumArr);
+        // sumTimes += performanceByForEach(sumArr);
+        
+        }
+        sumTimes *= 1000;
+        System.out.println("Result Time : "+resultAvg(sumTimes, maxCnt));
+
+    }
+~~~
+
+각 반복문의 평균 수행 시간(ms) 결과이다.
+![result](/assets/images/180615/compare_Repetition.jpeg)
+
+
+---
+> 테스트 결과로는 **While=for > For-loop > For-each > Iterator** 순으로 보인다.
+
+올바른 방법으로 테스트한것인지는 검증이 필요하겠지만, 서두에 링크로 참고해두었던 본문 내용에서도 말했듯이 for-each와 같이 Stream을 사용할 경우 누적되는 오버헤드 비용이 많이 발생하기 때문에 큰 사이즈를 반복문 처리할때는 유의해야할 필요가 있을 것으로 보인다.
+
+각각의 역할이 필요한 곳에 따라 유연하게 사용할 수 있도록 보다 확실하게 개념을 공부해야 할 것 같다.
