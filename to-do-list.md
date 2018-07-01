@@ -11,4 +11,5 @@
 - =, ==, ===, equals 에 대한 정리
 - 직렬화, 역직렬화에 대한 정리
 - 리눅스, 쉘 스크립트 사용법 정리
-- Open Source 
+- Open Source 개발과 실습 (https://www.edwith.org/opensource/lecture/22736/)
+- SOLID 원칙의 이해 및 적용 (+DRY, KISS, SLAP... http://rndelsl79.tistory.com/94)
