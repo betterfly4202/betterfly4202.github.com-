@@ -2,13 +2,11 @@
 title: About
 layout: page
 ---
-<!-- ![Profile Image]({{ site.url }}/{{ site.picture }}) -->
+![Profile Image]({{ site.url }}/{{ site.picture }})
 
 <p>
-수포자, 문돌이, 늦깎이개발자... <br>
 
-컴플렉스 투성이 개발자가 성장통을 겪어 가는 과정을 담아보려한다.
-
+### 늦깎이 개발자의 성장 과정
 
 </p>
 
@@ -17,4 +15,9 @@ layout: page
 <ul class="skill-list">
     <li>Java</li>
     <li>Spring Framework</li>
+    <li>Maven, Gradle</li>
+    <li>Oracle, MSsql</li>
+    <li>Jenkins</li>
+    <li>Vue.js</li>
+    
 </ul>
