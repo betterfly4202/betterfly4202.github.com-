@@ -1,5 +1,5 @@
 ---
-title: "Process와 Thread"
+title: "Collection Framework"
 layout: post
 date: 2018-08-12 20:44
 image: 
