@@ -1,5 +1,5 @@
 ---
-title: "개발일기 시작하기 ddd"
+title: "2018_08_20 시작"
 layout: post
 date: 2018-08-20 22:10
 tag: 개발일기
