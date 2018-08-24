@@ -1,5 +1,5 @@
 ---
-title: "개발일기 시작하기"
+title: "개발일기 시작하기aaaa"
 layout: post
 date: 2018-08-20 22:10
 tag: 개발일기
@@ -8,7 +8,7 @@ headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
 description: "매일 가볍게 쓰는 개발 일기"
-category: project
+category: projects
 author: betterFLY
 externalLink: false
 ---
