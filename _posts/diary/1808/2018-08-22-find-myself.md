@@ -2,13 +2,16 @@
 title: "현위치"
 layout: post
 date: 2018-08-22 15:23
-image: 
-headerImage: true
 tag:
+- 이직준비
+image: 
+projects: true
+headerImage: true
 category: project
 author: betterFLY
 description:
 ---
+
 
 ## 2018.8.22 
 
