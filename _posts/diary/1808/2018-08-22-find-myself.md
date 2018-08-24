@@ -1,5 +1,5 @@
 ---
-title: "2018_08_22 현위치"
+title: "현위치"
 layout: post
 date: 2018-08-22 15:23
 image: 
