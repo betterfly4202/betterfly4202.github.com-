@@ -9,6 +9,7 @@ tag:
 - 읽기 좋은 코드가 좋은 코드다
 - The Art of Readable Code
 category: review
+project : true
 author: betterFLY
 description:
 ---

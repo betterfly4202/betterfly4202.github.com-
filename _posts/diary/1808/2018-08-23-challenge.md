@@ -2,12 +2,14 @@
 title: "도전"
 layout: post
 date: 2018-08-23 22:45
+tag: 
 image: 
 headerImage: true
-tag:
+projects: true
+description: "새로운 도전을 도약하며"
 category: project
 author: betterFLY
-description:
+externalLink: false
 ---
 
 ## 2018.8.23 
