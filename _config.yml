@@ -73,6 +73,9 @@ projects: true
 about: true
 blog: true
 
+# if you don't need "review", comment them out below
+review: true
+
 # do you want to show the "read time" of the posts?
 read-time: true
 
