@@ -1,5 +1,5 @@
 ---
-title: "읽기 좋은 코드가 좋은 코드다"
+title: "읽기 좋은 코드가 좋은 코드다(The Art of Readable Code)"
 layout: post
 date: 2018-08-31 22:22
 image: 
