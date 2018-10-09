@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-##늦깎이 개발자의 성장 과정
+## 늦깎이 개발자의 성장 과정
 
 <h2>Skills</h2>
 
