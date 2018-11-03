@@ -111,3 +111,38 @@ public class Sampl31{
 프로그래밍은 혼자하는 것이 아니기 떄문이다.
 
 
+> 2018.10.20
+
+#### 2장. 제어 플래그 삭제
+
+> *제어 플래그*란? <br/> 프로그래밍에서 '상태를 기록하고 처리 흐름을 제어하기 위한 boolean 타입의 변수'
+
+<일반적인 제어 플래그 사용의 모습>
+
+~~~java
+boolean flag = true;
+while(flag){
+    ... 
+
+    if(A){
+        flag = false;
+    }else{
+        // do something
+    }
+}
+~~~
+
+*제어 플래그 삭제*
+
+~~~java
+
+while(flag){
+    ... 
+
+    if(A){
+        break;
+    }else{
+        // do something
+    }
+}
+~~~
