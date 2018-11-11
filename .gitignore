@@ -1,26 +1,14 @@
-.gradle
-/build/
-!gradle/wrapper/gradle-wrapper.jar
-/out
-scp.sh
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
+*.gem
+*.sublime-project
+*.sublime-workspace
+.bundle
+.DS_Store
+.jekyll-metadata
+.sass-cache
+_asset_bundler_cache
+_site
+codekit-config.json
+example/_site
+Gemfile.lock
+node_modules
+npm-debug.log*
