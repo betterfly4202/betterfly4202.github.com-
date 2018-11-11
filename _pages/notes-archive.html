@@ -9,6 +9,8 @@ author_profile: false
 {% for year in postsByYear %}
   <h2 id="{{ year.name | slugify }}" class="archive__subtitle">{{ year.name }}</h2>
   {% for post in year.items %}
-    {% include archive-single.html %}
+    {%- if post.categories contains 'notes' -%}
+      {% include archive-single.html %}
+    {%- endif -%}
   {% endfor %}
 {% endfor %}
