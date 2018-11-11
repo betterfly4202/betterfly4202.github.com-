@@ -1,11 +1,11 @@
 var store = [{
         "title": "category : db",
-        "excerpt":"db  ","categories": ["db"],
+        "excerpt":"zz   내용을 입력합니다  ","categories": ["DB"],
         "tags": ["content"],
         "url": "http://localhost:4000/db/2/",
         "teaser":null},{
         "title": "category : JAVA",
-        "excerpt":"JAVA  ","categories": ["java"],
+        "excerpt":"JAVA  ","categories": ["JAVA"],
         "tags": ["content"],
         "url": "http://localhost:4000/java/1/",
         "teaser":null},{
