@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "About"
+    url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "Dev"
+    url: /dev/
+  - title: "Notes"
+    url: /notes/
+  # - title: "Sitemap"
+  #   url: /sitemap/
