@@ -27,7 +27,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "staticman" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -38,8 +38,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
+  allowedFields          : ['betterfly', 'betterfly4202@gmail.com', '', 'hello']# ['name', 'email', 'url', 'message']
+  branch                 : 'master' # "master"
   commitMessage          : # "New comment by {fields.name}"
   filename               : # comment-{@timestamp}
   format                 : # "yml"
@@ -101,52 +101,52 @@ analytics:
 
 # Site Author
 author:
-  name             : "Lee chungil"
+  name             : "betterFLY"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an amazing person."
   location         : "Seoul, Korea"
-  email            :
+  email            : "betterfly4202@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: betterfly88@gmail.com
+      url: betterfly4202@gmail.com
     # - label: "Website"
-    #  icon: "fas fa-fw fa-link"
-    #  # url: "https://your-website.com"
-    #- label: "Twitter"
-    #  icon: "fab fa-fw fa-twitter-square"
-    #  # url: "https://twitter.com/"
-    #- label: "Facebook"
-    #  icon: "fab fa-fw fa-facebook-square"
-    #  # url: "https://facebook.com/"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://betterfly88.github.io/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/betterfly88"
-    #- label: "Instagram"
-    #  icon: "fab fa-fw fa-instagram"
-    #  # url: "https://instagram.com/"
-
+      url: "https://github.com/betterfly88"    
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/chungil.lee.779"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/mr.martine"
+    #- label: "Twitter"
+        #  icon: "fab fa-fw fa-twitter-square"
+        #  # url: "https://twitter.com/"
+        
 # Site Footer
 footer:
   links:
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   # url:
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-    #   # url:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: betterfly4202@gmail.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://betterfly88.github.io/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/chungil.lee.779"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: https://github.com/betterfly88/
-    # - label: "GitLab"
-    #   icon: "fab fa-fw fa-gitlab"
-    #   # url:
-    # - label: "Bitbucket"
-    #   icon: "fab fa-fw fa-bitbucket"
-    #   # url:
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   # url:
+      url: "https://github.com/betterfly88"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/mr.martine"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
+    #  # url: "https://twitter.com/"
 
 
 # Reading Files
