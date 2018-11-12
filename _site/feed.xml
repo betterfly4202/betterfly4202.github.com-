@@ -1,15 +1,504 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-12T23:12:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">category : JAVA</title><link href="http://localhost:4000/java/1/" rel="alternate" type="text/html" title="category : JAVA" /><published>2018-11-11T00:00:00+09:00</published><updated>2018-11-11T00:00:00+09:00</updated><id>http://localhost:4000/java/1</id><content type="html" xml:base="http://localhost:4000/java/1/">&lt;h2 id=&quot;java&quot;&gt;JAVA&lt;/h2&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">JAVA</summary></entry><entry><title type="html">새단장</title><link href="http://localhost:4000/notes/3/" rel="alternate" type="text/html" title="새단장" /><published>2018-11-11T00:00:00+09:00</published><updated>2018-11-11T00:00:00+09:00</updated><id>http://localhost:4000/notes/3</id><content type="html" xml:base="http://localhost:4000/notes/3/">&lt;h2 id=&quot;블로그-새단장&quot;&gt;블로그 새단장&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-13T01:39:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">category : JAVA</title><link href="http://localhost:4000/java/1/" rel="alternate" type="text/html" title="category : JAVA" /><published>2018-11-11T00:00:00+09:00</published><updated>2018-11-11T00:00:00+09:00</updated><id>http://localhost:4000/java/1</id><content type="html" xml:base="http://localhost:4000/java/1/">&lt;h2 id=&quot;java&quot;&gt;JAVA&lt;/h2&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">JAVA</summary></entry><entry><title type="html">ideation</title><link href="http://localhost:4000/notes/1811_3/" rel="alternate" type="text/html" title="ideation" /><published>2018-11-10T00:00:00+09:00</published><updated>2018-11-10T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_3</id><content type="html" xml:base="http://localhost:4000/notes/1811_3/">&lt;p&gt;누군가의 한마디가 큰 울림, 새로운 시발점을 불러오는 경험은 누구나 다 있다.&lt;/p&gt;
 
-&lt;p&gt;블로그 내용을 씁니다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">블로그 새단장</summary></entry><entry><title type="html">새단장</title><link href="http://localhost:4000/notes/2/" rel="alternate" type="text/html" title="새단장" /><published>2018-11-08T00:00:00+09:00</published><updated>2018-11-08T00:00:00+09:00</updated><id>http://localhost:4000/notes/2</id><content type="html" xml:base="http://localhost:4000/notes/2/">&lt;h2 id=&quot;블로그-새단장&quot;&gt;블로그 새단장&lt;/h2&gt;
+&lt;p&gt;조금 전 대화의 희열 - 아이유 편을 보는데,&lt;/p&gt;
 
-&lt;p&gt;블로그 내용을 씁니다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">블로그 새단장</summary></entry><entry><title type="html">category : db</title><link href="http://localhost:4000/db/2/" rel="alternate" type="text/html" title="category : db" /><published>2018-11-01T00:00:00+09:00</published><updated>2018-11-01T00:00:00+09:00</updated><id>http://localhost:4000/db/2</id><content type="html" xml:base="http://localhost:4000/db/2/">&lt;p&gt;https://mmistakes.github.io/minimal-mistakes/collection-archive/&lt;/p&gt;
+&lt;p&gt;아이유가 일반적인 음원 시장의 규칙을 깬 이야기를 했다.&lt;/p&gt;
 
-&lt;p&gt;내용을 입력합니다&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">https://mmistakes.github.io/minimal-mistakes/collection-archive/</summary></entry><entry><title type="html">새단장</title><link href="http://localhost:4000/notes/2/" rel="alternate" type="text/html" title="새단장" /><published>2018-10-08T00:00:00+09:00</published><updated>2018-10-08T00:00:00+09:00</updated><id>http://localhost:4000/notes/2</id><content type="html" xml:base="http://localhost:4000/notes/2/">&lt;h2 id=&quot;블로그-새단장&quot;&gt;블로그 새단장&lt;/h2&gt;
+&lt;p&gt;음원 시장은 암묵적으로 오후 12시부터 6시까지 발표하는 것을 관행으로 한다고 한다. 이유인즉슨,  그 시간에 스트리밍 집계를 하여 음원 순위에 반영되기 때문에 그 이전/이후에 스트리밍 하는 것은 꽤 큰 손실(Time-loss)가 있을 수 밖에 없다.&lt;/p&gt;
 
-&lt;p&gt;블로그 내용을 씁니다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">블로그 새단장</summary></entry><entry><title type="html">새단장</title><link href="http://localhost:4000/notes/2/" rel="alternate" type="text/html" title="새단장" /><published>2018-09-08T00:00:00+09:00</published><updated>2018-09-08T00:00:00+09:00</updated><id>http://localhost:4000/notes/2</id><content type="html" xml:base="http://localhost:4000/notes/2/">&lt;h2 id=&quot;블로그-새단장&quot;&gt;블로그 새단장&lt;/h2&gt;
+&lt;p&gt;하지만 아이유는 ‘가을 아침’ 이라는 곡을 발매할때, 이건 누가봐도 아침 노랜데 오후에 낼 수 없다는 신념으로 모두가 반대하는, 그리고 경제적인 손실을 감수하고 아침에 발표했다고 한다.&lt;/p&gt;
 
-&lt;p&gt;블로그 내용을 씁니다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">블로그 새단장</summary></entry><entry><title type="html">새단장</title><link href="http://localhost:4000/notes/1/" rel="alternate" type="text/html" title="새단장" /><published>2017-11-08T00:00:00+09:00</published><updated>2017-11-08T00:00:00+09:00</updated><id>http://localhost:4000/notes/1</id><content type="html" xml:base="http://localhost:4000/notes/1/">&lt;h2 id=&quot;블로그-새단장&quot;&gt;블로그 새단장&lt;/h2&gt;
+&lt;p&gt;그리고 아이유는 이러한 형식적인 관행은 누군가 깨지 않으면 계속해서 같은 패러다임안에서 굴러가기 때문에 새로운 창의적인 것이 실현되지 않을 것이라 한다.&lt;/p&gt;
 
-&lt;p&gt;블로그 내용을 씁니다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">블로그 새단장</summary></entry><entry><title type="html">새단장</title><link href="http://localhost:4000/notes/3/" rel="alternate" type="text/html" title="새단장" /><published>2017-09-08T00:00:00+09:00</published><updated>2017-09-08T00:00:00+09:00</updated><id>http://localhost:4000/notes/3</id><content type="html" xml:base="http://localhost:4000/notes/3/">&lt;h2 id=&quot;블로그-새단장&quot;&gt;블로그 새단장&lt;/h2&gt;
+&lt;p&gt;평소 그 생각의 깊이가 얼마나 큰 지 모르겠지만, 아티스트라고 칭하는 사람들은 꽤 다른 영역에. 그리고 아이돌이라는 껍데기에 씌여져 조금은 ‘평가절하’되고 있는(어쩌면 나만 그러고 있을지 모르겠지만) 아티스트들이 많은 것 같다.&lt;/p&gt;
 
-&lt;p&gt;블로그 내용을 씁니다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">블로그 새단장</summary></entry></feed>
+&lt;p&gt;‘어린 친구들이 뭘 알아’ 라는 꼰대식 마인드는 사실 나에게도 있다.&lt;/p&gt;
+
+&lt;p&gt;삶의 지혜, 세상을 보는 식견은 어느정도 세월에 비례한다고 생각했지만.&lt;/p&gt;
+
+&lt;p&gt;10대 어린 나이부터 활동해온 한 가수가 정신없이 시달리는 스케줄 속에서도 세상을 바라보는 통찰과 자기 내면의 훈련을 해내가는 과정이 대단하다고 생각한다.&lt;/p&gt;
+
+&lt;p&gt;말이 샜는데,&lt;/p&gt;
+
+&lt;p&gt;난 스터디를 좋아한다. 특히 여러 사람이 모여 이야기 나누는 것을 좋아한다.&lt;/p&gt;
+
+&lt;p&gt;특히 사람들이 모였을떄 재미난 경험은.&lt;/p&gt;
+
+&lt;p&gt;내가 불현듯 내뱉은 한마디에 옆에서 한마디씩 살을 붙여주어 풍성한 가지가 달린 나무가 되기도 한다.&lt;/p&gt;
+
+&lt;p&gt;예를들어, 스터디 이름을 정하는데 있어서 고민을 하던 중&lt;/p&gt;
+
+&lt;p&gt;누군가 ‘우리는 토요일마다 모이니까…’ 라는 한마디에&lt;/p&gt;
+
+&lt;p&gt;‘토모’라는 스터디명이 탄생했다.&lt;/p&gt;
+
+&lt;p&gt;1차원적이고 직관적인 이름이라고 무시할 수 있지만, 우리는 이 이름이 너무 만족스러웠고 가장 우리다운 이름이었다.&lt;/p&gt;
+
+&lt;p&gt;또, 스터디 주제에 대한 아이디어를 고민할때도 아무 얘기나 내뱉은 한마디에 불씨가 지펴져 꽤 뜨거운 토론으로 이어지기도 한다.&lt;/p&gt;
+
+&lt;p&gt;그 불씨를 누가 집히느냐 이다.&lt;/p&gt;
+
+&lt;p&gt;[어떻게, 무엇을]과 같은 형식은 중요하지 않다.&lt;/p&gt;
+
+&lt;p&gt;불씨만 집혀주면된다. 판 만 준비해주면 된다는 것이다.&lt;/p&gt;
+
+&lt;p&gt;그것이 어떤 형태이든 그 새로운 불씨는 누군가의 심지에 불이 붙을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;세상을 조금 더 주의깊게 바라보고 누군가의 소리에 귀기울이고 산다면.&lt;/p&gt;
+
+&lt;p&gt;그리고 내 마음 속에 언제든지 불이 붙을 수 있는 심지를 준비해 놓는다면.&lt;/p&gt;
+
+&lt;p&gt;언제든지 큰 폭발력을 낼 수 있지 않을까.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2018.11.10 새벽 6시에 뻘글…&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">누군가의 한마디가 큰 울림, 새로운 시발점을 불러오는 경험은 누구나 다 있다.</summary></entry><entry><title type="html">paintComponent</title><link href="http://localhost:4000/notes/1811_2/" rel="alternate" type="text/html" title="paintComponent" /><published>2018-11-08T00:00:00+09:00</published><updated>2018-11-08T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_2</id><content type="html" xml:base="http://localhost:4000/notes/1811_2/">&lt;p&gt;Java Swing component를 이용해서 간단한 음악게임을 만들고있다.&lt;/p&gt;
+
+&lt;p&gt;화면을 그리는 중인데&lt;/p&gt;
+
+&lt;p&gt;paint 와 paintComponent 간의 순서 또는 버퍼문제로 이미지가 제대로 뜨지 않는다.&lt;/p&gt;
+
+&lt;p&gt;백그라운드 이미지 위에 JLabel 또는 JButton이 위치해야하는데,&lt;/p&gt;
+
+&lt;p&gt;참고하고 있는 곳에서는 paint()를 이용해서 백그라운드 이미지를 그리고,&lt;/p&gt;
+
+&lt;p&gt;paintComponent() 를 이용해서 이미지 위에 버튼이나 레이블같은것을 뿌려준다고 하는데,&lt;/p&gt;
+
+&lt;p&gt;이 과정이 이중버퍼를 통해서 이루어지는 것으로 이해했는데&lt;/p&gt;
+
+&lt;p&gt;안된다.&lt;/p&gt;
+
+&lt;p&gt;아… 답답해&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;paint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Graphics&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;screenImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SCREEN_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SCREEN_HEIGHT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;screenGraphic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screenImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getGraphics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;screenDraw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screenGraphic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screenImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;screenDraw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Graphics&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;paintComponents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;introBackground&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//        this.revalidate();&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//        this.repaint();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;paintComponents()를 올리면, introBackground가 나오고&lt;/p&gt;
+
+&lt;p&gt;내리면 버튼이나 레이블이 나오고 어쩌라는거…&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">Java Swing component를 이용해서 간단한 음악게임을 만들고있다.</summary></entry><entry><title type="html">우선 순위</title><link href="http://localhost:4000/notes/1811_1/" rel="alternate" type="text/html" title="우선 순위" /><published>2018-11-06T00:00:00+09:00</published><updated>2018-11-06T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_1</id><content type="html" xml:base="http://localhost:4000/notes/1811_1/">&lt;p&gt;벌써 한달이 지났다.&lt;/p&gt;
+
+&lt;p&gt;꽤 많은 일들이 있었다.&lt;/p&gt;
+
+&lt;p&gt;내가 작업한 모듈이 서비스에서 활용되기도 한다.&lt;/p&gt;
+
+&lt;p&gt;그리고 최근엔 embulk를 통해 bigquery -&amp;gt; vertica 의 etl 작업을 진행하고 있다.&lt;/p&gt;
+
+&lt;p&gt;정확히는 저번주 목요일부터 진행을했다.&lt;/p&gt;
+
+&lt;p&gt;noSQL이라는 데이터도 처음 다루어 보았다.&lt;/p&gt;
+
+&lt;p&gt;여전히 많은 것들이 새롭고 낯설기만하다.&lt;/p&gt;
+
+&lt;p&gt;그런데 이제 그 낯섬에 대해선 극복이 필요할 것 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;이슈가 터졌기 때문이다&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;그것도 양방향에서…&lt;/p&gt;
+
+&lt;p&gt;‘이충일’이라는 스레드는 동시 작업이 들어와서 병목을 겪었다.&lt;/p&gt;
+
+&lt;p&gt;이전에 push 모듈을 만들었던 A 라는 프로세스와&lt;/p&gt;
+
+&lt;p&gt;현재 진행 중인 빅데이터 etl 하는 B 라는 프로세스의 충돌이다.&lt;/p&gt;
+
+&lt;p&gt;나라는 스레드를 관리하는 사람은 나의 사수이다. 나의 사수분께서 내 스레드의 스케줄을 관리한다. 우선순위를 선정하고, 둘 중 무엇을 해야할지 몰라서 작업이 멈춰있는 나는 사수님이 설정한 스케줄대로 잡을 진행한다.&lt;/p&gt;
+
+&lt;p&gt;A라는 모듈의 이슈를 먼저할 것으로 스케줄링되었다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A모듈의 문제는 원 서버에서 보내는 데이터가 제대로 업데이트가 되지 않는 이슈였다.&lt;/p&gt;
+
+&lt;p&gt;이 이슈를 겪으며 가장 치명적이고 기본적인 문제를 파악했는데, 다름아닌 작업을 할때 &lt;em&gt;이 일이 어떻게 돌아가는 지 모르고 시작했다는 것이다.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;개발자가 개발을 하는데 내가 무엇을 만드는지 모르고 시작한 것이다.&lt;/p&gt;
+
+&lt;p&gt;그저 ‘돌아가기만 하는’ 모듈을 만들어 놓은 것이다. 특별히 에러는 발생하지 않았고 로그도 잘 찍혔으며, 입력한 데이터가 제대로 들어온다.&lt;/p&gt;
+
+&lt;p&gt;사실 쉽게 생각하면 그것이 전부다.&lt;/p&gt;
+
+&lt;p&gt;하지만 디비 각 필드마다 어떤 역할을 하고, 어떤 값을 키 값으로 할것인지. 또 이 디비를 사용하는 클라이언트 개발자는 어떤 필드를 필요로 하는지 등등&lt;/p&gt;
+
+&lt;p&gt;참 생각없이 개발했다. 그저 자바코드를 어떻게 짤까. 객체지향적으로 하려면 어떨까. 중복은 어떻게 제거할까.&lt;/p&gt;
+
+&lt;p&gt;틀리진 않지만. 우선순위가 잘못됐다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;내가 무엇을 만들어야 하는지&lt;/li&gt;
+  &lt;li&gt;이 서비스를 사용하는 사람은 무엇을 필요로 하는지&lt;/li&gt;
+  &lt;li&gt;그것을 어떻게 만들 것인지&lt;/li&gt;
+  &lt;li&gt;로그는 어떻게 찍을 것인지&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;등등&lt;/p&gt;
+
+&lt;p&gt;당연한 이야기지만, 모든 일에는 순서가 중요한 것 같다.&lt;/p&gt;
+
+&lt;p&gt;그 순서를 고민하고, 어떤 방향으로 어떻게 진행할지를 설계하는 모든 과정이 아키텍트겠지.&lt;/p&gt;
+
+&lt;p&gt;급하게 결과만을 좇아서 만들어 놓은 결과를 놓고 돌아보면, 결국 처음으로 다시 돌아간다.&lt;/p&gt;
+
+&lt;p&gt;처음 시작할때 쫓기는 마음으로 일단 코딩부터 해야겠다고 IDE를 켜는 순간 제대로 세우지 못한 계획 때문에 다시 처음부터 고민해봐야할때가 많다.&lt;/p&gt;
+
+&lt;p&gt;아마 그런 훈련이 몸에 익은 사람들을 &lt;strong&gt;시니어&lt;/strong&gt;라고 하지 않을까 싶다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">벌써 한달이 지났다.</summary></entry><entry><title type="html">category : db</title><link href="http://localhost:4000/db/2/" rel="alternate" type="text/html" title="category : db" /><published>2018-11-01T00:00:00+09:00</published><updated>2018-11-01T00:00:00+09:00</updated><id>http://localhost:4000/db/2</id><content type="html" xml:base="http://localhost:4000/db/2/">&lt;p&gt;https://mmistakes.github.io/minimal-mistakes/collection-archive/&lt;/p&gt;
+
+&lt;p&gt;내용을 입력합니다&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="content" /><summary type="html">https://mmistakes.github.io/minimal-mistakes/collection-archive/</summary></entry><entry><title type="html">Google Cloud Summit in Seoul</title><link href="http://localhost:4000/notes/1810_8/" rel="alternate" type="text/html" title="Google Cloud Summit in Seoul" /><published>2018-10-25T00:00:00+09:00</published><updated>2018-10-25T00:00:00+09:00</updated><id>http://localhost:4000/notes/1810_8</id><content type="html" xml:base="http://localhost:4000/notes/1810_8/">&lt;h3 id=&quot;1st-google-cloud-summit&quot;&gt;1st. Google Cloud Summit…&lt;/h3&gt;
+
+&lt;p&gt;기다리던, 그리고 기대했던 구글 클라우드 서밋 행사가 있는 날이다.&lt;/p&gt;
+
+&lt;p&gt;팀에서 함께 하는 행사이기 때문에 약간 소풍(?)가는 듯한 느낌도 들었고, 어쨋든 회사에서 권장해서 참여한다는것도 고무적이었다.&lt;/p&gt;
+
+&lt;p&gt;Google Cloud Summit은 이번에 한국에서 처음 열리는 행사라고 한다.&lt;/p&gt;
+
+&lt;p&gt;올 4월에 AWS Summit을 참석했었는데, AWS에 비해선 조금 작은 규모로 진행됐지만 전체적인 세션 구성은 오히려 더 흥미로웠다.&lt;/p&gt;
+
+&lt;p&gt;AWS는 전체적인 세션 구성이 서비스를 소개하고 홍보하는 느낌이 강했다면, 이번 구글 서밋은 이 서비스를 어떻게 적용할 수 있는지에 대한 사례 위주의 세션들로 구성되어 있어서, 실제로 개발자들이 어떻게 활용할 수 있는지 좋은 가이드를 제시해준다는 느낌이었다.&lt;/p&gt;
+
+&lt;p&gt;사실 세션에 크게 집중하지 못하여 많으 내용을 기록하지 못했다.&lt;/p&gt;
+
+&lt;p&gt;하지만 가장 인상깊었던 2가지 세션이 있다.&lt;/p&gt;
+
+&lt;p&gt;가장 먼저 기조연설을 했던 구글의 임직원분들의 발표였는데 그 중 구글 IoT 부사장을 맡고 있는 ‘이인종’ 이라는 분의 연설이었다.&lt;/p&gt;
+
+&lt;p&gt;사진을 담아두지 못해 아쉽지만, 굉장히 우리가 생각하는 ‘구글’ 그 자체였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/notes/181025/lee.jpg&quot; alt=&quot;lee&quot; /&gt;
+출처 :http://news1.kr/photos/view/?3360340&lt;/p&gt;
+
+&lt;p&gt;자유분방한 헤어스타일, 기존연설의 연사임에도 후드티를 입고 있는 캐주얼한 복장, 여유있는 모습과 유머러스한 말투들.&lt;/p&gt;
+
+&lt;p&gt;겉으로 보여지는 모습만 봐도 절대 평범하지 않다.&lt;/p&gt;
+
+&lt;p&gt;그리고 다루는 이야기들은 더욱 흥미로웠는데, 특히 LG전자와 함께 스마트시티를 계획하고 있다는 소식이다.&lt;/p&gt;
+
+&lt;p&gt;도심에 설치된 CCTV를 분석하여 교통량을 예상하고, 더 나은 길을 제시해주기도 하고,&lt;/p&gt;
+
+&lt;p&gt;동네의 슈퍼, 세탁소 등에 모두 IoT를 결합하여 실시간으로 내가 방문하고자 하는 매장의 정보를 얻을 수 있다는 것이다.&lt;/p&gt;
+
+&lt;p&gt;참 멋있다는 생각이 들었다.&lt;/p&gt;
+
+&lt;p&gt;아직은 스스로 개발자라고 하기에도 부끄러운 위치이지만, 같은 개발자들이 하는 일들이 세상을 바꾸는데 기여한다는 것이 멋지고 대단하단 생각이 들면서도, 한편으론 나는 무엇에 기여할 수 있을까. 어떻게 하면 저런 고민들을 실천으로 옮길 수 있을까에 대한 막연한 혼자만의 고민속에 빠져들며 나 혼자 진지해지곤 했다.&lt;/p&gt;
+
+&lt;p&gt;기조연설을 마친 후 잠시 뒤 점심식사를 했다.&lt;/p&gt;
+
+&lt;p&gt;안내받은 공간에 정갈한 도시락들이 놓여있었고, 식사를 하던 중 스트리밍되는 화면에서 아주 흥미로운 화면을 볼 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;[주제가 있는 런치] 라는 주제로 진행된 이 행사는,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;3D프린터로 만드는 전자 의수&lt;/li&gt;
+  &lt;li&gt;시각장애인을 위한 모바일 어플리케이션&lt;/li&gt;
+  &lt;li&gt;음성을 통한 파킨슨 병 진단 디바이스&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;잘다니던 일류기업을 나와 3D프린터로 ‘의수’를 만들어 전세계 시장에 뛰어다니며 발품을 파는 멋진 개발자분의 발표로 시작했다.&lt;/p&gt;
+
+&lt;p&gt;말씀도 잘하셨고, 아주 멋지고 의미있고 그리고 상당히 가치있는 일을 하는 것에 큰 감명을 받았다.&lt;/p&gt;
+
+&lt;p&gt;그리고 다음 주제는 ‘시각장애인을 위한 모바일 어플리케이션’ 이라는 주제로 발표가 이어졌다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/notes/181025/dongtan.jpeg&quot; alt=&quot;dongtan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 아주 놀랍게도 고등학교 2학년의 학생이 무대에 올라섰다.&lt;/p&gt;
+
+&lt;p&gt;고등학교 2학년이 이 수백명 이상의 개발자들이 모인 공간에서 발표를 한다. 자신이 만든 서비스를.&lt;/p&gt;
+
+&lt;p&gt;그리고 그 주제와 실천은 더욱 참신했다.&lt;/p&gt;
+
+&lt;p&gt;‘요즘은 자동차도 사람의 손을 쓰지 않고 움직이는데, 어떻게 사람은 하다못해 안내견의 도움이라도 없으면 가까운 동네조차 다니지 못한다는 것’ 에 착안하여 개발을 시작했다고 한다.&lt;/p&gt;
+
+&lt;p&gt;그리고 실제로 이런 어플리케이션을 만들기 위해선 동네의 위치 정보를 제공해주는 api가 있어야 만들 수 있는데, 참고할 만한 데이터가 존재하지 않아 직접 자전거에 카메라를 설치하여 동네 구석구석 직접 촬영하고 누비며 본인이 직접 서비스에 이용할 데이터를 수집했다.&lt;/p&gt;
+
+&lt;p&gt;그리고 이 과정에서 검정색은 ‘차도’, 흰색,빨간색,초록색 등의 색상이 있으면 ‘인도’ 라는 패턴을 머신러닝으로 학습시켜 어플리케이션이 스스로 모든 데이터를 분석하여 서비스를 제공하도록 구현해냈다고 한다.&lt;/p&gt;
+
+&lt;p&gt;그 과정에서 쓰레기더미, 장애물 등의 변수가 있을때 겪었던 문제들을 어떻게 처리했는지를, 조금은 긴장한채로 조심스럽게 풀어나갔지만 부모님뻘되는 사람들이 수백명 모인 공간에서 자신의 이야기를 풀어나간다는 것 자체만으로도 대단했고 그 모습들이 하나같이 너무나 인상적이었다.&lt;/p&gt;
+
+&lt;p&gt;고등학교 2학년의 나이에 그런 생각을 했다는 것도 너무 대단했고, 단순히 생각이나 상상으로 그치는 것이 아니라 실천으로 옮겼고, 실제로 그것을 완성시켰다.&lt;/p&gt;
+
+&lt;p&gt;적어도 나에겐 그것이 완벽하게 작동하는 어플리케이션인지는 중요하지 않았다.&lt;/p&gt;
+
+&lt;p&gt;지금 나에게 그런 어플리케이션을 만들어보라고 아이디어를 제공해줘도 만들어내기 힘들 것이다.&lt;/p&gt;
+
+&lt;p&gt;그 학생이 단순히 그런 어플리케이션을 만들었다는 것이 놀라운 것이 아니라,&lt;/p&gt;
+
+&lt;p&gt;그런 생각을 하는 과정과 실천력이 가장 존경스럽기까지 했다.&lt;/p&gt;
+
+&lt;p&gt;그 학생의 발표가 끝난 후 약간은 벙찐채로 로비로 나왔다.&lt;/p&gt;
+
+&lt;p&gt;여러가지 낯선 감정들이 교차했다. 아주 긍정적이고 가슴 깊은 곳에서 벅차오르는 기분이었다.&lt;/p&gt;
+
+&lt;p&gt;그런데 여기서 끝이 아니다.&lt;/p&gt;
+
+&lt;p&gt;로비로 나와 1층으로 이동 후 다음 세션을 위해 미리 들어가 있으려 했는데, 그 무대위에 교복을 입은 여자 학생이 발표를 하고 있었다.&lt;/p&gt;
+
+&lt;p&gt;말을 너무나 잘했다. 기술적인 용어들도 그렇고 자신이 겪은 문제, 그것 해결 하는 과정 등등 모든 표현이 너무나 정갈하고 정리되어있었다.&lt;/p&gt;
+
+&lt;p&gt;처음엔 어떤 기업에서 홍보차 나온 엔지니어라고 생각했지만, 그 학생은 고등학교 3학년의 여학생이었다.&lt;/p&gt;
+
+&lt;p&gt;초입에 어떤 계기로 어떻게 시작했는지를 놓쳤지만, 내가 들은 부분은 파킨슨병이 음성의 떨림 정도로 판별이 가능하여 이를 발견할 경우 초기에 조치가 가능한데, 우리나라에 이런 기술이 보급되지 않아 직접 구현해낸 것이다.&lt;/p&gt;
+
+&lt;p&gt;그리고 그 과정을 역시 머신러닝 ai를 통해 그 판별해 낼 수 있도록 구현하는 과정을 아무 멋지게 설명해나갔다.&lt;/p&gt;
+
+&lt;p&gt;그리고 이 학생은 자신이 소프트웨어만을 개발해왔기 떄문에, 이 소프트웨어를 사용하기 위해서 목소리를 담을 수 있는 디바이스가필요했다고한다.&lt;/p&gt;
+
+&lt;p&gt;정확한 모임은 기억나지 않지만, 개발자들이 모이는 캠프에 참여하여 자신의 소프트웨어를 소개한 후 팀을 꾸려서 디바이스와 소프트웨어를 결합시켜 이 도구를 만들어 낸 이야기였다.&lt;/p&gt;
+
+&lt;p&gt;그 팀에는 10여명의 팀원이 함께했고, 그 팀원들은 현업에 종사하는 개발자이거나 대학원생 등으로 구성된 전문 인력들이었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/notes/181025/parkinson.jpeg&quot; alt=&quot;parkinson&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;앞에 남학생과 또 다른 아주 대단한 학생이었다.&lt;/p&gt;
+
+&lt;p&gt;혼자의 힘이 아닌, 자신이 무엇이 부족한지를 알고 자신에게 도움을 줄 수 있는 사람을 정확히 찾아냈고, 그들과 아주 좋은 콜라보를 이루어 근사한 어플리케이션을 완성했다.&lt;/p&gt;
+
+&lt;p&gt;연속으로 이 두 학생의 이야기를 듣고 나니 정말 망치로 얻어마진 기분이었다.&lt;/p&gt;
+
+&lt;p&gt;좌책감이나 좌절감이 아니라, 내가 꿈이 없이 맹목적으로 개발만 잘하고 싶다는 생각으로 살고 있었다는 것을 깨닫게되었다.&lt;/p&gt;
+
+&lt;p&gt;사실 ‘개발을 정말 잘하고 싶고, 개발을 잘해서 인정받고 필요한 사람이 되기 싶다’ 정도만 생각했지 궁극적으로 어떤 개발자가 되겠다는 생각은 하지 못했던 것 같다.&lt;/p&gt;
+
+&lt;p&gt;오늘 컨퍼런스의 취지는 GCP의 특징이나 서비스의 고도화 등등을 소개하는 자리였을테지만, 내가 느낀 것은 세상에 기여하는 개발자들의 모습을 통해 나는 과연 무엇을 할 수 있을까를 돌아보는 시간이었다.&lt;/p&gt;
+
+&lt;p&gt;거창하고 대단해보이는 개발자가 아니라, 어떤 방식으로든 사회에 기여하고, 내가 하는 일에 더욱 가치를 부여할 수 있는 사람이 되고 싶다. 그런 철학이 있고, 생각을 하는 사람이 되어야 한다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Google Cloud Summit" /><summary type="html">1st. Google Cloud Summit…</summary></entry><entry><title type="html">협업</title><link href="http://localhost:4000/notes/1810_7/" rel="alternate" type="text/html" title="협업" /><published>2018-10-23T00:00:00+09:00</published><updated>2018-10-23T00:00:00+09:00</updated><id>http://localhost:4000/notes/1810_7</id><content type="html" xml:base="http://localhost:4000/notes/1810_7/">&lt;h3 id=&quot;첫-푸시&quot;&gt;첫 푸시&lt;/h3&gt;
+
+&lt;p&gt;처음 푸시를 한 날이다. 간단한 api를 수정했다.&lt;/p&gt;
+
+&lt;p&gt;화면의 정렬을 바꾸고, 노출되지 않던 데이터를 노출시키는 것 등 사실 크게 무리도 없는 작업이고, 늘 하던 작업이다.&lt;/p&gt;
+
+&lt;p&gt;그런데 처음해보는 작업이다.&lt;/p&gt;
+
+&lt;p&gt;그동안 했던 일은 사실 프론트/백엔드 구분이 없다. 내가 다 해야했으니까.&lt;/p&gt;
+
+&lt;p&gt;대게의 작업 흐름은 이러하다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;사용자의 요청(Request)를 받는다.&lt;/li&gt;
+  &lt;li&gt;서버에서 해당 요청을 받아 DB에 쿼리를 날린다.&lt;/li&gt;
+  &lt;li&gt;쿼리 결과를 담아 다시 사용자에게 전달/응답(Response)한다.&lt;/li&gt;
+  &lt;li&gt;결과가 사용자의 브라우저에 랜더링된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;특히나 내게 어려웠던 것은 화면단인데,&lt;/p&gt;
+
+&lt;p&gt;아이콘 위치의 차이, hover, 색상 등등… 퍼블리셔가 기본은 잡아주지만 보통 작업하다보면 모든 작업이 그렇게 말끔히 분업화되긴 힘들다.&lt;/p&gt;
+
+&lt;p&gt;난 이 작업들이 너무 즐겁지 않았다. 미적인 감각도 없었을 뿐만 아니라, 사용자들 저마다 서로 다른 요구를 하기 때문에 그 합의점을 찾는 것은 보통 어려운 일이 아니다.&lt;/p&gt;
+
+&lt;p&gt;그것이 결국 내가 back-end 개발자가되리라 굳게 마음먹은 이유 중 하나였지만.&lt;/p&gt;
+
+&lt;p&gt;다시 본론으로 돌아와서 오늘 내가 한 작업은 단순히 기존 화면에 &lt;strong&gt;1. 검색 기능이 추가&lt;/strong&gt;되고 &lt;strong&gt;결과 정렬&lt;/strong&gt;을 바꾸는 간단한 작업이었다.&lt;/p&gt;
+
+&lt;p&gt;사실 api 작업은 금방 끝났다. 크게 고민할게 없을 정도의 간단한 일이다.&lt;/p&gt;
+
+&lt;p&gt;그런데 문제는 그게 아니다.&lt;/p&gt;
+
+&lt;p&gt;먼저 처음 애를 먹었던 것은 Git의 사용이다.&lt;/p&gt;
+
+&lt;p&gt;그전까지 svn으로만 작업을 했던 것. 그리고 무엇보다 브랜치와 같은 기본 기능은 쓰지 않는다. 그저 main trunk를 고정으로 하여 그 메인 브랜치에 update/commit 이 외에는 거의 다른 작업은 하지 않았기 때문에.&lt;/p&gt;
+
+&lt;p&gt;브랜치가 분리되어 있고, 깃은 commit/push 까지 이어져야 하는 모든 과정들이 쉽지 않았다.&lt;/p&gt;
+
+&lt;p&gt;혼자 이렇게 블로그에 글을 남기고, 개인 작업을 하는 것도 그저 혼자 개인 깃헙에 날려버리는 것이기 떄문에 소스가 꼬일일도, 브랜치를 따로 따서 사용할 일도 없었다.&lt;/p&gt;
+
+&lt;p&gt;작업은 완료되었는데 내 로컬환경에서만 작업이 완료된건 전혀 완료된게 아니였다.&lt;/p&gt;
+
+&lt;p&gt;또 하나의 문제.&lt;/p&gt;
+
+&lt;p&gt;이렇게 완벽하게 백엔드와 프런트앤드가 분리된 경우 서버에서 제공하는 API는 정확한 명세가 필요하다.&lt;/p&gt;
+
+&lt;p&gt;어떤 파라미터를 요청받을 것이며, 어떤 결과를 리턴할것인지 정확한 명세.&lt;/p&gt;
+
+&lt;p&gt;우리는 이 api 명세를 Atlassian의 confluence라는 위키와 같은 공간에 공유한다.&lt;/p&gt;
+
+&lt;p&gt;이런 작업 역시 처음이었다.&lt;/p&gt;
+
+&lt;p&gt;상당히 재미있었다. 명확하게 각자의 포지션에서 정해진(약속된) 결과만 전달해주면 되는 것이다.&lt;/p&gt;
+
+&lt;p&gt;익숙했다면, 1시간도 채 안돼서 마무리 될 작업을 거의 반나절을 했다.&lt;/p&gt;
+
+&lt;p&gt;그래도 즐겁다. 내가 무엇을 놓치고 있었는지 하나씩 보인다. 그런 과정들을 스스로 찾아가면서 매꾸어 나가는 과정이 꽤 보람차다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">첫 푸시</summary></entry><entry><title type="html">공동체</title><link href="http://localhost:4000/notes/1810_6/" rel="alternate" type="text/html" title="공동체" /><published>2018-10-22T00:00:00+09:00</published><updated>2018-10-22T00:00:00+09:00</updated><id>http://localhost:4000/notes/1810_6</id><content type="html" xml:base="http://localhost:4000/notes/1810_6/">&lt;h3 id=&quot;e05181019알쓸신잡3&quot;&gt;E05.181019.알쓸신잡3&lt;/h3&gt;
+
+&lt;p&gt;알쓸신잡이라는 프로그램은 여러모로 너무나 많은 영감과 그 이상의 깊은 울림을 주는 가장 사랑하는 프로그램이다.&lt;/p&gt;
+
+&lt;p&gt;알쓸신잡을 한 편 보고나면, 책을 한 권 읽은 듯이 새로운 세상을 간접적으로 접하기도 하고, 전혀 몰랐던 역사적, 과학적 또는 그 밖의 세상의 많은 잡다한 지식들을 얻을 수 있다.&lt;/p&gt;
+
+&lt;p&gt;건강에 좋은 식사를 한 끼 마친것과 같은 포만감을 준다.&lt;/p&gt;
+
+&lt;p&gt;이번 에피소드에서 최근 내가 고민하던 또는 내가 걱정하던 주제에 대한 이야기가 얼핏 나왔다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;건축과 관련된 이야기를 하던 중 유럽의 광장 문화에 대한 이야기가 나왔다.&lt;/p&gt;
+
+&lt;p&gt;유럽에는 광장 문화가 발달하여 대부분의 큰 도시마다 광장들이 존재한다.&lt;/p&gt;
+
+&lt;p&gt;개인들이 모여서 합을 이루는 공간이다.&lt;/p&gt;
+
+&lt;p&gt;하지만 우리나라에서 광장을 찾아보기란 그리 쉽지 않다.&lt;/p&gt;
+
+&lt;p&gt;우리나라는 광장이라는 공간의 모임 보다는 인간적인 공동체 문화가 너무 많이 형성되어 있다.&lt;/p&gt;
+
+&lt;p&gt;우리가 속해 있는 집단은 항상 어떤 모임을 형성하여 새로운 그룹문화를 만든다.&lt;/p&gt;
+
+&lt;p&gt;그 속에서 우리는 ‘나’에 대해 집중하기 어려워진다. 이런 조직(공동체) 문화는 개인이 무시되는 경향으로 번지기도 한다.&lt;/p&gt;
+
+&lt;p&gt;우리는 관계망(network) 속에서 존재한다. 그 관계망을 벗어나는 순간 우리는 사회적으로, 사회적인 시선에서 인정을 받지 못한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/notes/181022/infra_network.png&quot; alt=&quot;관계망&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;형성된 관계망을 벗어나는 순간 우리는 곱지 못한 눈총을 받기도하고, 남들과 같지 않다는 것을 느끼며 스스로 괴롭다는 생각이 들기까지 한다.&lt;/p&gt;
+
+&lt;p&gt;유럽 문화와 우리 문화의 차이 중 하나는,&lt;/p&gt;
+
+&lt;p&gt;유럽은 개인이 있고, 그 위에 관계망들이 존재한다.&lt;/p&gt;
+
+&lt;p&gt;그들은 자발적으로 관계망을 형성하고, 그런 관계망을 표현하는 것이 광장 또는 무대로 이어진다.&lt;/p&gt;
+
+&lt;p&gt;우리는 어떨까?&lt;/p&gt;
+
+&lt;p&gt;우리는 항상 어딘가에 속해있다.&lt;/p&gt;
+
+&lt;p&gt;초등학교 동창회, 중학교 동창회 … 군대 동기 모임, 대학 동기 모임, 동호회 등등….&lt;/p&gt;
+
+&lt;p&gt;이미 우리는 너무나 많은 공동체에 속해있다. 그리고 그 공동체 속에서 쉽게 피로갊을 느끼기도 한다.
+하지만 아이러니하게도 내가 공동체에 속해 있지 않다고 느끼는 순간, 주변과 비교하며 큰 소외감을 느끼기도 한다.&lt;/p&gt;
+
+&lt;p&gt;한편으론 공동체라는 틀 안에서 안정감을 느끼기도 하지만, 때로는 그 울타리를 벗어나고 싶억하기도 한다.&lt;/p&gt;
+
+&lt;p&gt;이러한 사회적인 성격때문에 굳이 우리는 광장이라는 공간에 모이지 않는다. 오히려 도망치고 싶어한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;사실 이 이야기는 내가 그간 고민하던 것에 대한 대답과도 같이 들렸다.&lt;/p&gt;
+
+&lt;p&gt;원래 그러했지만, 최근들어 더욱. 사람들을 만나는 것에 허망함(?)을 느끼던 떄가 있었다.&lt;/p&gt;
+
+&lt;p&gt;누군가를 만난다는 것에 의미를 부여하며 하나씩 따지는 것은 피곤한 일이겠지만, 가끔은 어떤 만남을 가진 후 허무하게 느껴지기도, 이 시간이 정말 내가 좋아서 함께한 시간인가 하는 쓸쓸함마저 몰려올때가 있다.&lt;/p&gt;
+
+&lt;p&gt;이런 생각이 들면서도 그런 공간에 있는 다는 것은, 어쩌면 나의 그릇된 행동들이 이 관계망을 해치진 않을까에 대한 두려움이 있을 것이다.&lt;/p&gt;
+
+&lt;p&gt;그래서 늘 눈치를 보고, 관계를 살피며 쉽게 피로감을 느끼곤 한다.&lt;/p&gt;
+
+&lt;p&gt;답이 없는 고민이지만, 공동체라는 관계망에 너무 큰 의미를 부여하는 것은 나 스스로를 잡아먹는 피로감만 증폭시킬 것이다.&lt;/p&gt;
+
+&lt;p&gt;그 다음 재미있는 이야기가 있었는데 내일 이어서 써야겠다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="알쓸신잡" /><summary type="html">E05.181019.알쓸신잡3</summary></entry><entry><title type="html">Maven Dependency Plugin</title><link href="http://localhost:4000/notes/1810_5/" rel="alternate" type="text/html" title="Maven Dependency Plugin" /><published>2018-10-18T00:00:00+09:00</published><updated>2018-10-18T00:00:00+09:00</updated><id>http://localhost:4000/notes/1810_5</id><content type="html" xml:base="http://localhost:4000/notes/1810_5/">&lt;h2 id=&quot;maven과-빌드이야기&quot;&gt;Maven과 빌드이야기&lt;/h2&gt;
+
+&lt;p&gt;현재 작업하는 프로그램은 최종적으로 jar파일로 배포하여 실행해야한다.&lt;/p&gt;
+
+&lt;p&gt;항상 웹개발을 했기때문에 jar를 패키징하는 것도 처음이었고, 프레임워크의 도움없이 레거시시스템으로 개발하는것도 처음이었다.&lt;/p&gt;
+
+&lt;p&gt;그리고 사실 그동안 메이븐은 그저 라이브러리를 디펜던시해주는 역할로만 사용했을 뿐 그 이상의 많은 환경을 손대지 않았었다.&lt;/p&gt;
+
+&lt;p&gt;그러다보니 스터디하는 대부분의 내용들은 단순히 코딩을 잘할 수 있는 것에 집중되었고 외부의 환경이나 흐름에 대한 고찰은 하지 못했었다.&lt;/p&gt;
+
+&lt;p&gt;무식하면 용감하다고, 이런 모든것들이 결국 프로그래밍이라는 것. 그리고 궁극적으로 이 모든 과정들이 어떻게 빌드되어 구동되는지에 대해서 깊이 알아보지도 않았다.&lt;/p&gt;
+
+&lt;p&gt;그러던 중 이렇게 스프링을 제외시키고 순수 메이븐 빌드환경을 구성해서 작업하며 정말 새롭게 깨닫고 배운 부분들이 많아 하나씩 기록해두려한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;일반적으로 웹 개발에서 메이븐 사용시 빌드환경에 필요한 모듈을 얹어주면 패키징할때마다 필요한 모듈을 가져와서 라이브러리에 jar파일을 준비해준다.&lt;/p&gt;
+
+&lt;p&gt;하지만 데몬에서는 어떨까? 웹에서 모듈을 준비하지 못한다면?&lt;/p&gt;
+
+&lt;p&gt;때문에 데몬에서 실행되는 jar파일을 생성시 필요한 메이블 설정이 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/notes/181018/dependency_jar.png&quot; alt=&quot;jar&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이와 같은 설정인데,&lt;/p&gt;
+
+&lt;p&gt;결과적으로 maven-plugins에 해당 옵션을 삽입해준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/notes/181018/config.png&quot; alt=&quot;config&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이처럼 설정 후 패키징을 해주자&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;clean package&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;/target 디렉토리에 패키징된 jar파일이 생성된다.&lt;/p&gt;
+
+&lt;p&gt;위 설정이 정상적으로 적용되었다면, 기본 &lt;strong&gt;artifact-id.jar&lt;/strong&gt; 파일과 더불어,&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[artifact-id]-[descriptorRef].jar&lt;/strong&gt; 이와 같은 형식으 파일이 떨어진다.&lt;/p&gt;
+
+&lt;p&gt;이 파일은 메이븐에 주입해놓은 모든 모듈을 포함한 jar 파일이기 때문에 데몬에서 실행시 해당 jar파일을 실행하면된다.&lt;/p&gt;
+
+&lt;p&gt;[참고]&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;http://javafactory.tistory.com/1490&lt;/li&gt;
+  &lt;li&gt;https://www.lesstif.com/display/JAVA/Maven+Dependency+Plugin&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="maven" /><summary type="html">Maven과 빌드이야기</summary></entry><entry><title type="html">미션-2</title><link href="http://localhost:4000/notes/1810_4/" rel="alternate" type="text/html" title="미션-2" /><published>2018-10-12T00:00:00+09:00</published><updated>2018-10-12T00:00:00+09:00</updated><id>http://localhost:4000/notes/1810_4</id><content type="html" xml:base="http://localhost:4000/notes/1810_4/">&lt;h2 id=&quot;첫번쨰-임무-두번째-이야기&quot;&gt;첫번쨰 임무 두번째 이야기&lt;/h2&gt;
+
+&lt;h3 id=&quot;embulk를-통해-a서버-a테이블을-b서버-a테이블로-데이터-이관---cron-job&quot;&gt;embulk를 통해 A서버 a테이블을 B서버 a테이블로 데이터 이관 -&amp;gt; cron-job&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.embulk.org/docs/&quot;&gt;embulk&lt;/a&gt;는 굉장히 훌륭한 오픈소스이다.&lt;/p&gt;
+
+&lt;p&gt;기본으로 제공해주는 docs에도 아주 상세하고 친절하게 사용방법이 나와있어서 어렵지 않게 작업할 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;특히 인상싶었던 것은, embulk를 통해 디비 작업을 하면 mysql 기준으로 스스로 merge를 해준다.&lt;/p&gt;
+
+&lt;p&gt;예를들어,&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A서버 a테이블의 a-1,a-2,a-3의 필드를 B서버 b테이블의 b-1, b-2, b-3 테이블로 이관하고 싶다면,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;보내는 서버(in)의 정보와 쿼리, 그리고 받는 서버(out)의 정보와 테이블명을 기입해준다면,&lt;/p&gt;
+
+&lt;p&gt;만약에 B서버에 입력받을 b테이블에 대한 스키마 정보가 없다면, 입력하는 스키마 정보(A서버의 a테이블)와 동일한 테이블이 생성되며 데이터까지 적재된다.(단순 insert 뿐만 아니라, merge처리까지 자동으로 됨)&lt;/p&gt;
+
+&lt;p&gt;아주 효율적이고 강력한 기능이 아닐 수 없다!&lt;/p&gt;
+
+&lt;p&gt;덕분에 첫번쨰 작업 embulk를 이용한 크론잡은 해결됐다.&lt;/p&gt;
+
+&lt;h3 id=&quot;google-app-engine을-이용한-개발&quot;&gt;Google App Engine을 이용한 개발&lt;/h3&gt;
+
+&lt;p&gt;이제 본격적인 작업이다. GAE(Google App Engine) 사용도 처음이고, 그보다 거의 모든작업은 Spring Framework/Boot 환경을 통해서 작업했는데 스프링을 사용하지 않고 Maven과 servlet환경으로 처리한다는 것 자체가 처음에 감이 잡히질 않는 것이다.&lt;/p&gt;
+
+&lt;p&gt;너무나 맹목적으로 ‘Maven-Spring’을 한 세트처럼 사용해왔기 때문에 이 둘을 분리하여 어떤 작업을 한다고 생각도 하지 못했다.&lt;/p&gt;
+
+&lt;p&gt;한편으론 이것이 가장 즐거운 일이기도 하다.&lt;/p&gt;
+
+&lt;p&gt;servlet만을 사용하여 웹 개발을 한 것은 개발을 거의 처음 배울때 잠시 스쳐지나갔기 때문에&lt;/p&gt;
+
+&lt;p&gt;doPost/doGet 이라는 메서드도 정말 오랜만에 본 것이다.&lt;/p&gt;
+
+&lt;p&gt;하지만 너무나 즐거운 일인 것이, 사실 Spring이라는 프레임워크들을 사용하는 이유가 바로 이런 불편한 개발환경을 개선하고 효율적인 작업을 위해서 등장했을 것이다.&lt;/p&gt;
+
+&lt;p&gt;그러면 무엇이 불편하지를 알아야, 스프링의 참 가치를 느낄 수 있다.&lt;/p&gt;
+
+&lt;p&gt;servlet 또는 그것보다 low한 환경에서 개발하지 않고 스프링만 사용하는 사람이 어떻게 스프링이 좋다고 말할 수 있을까?&lt;/p&gt;
+
+&lt;p&gt;그러한 물음에 조금이라도 접근할 수 있을 것 같아 아주 즐거운 경험이었다.(물론 초기 프로젝트 환경 구축조차 제대로 하지 못한걸 뺀다면…^^;;)&lt;/p&gt;
+
+&lt;p&gt;기계적으로 사용하던 Maven을 통한 라이브러리 구축, web.xml과 dispatcher-servlet을 통한 웹 환경 구축 및 디비커넥션처리 등 작업들은 수동으로 처리하여&lt;/p&gt;
+
+&lt;p&gt;JDBC를 직접 컨트롤(커넥션부터 클로즈까지)하고, doGet/doPost로 받는 파라미터도 직접 처리하고, Response type 설정, json 파싱 등등 직접 처리한다.&lt;/p&gt;
+
+&lt;p&gt;그래서 어려웠다.&lt;/p&gt;
+
+&lt;p&gt;그래서 유익했다.&lt;/p&gt;
+
+&lt;p&gt;초안 작업은 되었지만, 단순한 작업인데 mybatis를 쓰지 않다보니 쿼리 관리도 불편했고,&lt;/p&gt;
+
+&lt;p&gt;특히 무엇보다 결과를 받아 처리하는 과정이 너무나 비효율적이었다.&lt;/p&gt;
+
+&lt;p&gt;또한 급급하게 작업이 될 수 있도록 구현에 집중하다보니 클래스 구조나 로직 자체가 뒤엉킨 느낌도 많이 든다.&lt;/p&gt;
+
+&lt;p&gt;처음 작업이니만큼 지속적으로 리팩토링하여 쓸만한 코드로 닦아야 겠다.&lt;/p&gt;
+
+&lt;p&gt;이것이 내가 가장 원하던 작업이다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">첫번쨰 임무 두번째 이야기</summary></entry></feed>

@@ -1,0 +1,633 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>개발 2막 - 효자손 개발자</title>
+<meta name="description" content="기다리던, 한편으론 걱정스럽기도 했던 첫 출근이었다.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="효자손 개발자">
+<meta property="og:title" content="개발 2막">
+<meta property="og:url" content="http://localhost:4000/notes/1810_1/">
+
+
+  <meta property="og:description" content="기다리던, 한편으론 걱정스럽기도 했던 첫 출근이었다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-10-01T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/notes/1810_1/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "betterFLY",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="효자손 개발자 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">효자손 개발자</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/" >Dev</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">@betterFLY</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        주니어 개발자의 성장과정
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="betterfly4202@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://github.com/betterfly88"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://www.facebook.com/chungil.lee.779"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/mr.martine"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:betterfly4202@gmail.com">
+            <meta itemprop="email" content="betterfly4202@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="개발 2막">
+    <meta itemprop="description" content="기다리던, 한편으론 걱정스럽기도 했던 첫 출근이었다.">
+    <meta itemprop="datePublished" content="October 01, 2018">
+    
+
+    <div class="page__inner-wrap">
+      <!--
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">개발 2막
+</h1>
+           
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+           
+        </header>
+      
+      -->
+
+      <!-- contents와 위치 변경 -->
+      <footer class="page__meta">
+        <!-- title -->
+        <h1 id="page-title" class="page__title" itemprop="headline" style="font-size: 35px;">개발 2막
+</h1>
+        <hr style="border: solid 0.5px;">
+
+        
+        <!--  -->
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 
+      Category : 
+    </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#notes" class="page__taxonomy-item" rel="tag">notes</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Date : </strong> <time datetime="2018-10-01T00:00:00+09:00">October 01, 2018</time></p>
+        
+        
+        <hr style="border: solid 0.5px; margin-top:25px;">
+      </footer>
+
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>기다리던, 한편으론 걱정스럽기도 했던 첫 출근이었다.</p>
+
+<p>걱정보단 설레임이 컸는지 내심 출근이 기다려지기도 했다.</p>
+
+<p>오전 시간은 가볍게 오티로 시작을 했고, 프로필 사진도 찍었다.</p>
+
+<p>그리고 잠시 후 멘토라는 분들이 와서 우리를 데리러 왔다. 1:1 매칭된다는 멘토는 다름아닌 내 ‘사수’ 이다.</p>
+
+<p>어색한 인사와 함께, 궁금한게 무엇이냐고 하는데 뭐가 궁금한지도 모른다. 가서 무슨일을, 어떤 환경인지도 모르기 때문에.</p>
+
+<p>일단 많은 말은 하지 않았다. 바로 팀으로 이동했다.</p>
+
+<p>이동하여 실장님과 우리 팀분들 그리고 나와 인터뷰를 진행했던 우리 팀장님께 인사를 드렸다.</p>
+
+<p>전체적으로 인상들이 너무 좋았고, 특히 팀장님은 ‘잘 왔어요’ 라며 반겨주셨다. 굉장히 인상적인 인사였다.</p>
+
+<p>그리고 무엇보다 마음에 들었던 것은, 내가 그토록 원하던 개발환경이었다.</p>
+
+<p>내 자리에는 맥북이 있었고, 해상도 좋은 모니터 두 대와 매직 마우스와 키보드까지 세팅해 주었다.</p>
+
+<p>그리고 cloud platform을 이용한 개발.</p>
+
+<p>다 내가 꿈꾸던 개발환경과 구성이다.</p>
+
+<p>첫 날이니 만큼, 기본 환경을 세팅할 것을 주문했고, 무엇보다 사용할 물건들과 소프트웨어들에 대한 권한 요청이 최우선이었다.</p>
+
+<p>각종 계정 접근 권한 및 라이센스 발급에 필요한 결재만 2시간 이상 작성했던 것 같다.</p>
+
+<p>결재라인도 손에 익지 않고, 아직은 헷갈리는 VPN, VDI등과 JIRA와 Confluence와 같은 atlassian 제품을을 사용한 것도 즐거웠다.</p>
+
+<p>모든 과정들이 마냥 즐겁기만하다.</p>
+
+<p>새로워서 좋은 것도 있지만, 이제서야 내가 원하던 밥상이 차려진, 내가 좋아하는 고기만찬들이 상에 올라온 기분이다.</p>
+
+<p>모든 것이 순조롭고, 내가 할 일도 명확하다. 나만 잘하면 된다.</p>
+
+<p>하지만 역시, 기대도 되고 걱정도 된다.</p>
+
+<p>앞으로 할 일이 무엇일까 기대도 되고, 잘할 수 있을까 그리고 잘해야 된다는 걱정도 된다.</p>
+
+<p>잘 할거다.</p>
+
+        
+      </section>
+
+      
+
+      <!-- 소셜 공유 공간 -->
+      <!-- <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EA%B0%9C%EB%B0%9C+2%EB%A7%89%20http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1810_1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1810_1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1810_1%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1810_1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+ -->
+
+      
+  <nav class="pagination">
+    
+      <a href="/notes/1809_5/" class="pagination--pager" title="난 놈
+">Previous</a>
+    
+    
+      <a href="/notes/1810_2/" class="pagination--pager" title="Back-end 개발자
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java/1/" rel="permalink">category : JAVA
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-11</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">JAVA
+</p>
+  </article>
+</div>
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/notes/1811_3/" rel="permalink">ideation
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-10</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">누군가의 한마디가 큰 울림, 새로운 시발점을 불러오는 경험은 누구나 다 있다.
+
+</p>
+  </article>
+</div>
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/notes/1811_2/" rel="permalink">paintComponent
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-08</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">Java Swing component를 이용해서 간단한 음악게임을 만들고있다.
+
+</p>
+  </article>
+</div>
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/notes/1811_1/" rel="permalink">우선 순위
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-06</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">벌써 한달이 지났다.
+
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter search title..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="betterfly4202@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://betterfly88.github.io/"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/chungil.lee.779"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/betterfly88"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/mr.martine"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 betterFLY. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

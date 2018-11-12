@@ -1,0 +1,664 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Webpack Memory Leak - 효자손 개발자</title>
+<meta name="description" content="웹팩 환경 아래에서 Vue.js 작업을 하며 소스코드를 변경하여 저장하면, 핫 리로드가 되면서 가끔씩 서버가 죽어버리는 현상이 발생한다.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="효자손 개발자">
+<meta property="og:title" content="Webpack Memory Leak">
+<meta property="og:url" content="http://localhost:4000/notes/1809_2/">
+
+
+  <meta property="og:description" content="웹팩 환경 아래에서 Vue.js 작업을 하며 소스코드를 변경하여 저장하면, 핫 리로드가 되면서 가끔씩 서버가 죽어버리는 현상이 발생한다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-06T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/notes/1809_2/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "betterFLY",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="효자손 개발자 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">효자손 개발자</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/" >Dev</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">@betterFLY</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        주니어 개발자의 성장과정
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="betterfly4202@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://github.com/betterfly88"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://www.facebook.com/chungil.lee.779"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/mr.martine"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:betterfly4202@gmail.com">
+            <meta itemprop="email" content="betterfly4202@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Webpack Memory Leak">
+    <meta itemprop="description" content="웹팩 환경 아래에서 Vue.js 작업을 하며 소스코드를 변경하여 저장하면, 핫 리로드가 되면서 가끔씩 서버가 죽어버리는 현상이 발생한다.">
+    <meta itemprop="datePublished" content="September 06, 2018">
+    
+
+    <div class="page__inner-wrap">
+      <!--
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Webpack Memory Leak
+</h1>
+           
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+           
+        </header>
+      
+      -->
+
+      <!-- contents와 위치 변경 -->
+      <footer class="page__meta">
+        <!-- title -->
+        <h1 id="page-title" class="page__title" itemprop="headline" style="font-size: 35px;">Webpack Memory Leak
+</h1>
+        <hr style="border: solid 0.5px;">
+
+        
+        <!-- 
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#memory-leak" class="page__taxonomy-item" rel="tag">memory leak</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#webpack" class="page__taxonomy-item" rel="tag">webpack</a>
+    
+    </span>
+  </p>
+
+ -->
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 
+      Category : 
+    </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#notes" class="page__taxonomy-item" rel="tag">notes</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Date : </strong> <time datetime="2018-09-06T00:00:00+09:00">September 06, 2018</time></p>
+        
+        
+        <hr style="border: solid 0.5px; margin-top:25px;">
+      </footer>
+
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>웹팩 환경 아래에서 Vue.js 작업을 하며 소스코드를 변경하여 저장하면, 핫 리로드가 되면서 가끔씩 서버가 죽어버리는 현상이 발생한다.</p>
+
+<p>아니 가끔이 아니라, 꽤 자주. 그리고 점점 더 빈번하게.</p>
+
+<p>그리고 콘솔에는 다음과 같은 로그가 찍힌다.</p>
+
+<p>Security context: 0000023290225879 <JSObject>
+    1: fromString(aka fromString) [buffer.js:314] [bytecode=0000028B95FE9031 offset=164](this=00000066F9F822D1 <undefined>,string=0000026B6ACAC8C9 &lt;Very long string[44331659]&gt;,encoding=0000023290235001 &lt;String[4]: utf8&gt;)
+    2: from [buffer.js:177] [bytecode=0000028B95FE8B39 offset=11](this=0000001BB8136359 &lt;JSFunction Buffer (sfi = 000002329027BF81)&gt;,value=0000026B6ACAC8C9 &lt;Very long string[4...</undefined></JSObject></p>
+
+<p>FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+ 1: node_module_register
+ 2: v8::internal::FatalProcessOutOfMemory
+ 3: v8::internal::FatalProcessOutOfMemory
+ 4: v8::internal::Factory::NewRawTwoByteString
+ 5: v8::internal::Smi::SmiPrint
+ 6: v8::internal::StackGuard::HandleInterrupts
+ 7: v8::String::WriteUtf8
+ 8: v8::internal::wasm::AsmType::Extern
+ 9: node::Buffer::New
+ …</p>
+
+<p>사실 정확히 어디서 메모리 누수가 발생하는지 원인은 파악하지 못했지만 (아마도 Node.js 서버환경이 최적화되거나 힙 메모리 초기화를 하지 않은 문제이지 않을까…?)</p>
+
+<p>위와 같이 Memory Leak 현상이 발생했다.</p>
+
+<p>해결법은 의외로 간단했다.</p>
+
+<p>현재 webpack 빌드 환경(package.json)은 다음과 같이 선언되어있다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="s2">"dev"</span> <span class="p">:</span> <span class="s2">"webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"</span>
+</code></pre></div></div>
+
+<p>위 빌드 환경에 옵션을 조금만 추가해주면 이 문제를 해결할 수 있다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="s2">"dev"</span><span class="p">:</span> <span class="s2">"node --max_old_space_size=8000 node_modules/webpack-dev-server/bin/webpack-dev-server.js  --inline --progress --config build/webpack.dev.conf.js "</span><span class="p">,</span>
+</code></pre></div></div>
+
+<p>대략적으로 Node.js의 힙 메모리가 OS에서 할당하는 메모리를 초과하면서 발생하는 현상으로 강제로 할당량을 늘려버려서(node –max_old_space_size=8000) 문제를 해결한 것으로 보인다.</p>
+
+<p>이게 근본적인 문제를 해결한 것이 아닌 것 같아 영 찝찝한 기분이 남는다.</p>
+
+<p>자바스크립트의 메모리 관리를 찾아보며 Javascript의 GC 프로세스 및 메모리 관리하는 것에 대한 좋은 블로그들을 만날 수 있었다.</p>
+
+<p><a href="https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B4%80%EB%A6%AC-4%EA%B0%80%EC%A7%80-%ED%9D%94%ED%95%9C-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EB%88%84%EC%88%98-%EB%8C%80%EC%B2%98%EB%B2%95-5b0d217d788d">자바스크립트는 어떻게 작동하는가: 메모리 관리 + 4가지 흔한 메모리 누수 대처법
+</a></p>
+
+<p><a href="https://hyunjun19.github.io/2018/02/19/node-js-at-scale-node-js-garbage-collection/">Node.js의 GC는 어떻게 동작하는가?
+</a></p>
+
+        
+      </section>
+
+      
+
+      <!-- 소셜 공유 공간 -->
+      <!-- <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Webpack+Memory+Leak%20http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1809_2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1809_2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1809_2%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnotes%2F1809_2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+ -->
+
+      
+  <nav class="pagination">
+    
+      <a href="/notes/1809_1/" class="pagination--pager" title="slash &amp; back slash
+">Previous</a>
+    
+    
+      <a href="/notes/1809_3/" class="pagination--pager" title="그냥은 없다
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/java/1/" rel="permalink">category : JAVA
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-11</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">JAVA
+</p>
+  </article>
+</div>
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/notes/1811_3/" rel="permalink">ideation
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-10</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">누군가의 한마디가 큰 울림, 새로운 시발점을 불러오는 경험은 누구나 다 있다.
+
+</p>
+  </article>
+</div>
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/notes/1811_2/" rel="permalink">paintComponent
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-08</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">Java Swing component를 이용해서 간단한 음악게임을 만들고있다.
+
+</p>
+  </article>
+</div>
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/notes/1811_1/" rel="permalink">우선 순위
+</a>
+      
+    </h2>
+
+    
+      <p class="page__meta"><i class="far fa-calendar" aria-hidden="true"></i> 2018-11-06</p>
+    
+
+    <!-- 
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+     -->
+    <p class="archive__item-excerpt" itemprop="description">벌써 한달이 지났다.
+
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter search title..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="betterfly4202@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://betterfly88.github.io/"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/chungil.lee.779"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/betterfly88"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/mr.martine"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 betterFLY. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>
