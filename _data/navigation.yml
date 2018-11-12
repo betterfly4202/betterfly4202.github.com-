@@ -6,10 +6,7 @@ main:
     url: /dev/
   - title: "Notes"
     url: /notes/
-  - title: "Row Contents"
-    url: /test/
-
-
+  
 # # documentation links
 docs:
   - title: Programming
