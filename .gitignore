@@ -27,4 +27,6 @@ nbdist/
 
 # jekyll
 _site
+_site/
 .sass-cache
+.sass-cache/
