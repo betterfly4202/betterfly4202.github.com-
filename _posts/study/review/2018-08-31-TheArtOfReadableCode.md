@@ -1,6 +1,6 @@
 ---
 title: "읽기 좋은 코드가 좋은 코드다(The Art of Readable Code)"
-categories: "review"
+categories: "REVIEW"
 tags:
   - 읽기 좋은 코드가 좋은 코드다
 ---

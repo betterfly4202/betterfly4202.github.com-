@@ -1,6 +1,6 @@
 ---
 title: "실용주의 프로그래머(The Pragmatic Programmer)"
-categories: "review"
+categories: "REVIEW"
 tags:
   - The pragmatic Programmer
   - 실용주의 프로그래머

@@ -1,6 +1,6 @@
 ---
 title: "자바로 배우는 리팩토링 입문(Java Refactoring For Beginner)"
-categories: "review"
+categories: "REVIEW"
 tags:
   - 자바로 배우는 리팩토링 입문
 ---
