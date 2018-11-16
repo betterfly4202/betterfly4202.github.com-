@@ -38,7 +38,7 @@ call by value와 call by reference 를 검색하면 가장 많이 볼 수 있는
 너무나 당연한 결과이지만 valSwap함수를 호출했지만 스왑이 이루어지지 않는다. 이를 stack 그림으로 참고해 보면 이해가 쉽다.
 
 
-![call_by_value](/assets/images/180506/call%20by%20value.png)
+![call_by_value](/assets/images/study/dev/2018/5_call%20by%20value.png)
 
 swap 이라는 함수는 호출되지만 각 변수(a,b,temp)가 할당하는 메모리 주소는 공유되지 않는다.
 
@@ -102,7 +102,7 @@ swap 이라는 함수는 호출되지만 각 변수(a,b,temp)가 할당하는 �
 
 어떻게 이런 결과가 나왔는지 다음의 그림을 참고해보자. 
 
-![call_by_ref](/assets/images/180506/call%20by%20ref.png)
+![call_by_ref](/assets/images/study/dev/2018/5_call%20by%20ref.png)
 
 위 그림에서 눈여겨 볼 것은 1번 변수 a,b가 생성되며 표기된 좌측의 **100**, **104** 라는 메모리 주소이다.
 
@@ -118,7 +118,7 @@ call by value 의 예제처럼 일반적으로 Parameter(매개변수)를 선언
 
 ### Call by value in Java
 
-![datatype_in_java](/assets/images/180506/DataType_java.png)
+![datatype_in_java](/assets/images/study/dev/2018/5_DataType_java.png)
 <figcaption class="caption">Data type in Java</figcaption>
 
 그림에서 보이는 좌측의 Primitive 타입(원시타입)만이 소위 call by value 라는 매커니즘이 적용된다. 

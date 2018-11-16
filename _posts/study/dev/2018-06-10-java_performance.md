@@ -154,7 +154,7 @@ class TimerUtil {
 ~~~
 
 각 반복문의 평균 수행 시간(ms) 결과이다.
-![result](/assets/images/180615/compare_Repetition.jpeg)
+![result](/assets/images/study/dev/2018/6_compare_Repetition.jpeg)
 
 
 ---

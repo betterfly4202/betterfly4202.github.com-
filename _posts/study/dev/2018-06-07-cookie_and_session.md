@@ -50,8 +50,7 @@ String user = httpSession.getAttribute("user");
 
 쿠키는 사용자의 민감한 정보를 다루는 것은 매우 위험하고, 쇼핑몰로 예로들면 장바구니에 담는 사용자 쇼핑 기록 정도를 저장시 쿠키를 활용한다라고 말한다.
 
-![쿠키세션비교](/assets/images/180607/compare_with_cookie_session.png)
-
+![쿠키세션비교](/assets/images/study/dev/2018/6_compare_with_cookie_session.png)
 
 ---
 

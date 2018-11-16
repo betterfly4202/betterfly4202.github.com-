@@ -28,7 +28,8 @@ Process 와 Thread 에 대한 개념은 흔히 언급되는 내용이다.
 
 프로세스는 각각의 독립된 메모리 영역에서 작동한다.
  
-![Process_Menory](/assets/images/180812/memory_organization.jpg)
+![Process_Menory](/assets/images/study/dev/2018/8_memory_organization.jpg)
+
 
 이러한 메모리 구조를 사용하는 프로세스는 CPU에서 적재된 프로세스의 로테이션을 돌며 '멀티 프로세싱'하는 과정에서 문제점을 보인다.
 
@@ -44,7 +45,7 @@ A라는 프로세스가 동작 후 대기중이던 B 프로세스가 실행될 �
 
 스레드는 프로세스상에 실행되기 때문에 하나의 프로세스에 적재되어 Stack 영역만 따로 할당받으며, Code, Data, Heap 영역은 공유되어 사용된다.
 
-![Thread_Menory](/assets/images/180812/thread_container.png)
+![Thread_Menory](/assets/images/study/dev/2018/8_thread_container.png)
 
 메모리를 공유하는 스레드는 *전역변수*를 통해서 데이터를 공유하고, 시스템의 자원 소모를 줄일 수 있어 효율을 높일 수 있다.
 
@@ -87,14 +88,14 @@ public class ThreadPrinter implements Runnable{
 }
 
 ~~~
-![thread](/assets/images/180812/thread_test.png)
+![thread](/assets/images/study/dev/2018/8_thread_test.png)
 
 ---
 
 #### Dead Lock
 Dead Lock에 대해서는 유명한 '철학자의 식사문제' 이야기가 있다.
 
-![dining_philosopher](/assets/images/180812/An_illustration_of_the_dining_philosophers_problem.png)
+![dining_philosopher](/assets/images/study/dev/2018/8_An_illustration_of_the_dining_philosophers_problem.png)
 
 ##### [다섯 명의 철학자와 포크]
 

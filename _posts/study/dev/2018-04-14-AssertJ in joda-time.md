@@ -6,7 +6,7 @@ tags:
   - joda-time
 ---
 
-![joda](/assets/images/180414/joda.jpg)
+![joda](/assets/images/study/dev/2018/joda.jpg)
 
 ## AssertJ assertions for Joda-Time
 

@@ -6,7 +6,7 @@ tags:
 ---
 
 ### 곧 시니어가 될 주니어를 위한 150분
-![강연자](/assets/images/180417/speaker.png)
+![강연자](/assets/images/study/conference/2018/speaker.png)
 <figcaption class="caption">24년 경력의 김민태님</figcaption>
 
 앞서 이직하는 요령, 이력을 관리하는 노하우 등 구직자 입장에서 강연이 있었다면,
@@ -139,7 +139,7 @@ tags:
 - 5년이 지나면 차이를 나타내기 시작한다. -> **부채의식**의 차이
 
 #### 부채의식
-![부채의식](/assets/images/180417/dept.jpg)
+![부채의식](/assets/images/study/conference/2018/dept.jpg)
 잘하는 사람은 항상 부족함에 갈망한다. 무언가를 해야한다는 긴장감을 유지시킨다. >> 습관으로 발전
 
 내가 무언가를 인지하고 있다는 것은 나의 행동으로 이어진다. 내가 무엇을 모른다는 것을 안다는 것 만으로도 발전할 여지가 있다.

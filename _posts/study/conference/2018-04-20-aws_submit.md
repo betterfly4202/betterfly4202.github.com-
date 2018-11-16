@@ -5,7 +5,7 @@ tags:
   - aws
 ---
 
-![!AWSOME_DAY_ENTERANCE](/assets/images/180420/aws_summit_main.png)
+![!AWSOME_DAY_ENTERANCE](/assets/images/study/conference/2018/aws_summit_main.png)
 {: class="bigger-image" }
 
 # AWS Summit 후기
@@ -14,13 +14,13 @@ tags:
 
 이번 AWS세미나에서 많은 세션들이 동시에 진행되어 필요에 따라 선택해서 들을 수 있었지만, 그 중 가장 기본적이고 메인(?) 세션이었던 AWSome Day을 선택했다.
 
-![AWS](/assets/images/180420/aws_enterance.jpeg)
+![AWS](/assets/images/study/conference/2018/aws_enterance.jpeg)
 <figcaption class="caption">입장권 발권을 담당하는 프런트의 모습</figcaption>
 
 도착한 행사장에는 생각보다 훨씬 많은 사람이 참석했고, 이런 개발자들의 모임에 자리했다는 것이 아직은 어색하게 느껴졌지만 그것도 잠시. 어느덧 그 분위기즐 즐기게 되었다.
 이벤트의 모든 진행은 배부 받은 명찰의 QR코드를 통해 진행되었다. 덕분에 비교적 매끄러운 진행이 유지될 수 있었지만, 각 세션이 끝날때마다 모든 인원이 2~3명의 스태프에게 QR코드를 인증받아야 해서 상당히 붐비는 불상사가 있기도 했다.
 
-![!NAME_TAG](/assets/images/180420/name_tag.jpeg)
+![!NAME_TAG](/assets/images/study/conference/2018/name_tag.jpeg)
 <figcaption class="caption">배부받은 명찰! 회사명과 내 이름이 적혀있고 하단의 QR코드를 통해 이벤트 인증이 처리된다</figcaption>
 
 ---
@@ -28,7 +28,7 @@ tags:
 잠시 후 세미나장에 입장했다. 밖에서 보던 공간보다 훨씬 크고 멋진 공간이었다.
 특히 입장과 동시에 햄버거 세트가 제공되었는데, 무료로 이런 멋진 간식을 나눠주는 AWS의 규모에 다시한 번 놀라움을 금치 못했다.
 
-![DESSERT](/assets/images/180420/dessert.jpeg)
+![DESSERT](/assets/images/study/conference/2018/dessert.jpeg)
 <figcaption class="caption">이런 고급진 햄버거를 마구 뿌려준다!!!</figcaption>
 
 ---
@@ -36,7 +36,7 @@ tags:
 곧이어 첫번째 세션이 시작되었다.
 
 
-![AWS_SUMMIT](/assets/images/180420/open_aws_summit.jpeg)
+![AWS_SUMMIT](/assets/images/study/conference/2018/open_aws_summit.jpeg)
 <figcaption class="caption">드디어 시작된 세미나</figcaption>
 
 #### 총 6개의 파트로 나누어 진행되었다.

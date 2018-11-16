@@ -5,7 +5,8 @@ tags:
   - fast campus
 ---
 
-![메인](/assets/images/180416/1.png)
+![메인](/assets/images/study/conference/2018/1.png)
+
 
 ### 내용에 앞서...
 패스트 캠퍼스에서 주관하는 'DEV Seminar, 좋았을걸; Front-end' 세미나를 다녀왔다.
@@ -19,18 +20,19 @@ tags:
 
 강연장은 '마루180'이라는 역삼역 1번출구로 나가 도곡동 방향으로 향하는 길에 위치해있다.
 마루180은 아산재단에서 운영하는 스타트업 기업을 상대로 공간을 대관해주는 곳인 것 같다.
-![로비](/assets/images/180416/robby.jpeg)
+![로비](/assets/images/study/conference/2018/robby.jpeg)
+
 <figcaption class="caption">건물 로비 카운터에서 볼 수 있는 다양한 스타트업 스티커들</figcaption>
  
-![전경1](/assets/images/180416/outer_1.jpeg)
+![전경1](/assets/images/study/conference/2018/outer_1.jpeg)
 <figcaption class="caption">귀여운 입구 전경</figcaption>
 
-![전경2](/assets/images/180416/outer_2.jpeg)
+![전경2](/assets/images/study/conference/2018/outer_2.jpeg)
 
 
 
 
-![발표자](/assets/images/180416/2.png)
+![발표자](/assets/images/study/conference/2018/2.png)
 
 ### 실전 프론트엔드 개발 취직 & 이직 이야기
 첫번째 발표는 취직&이직에 앞서 발표자님의 이직하는 과정을 생생하게 들려주었다.
@@ -57,7 +59,7 @@ tags:
 특히 개발자는 하이프 사이클 중 '고원'의 단계를 빗대며, 이를 탈피해야 한다고 강조했다.
 
 
-![가트너_하이프사이클](/assets/images/180416/500px-Gartner_Hype_Cycle.svg.png)
+![가트너_하이프사이클](/assets/images/study/conference/2018/500px-Gartner_Hype_Cycle.svg.png)
 <figcaption class="caption">가트너의 Hype-Cycle</figcaption>
 
 

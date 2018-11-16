@@ -12,7 +12,8 @@ tags:
 의 내용을 발췌했다.
 
 ---
-![image](/assets/images/180602/js_style_guide_google.jpeg)
+![image](/assets/images/study/dev/2018/6_js_style_guide_google.jpeg)
+
 
 아직 익숙하지 않은 사람들을 위해, 구글은 깨끗하고 이해할 수 있는 코드를 쓰는 데 있어 가장 좋은 lays out을 제시하는 자바 스크립트(JavaScript) 작성을 위한 [스타일 가이드](https://google.github.io/styleguide/jsguide.html)를 내놓았다.
 이러한 규칙은 유효한 JavaScript를 작성하기 위한 어렵고 빠른 규칙이 아니며 원본 파일 전체에 걸쳐 일관되고 매력적인 스타일 선택 사항을 유지하기 위한 규정만 있습니다. 이것은 자바 스크립트에서 특히 흥미 롭습니다. 자바 스크립트는 다양한 스타일 선택을 허용하는 유연하고 관대 한 언어입니다.
