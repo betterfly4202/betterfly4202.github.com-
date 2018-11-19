@@ -9,7 +9,7 @@ tags:
 
 ## [Singleton Pattern]
 
-![singleton](/assets/images/180823/Singleton-pattern-class-diagram.jpg)
+![singleton](/assets/images/study/dev/2018/8_Singleton-pattern-class-diagram.jpg)
 
 싱글턴패턴은 이름 그대로 아주 심플하다.
 
@@ -66,7 +66,7 @@ public class SystemSpeaker {
 
 위 클래스를 메인함수에서 호출한다면 아래와 같은 결과를 확인할 수 있다.
 
-![speaker_result](/assets/images/180823/speaker_main.png)
+![speaker_result](/assets/images/study/dev/2018/8_speaker_main.png)
 
 동일한 메모리 주소를 바라보고 있는 하나의 인스턴스 이므로 당연히 동일한 결과를 확인할 수 있다.
 

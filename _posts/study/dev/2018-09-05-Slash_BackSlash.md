@@ -43,10 +43,10 @@ tags:
 그리고 다음과 같은 질답을 찾았다.
 
 #### 질문
-![slash_question](/assets/images/180905/Question.png)
+![slash_question](/assets/images/study/dev/2018/9_Question.png)
 
 #### 답변
-![slash_answer](/assets/images/180905/Answer.png)
+![slash_answer](/assets/images/study/dev/2018/9_Answer.png)
 
 <figcaption class="caption">출처 : Okky 커뮤니티</figcaption>
 ---
@@ -68,5 +68,5 @@ tags:
 그래서 이스케이프 일부 문자에 대해 단일 문자 이스케이프 시퀀스를 제공한다.
 
 ### Escape Sequence
-![Escape_Sequence](/assets/images/180905/escape_sequence.png)
+![Escape_Sequence](/assets/images/study/dev/2018/9_escape_sequence.png)
 

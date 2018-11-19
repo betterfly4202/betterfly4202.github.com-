@@ -18,7 +18,7 @@ tags:
 
 리팩토링 관련해서는 거의 바이블과 같은 책이 있지만
 
-![리팩토링](/assets/images/181017/book_refactoring.jpg)
+![리팩토링](/assets/images/study/review/2018/10_book_refactoring.jpg)
 <figcaption class="caption">리팩토링(마틴 파울러)</figcaption>
 
 위 책은 조금 어렵다.

@@ -52,7 +52,7 @@ tags:
 
 위 내용을 그림으로 정리하면 다음과 같다.
 
-![IaaS_PaaS_SaaS](/assets/images/181002/iaas-paas-saas-comparison-1024x759.jpg)
+![IaaS_PaaS_SaaS](/assets/images/study/dev/2018/10_iaas-paas-saas-comparison-1024x759.jpg)
 
 사실 위 그림을 참고하는 것이 가장 쉽게 참고할 수 있다.
 
@@ -60,6 +60,6 @@ tags:
 
 마지막으로 각각의 서비스 별로 이해하기 좋게 분류한 표가 있다.
 
-![useCase](/assets/images/181002/usecase.png)
+![useCase](/assets/images/study/dev/2018/10_usecase.png)
 
 출처 : https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/

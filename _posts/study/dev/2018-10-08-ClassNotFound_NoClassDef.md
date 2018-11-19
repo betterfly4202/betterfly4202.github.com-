@@ -40,7 +40,7 @@ public class TargetClass {
 
 ```
 
-![ClassNotFound](/assets/images/181008/classnotfound.png)
+![ClassNotFound](/assets/images/study/dev/2018/10_classnotfound.png)
 
 위와 같이 web패키지아래 ClassNotFoundTestt 라는 클래스를 로딩하지만 해당 클래스가 존재하지 않는 경우이다.
 
@@ -107,7 +107,7 @@ class TargetMain{
 
 컴파일하면 다음과 같은 결과를 확인할 수 있다.
 
-![compile_result](/assets/images/181008/compile_result.png)
+![compile_result](/assets/images/study/dev/2018/10_compile_result.png)
 
 NoClassDefErrorMain 클래스에 종속되어 있는 모든 자바 파일들이 컴파일되어 .class 파일로 떨어졌다.
 
@@ -115,7 +115,7 @@ NoClassDefErrorMain 클래스에 종속되어 있는 모든 자바 파일들이 
 
 > java NoClassDefErrorMain
 
-![NoClassDef_run](/assets/images/181008/NoClassDef_run.png)
+![NoClassDef_run](/assets/images/study/dev/2018/10_NoClassDef_run.png)
 
 사진과 같이 정상적으로 실행되어 *call target main class!!!* 를 확인할 수 있다.
 
@@ -133,7 +133,7 @@ NoClassDefErrorMain 클래스에 종속되어 있는 모든 자바 파일들이 
 
 > rm TargetMain.class
 
-![delete_targetMain](/assets/images/181008/delete_TargetMain.png)
+![delete_targetMain](/assets/images/study/dev/2018/10_delete_TargetMain.png)
 
 절차대로 진행했다면 위와 같이 파일의 결과가 나온다.
 
@@ -141,7 +141,7 @@ NoClassDefErrorMain 클래스에 종속되어 있는 모든 자바 파일들이 
 
 > java NoClassDefErrorMain
 
-![noDefClass](/assets/images/181008/NoClassDefFound.png)
+![noDefClass](/assets/images/study/dev/2018/10_NoClassDefFound.png)
 
 드디어 나왔다. NoClassDefFoundError 이다.
 

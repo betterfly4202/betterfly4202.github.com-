@@ -29,7 +29,7 @@ tags:
 
 나는 다음과 같이 /src/main/java/app/rhythm/player 패키지 하위에 Main 메서드를 위치시켰다.
 
-![main](/assets/images/181101/main_method.png)
+![main](/assets/images/study/dev/2018/11_main_method.png)
 
 메인 메서드에서 할 일은 프로그램의 실행이다.
 
@@ -87,7 +87,7 @@ SenseOfRhythm이라는 클래스의 인스턴스를 생성하면서 게임은 �
 
 현재 상태그대로 메인 메서드를 실행하면 1280*720 사이즈의 빈 화면이 출력될 것이다.
 
-![display](/assets/images/181101/basic_display.png)
+![display](/assets/images/study/dev/2018/11_basic_display.png)
 
 화면을 띄우는 것 까지 성공했으면 이제 기본 배경 이미지를 삽입해보자.
 
@@ -103,7 +103,7 @@ http://wallpaperswide.com
 
 우선 다운받은 이미지는 resource경로에 옮겨 두자.
 
-![image_path](/assets/images/181101/image_path.png)
+![image_path](/assets/images/study/dev/2018/11_image_path.png)
 
 그리고 이미지파일을 읽어서 화면에 출력시켜주면된다.
 
@@ -180,7 +180,7 @@ paint() -> screenDraw() -> paint() 로 돌아오는 재귀적 구조로 볼 수 
 
 다시 메인메서드를 실행해보자.
 
-![run](/assets/images/181101/run.png)
+![run](/assets/images/study/dev/2018/11_181101/run.png)
 
 intro 이미지가 잘 나오는 것을 확인할 수 있다.
 
