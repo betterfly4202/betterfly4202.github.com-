@@ -6,7 +6,7 @@ tags:
   - joda-time
 ---
 
-![joda](/assets/images/study/dev/2018/joda.jpg)
+![joda](/assets/images/study/dev/2018/4_joda.jpg)
 
 ## AssertJ assertions for Joda-Time
 
@@ -37,11 +37,8 @@ tags:
                   calendar.set(1999, 12, 31);
                   assertThat(calendar.get(Calendar.YEAR)).isEqualTo(2000);
                   assertThat(calendar.get(Calendar.MONTH)).isEqualTo(Calendar.JANUARY);
-                  assertThat(calendar.get(Calendar.DAY_OF_MONTH)).isEqualTo(31);
-          
-                      
+                  assertThat(calendar.get(Calendar.DAY_OF_MONTH)).isEqualTo(31);                      
               }
-          
         ~~~
         
         1999년 12월 31일을 지정하려 했으나, 12월의 상수값은 11이므로 직접 숫자 12를 대입하면 2000년 1월 31일로 넘어간다. 숫자 12 대신 11 혹은 Calendar.DECEMBER 상수로 지정해야 1999년 12월 31일이 된다.
@@ -65,9 +62,7 @@ tags:
                   assertThat(dayOfWeek).isEqualTo(Calendar.WEDNESDAY);
                   assertThat(dayOfWeek).isEqualTo(4);
                   Date theDate = calendar.getTime();
-                  assertThat(theDate.getDay()).isEqualTo(3);
-          
-                  
+                  assertThat(theDate.getDay()).isEqualTo(3);                  
               }
         ~~~
         
@@ -78,6 +73,7 @@ tags:
 
 
 #### maven dependency
+
 ~~~xml
 <dependency>
     <groupId>joda-time</groupId>
@@ -92,7 +88,6 @@ tags:
     <version>3.9.1</version>
     <scope>test</scope>
 </dependency>
-
 ~~~
 
 #### gradle
@@ -103,6 +98,7 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
 
 - **java.utils.Calendar** vs **jodatime**
     - java.utils.Calendar
+
 ~~~java
     @Test
     public void 자바_캘린더_기본(){
@@ -117,18 +113,20 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
 ~~~
 
    - jodatime
+
 ~~~java
-        @Test
-        public void 조다타임_기본(){
-            DateTime dateTime = new DateTime(2018, 4, 13, 0, 0, 0, 0);
-            System.out.println(dateTime.plusDays(90).toString("yyyy-MM-dd E HH:mm:ss.SSS"));
-        }
+    @Test
+    public void 조다타임_기본(){
+        DateTime dateTime = new DateTime(2018, 4, 13, 0, 0, 0, 0);
+        System.out.println(dateTime.plusDays(90).toString("yyyy-MM-dd E HH:mm:ss.SSS"));
+    }
 ~~~~
 
 
 #### AssertJ in joda-time
 
 - 데이터타입을 커스터마이징 하여 원하는 조건으로 비교
+
 ~~~java
     @Test
     public void 패턴비교(){
@@ -138,11 +136,11 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
 
         String result2 = DateTimeFormat.forPattern("MM월dd일 HH:mm").withLocale(new Locale("ko")).print(nowTime);
         assertThat(result2).isEqualTo("04월13일 00:23");
-
     }
 ~~~
     
 - UTC타임과 해당 지역을 비교
+
 ~~~java
     @Test
     public void 타임존(){
@@ -154,6 +152,7 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
 ~~~
         
 - 기준시간 이전 혹은 이후 검증 
+
 ~~~java
     
     @Test
@@ -164,12 +163,11 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
         assertThat(new DateTime("2000-01-01")).isBeforeOrEqualTo(new DateTime("2000-01-01"));
         assertThat(new DateTime("2000-01-01")).isAfterOrEqualTo(new DateTime("2000-01-01"));
     }
-
 ~~~
     
 - 상세 시간을 무시하여 검증
-~~~java
 
+~~~java
     @Test
     public void 시간무시(){
         // ... milliseconds
@@ -189,13 +187,12 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
         dateTime2 = new DateTime(2000, 1, 1, 00, 00, 00, 000, UTC);
         assertThat(dateTime1).isEqualToIgnoringHours(dateTime2);
     }
-
 ~~~
 
 - 기준 시간내에 포함여부 검증 
     <br/> **기준시간.isIn(A, B)** -> 기준시간이 A~B시간 사이에 해당하는지 검증 
-~~~java
 
+~~~java
     @Test
     public void not_in(){
         assertThat(new DateTime("2000-01-01")).isIn(new DateTime("1999-12-22"), new DateTime("2000-01-01")); //A~B까지의 시간안에 포함
@@ -203,7 +200,6 @@ testCompile group: 'org.assertj', name: 'assertj-core', version: '3.9.1'
         
         assertThat(new LocalDateTime("2000-01-01")).isIn("1999-12-31", "2000-01-01").isNotIn("1999-12-31", "2000-01-02");
     }
-
 ~~~
 
 #### 참고 
