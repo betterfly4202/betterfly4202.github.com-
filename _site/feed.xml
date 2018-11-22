@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-20T20:44:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">Connection pool</title><link href="http://localhost:4000/notes/1811_6/" rel="alternate" type="text/html" title="Connection pool" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_6</id><content type="html" xml:base="http://localhost:4000/notes/1811_6/">&lt;p&gt;징그러운 삽질의 시간이었다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-20T21:01:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">Connection pool</title><link href="http://localhost:4000/notes/1811_6/" rel="alternate" type="text/html" title="Connection pool" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_6</id><content type="html" xml:base="http://localhost:4000/notes/1811_6/">&lt;p&gt;징그러운 삽질의 시간이었다.&lt;/p&gt;
 
 &lt;p&gt;사건의 발단을 이러했다.&lt;/p&gt;
 
@@ -124,7 +124,7 @@
 
 &lt;p&gt;이틀간 수도 없이 디비 커녁센에 관하여 서칭하며 조금 근접해보이는 해결책을 찾을 수 있었다.&lt;/p&gt;
 
-&lt;p&gt;[Commons DBCP 이해하기])(https://d2.naver.com/helloworld/5102792)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/5102792&quot;&gt;Naver D2; Commons DBCP 이해하기&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Connection Pool을 관리해주는 라이브러리다. 커넥션 구성 환경을 설정하여 커넥션 풀의 생명주기를 컨트롤하는 것을 돕는 라이브러리로 보인다.&lt;/p&gt;
 
