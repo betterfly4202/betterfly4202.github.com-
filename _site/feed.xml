@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-23T22:54:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">Open Source 활용기</title><link href="http://localhost:4000/java/OpenSource/" rel="alternate" type="text/html" title="Open Source 활용기" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/java/OpenSource</id><content type="html" xml:base="http://localhost:4000/java/OpenSource/">&lt;h2 id=&quot;오픈소스깃헙-사용하기&quot;&gt;오픈소스/깃헙 사용하기&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-26T11:14:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">Open Source 활용기</title><link href="http://localhost:4000/java/OpenSource/" rel="alternate" type="text/html" title="Open Source 활용기" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/java/OpenSource</id><content type="html" xml:base="http://localhost:4000/java/OpenSource/">&lt;h2 id=&quot;오픈소스깃헙-사용하기&quot;&gt;오픈소스/깃헙 사용하기&lt;/h2&gt;
 
 &lt;p&gt;https://medium.com/hbsmith/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%9D%BC%EA%B8%B0-git-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%8B%A4%EB%A3%A8%EA%B8%B0-9f66c98c1cb5&lt;/p&gt;
 
@@ -8,7 +8,129 @@
 
 &lt;p&gt;http://sanghaklee.tistory.com/30&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Open Source" /><category term="github" /><summary type="html">오픈소스/깃헙 사용하기</summary></entry><entry><title type="html">[Google App Engine] include HTML in JSP</title><link href="http://localhost:4000/gcp/gae/" rel="alternate" type="text/html" title="[Google App Engine] include HTML in JSP" /><published>2018-11-21T00:00:00+09:00</published><updated>2018-11-21T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gae</id><content type="html" xml:base="http://localhost:4000/gcp/gae/">&lt;p&gt;황당한 일을 겪었다.&lt;/p&gt;
 
-&lt;p&gt;진행 중인 웹서비스에서 Google App Engine(이하 GAE)에 배포 후 팝업화면 전체가 노출되지 않는 것이다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Google Cloud Platform" /><category term="Google App Engine" /><category term="JSP" /><summary type="html">황당한 일을 겪었다.</summary></entry><entry><title type="html">Connection pool</title><link href="http://localhost:4000/notes/1811_6/" rel="alternate" type="text/html" title="Connection pool" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_6</id><content type="html" xml:base="http://localhost:4000/notes/1811_6/">&lt;p&gt;징그러운 삽질의 시간이었다.&lt;/p&gt;
+&lt;p&gt;진행 중인 웹서비스에서 Google App Engine(이하 GAE)에 배포 후 팝업화면 전체가 노출되지 않는 것이다.&lt;/p&gt;
+
+&lt;p&gt;로컬에서 테스트시에는 문제가 없던 것들이, GAE 배포만 하면 모든 팝업창이 나타나지 않았다.&lt;/p&gt;
+
+&lt;p&gt;어떤 에러로그도 발생하지 않고 아무런 반응이 없다.
+네트워크를 보면, 아무리 팝업창을 클릭해도 API가 호출되지 않는다.&lt;/p&gt;
+
+&lt;p&gt;API통신 자체가 되지 않는 다는 것은 팝업창에 문제가 있으리라.&lt;/p&gt;
+
+&lt;p&gt;꽤 오랜 삽질과 인고의 시간 결과, 현재 우리 프로젝트의 Front-end부분의 팝업창 구현은 모두 각각의 HTML을 include시켜 이벤트가 발생하도록 구현되어 있다.&lt;/p&gt;
+
+&lt;p&gt;예를들어 ‘히스토리’ 라는 메뉴가 있다면, history/index.jsp 라는 각각의 메인 서비스에 대한 jsp 기본 화면을 그려놓고.&lt;/p&gt;
+
+&lt;p&gt;그 안에&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;jsp:include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;page=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;modal-item-detail.html&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;flush=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/jsp:include&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이와 같은 방식으로 각각의 HTML로 구현해놓은 HTML파일들을 &lt;code&gt; jsp:include &lt;/code&gt;를 통해서 삽입했다.&lt;/p&gt;
+
+&lt;p&gt;문제는 우리 프로젝트르를 패키징한 후 이렇게 include한 부분이 모두 제거되어 있었던 것이다!!&lt;/p&gt;
+
+&lt;h3 id=&quot;정상적으로-include된-소스&quot;&gt;정상적으로 include된 소스&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_included_modal.png&quot; alt=&quot;include_html&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;include되지-않은-소스&quot;&gt;include되지 않은 소스&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_not_included_modal.png&quot; alt=&quot;not_include_html&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이처럼 include 자체에 문제가 있는 것으로 보였다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yongblog.tistory.com/entry/jspinclude-%EC%99%80-include-%EC%B0%A8%EC%9D%B4&quot;&gt;jsp:include와 &amp;lt;%@ include%&amp;gt; 의 차이&amp;gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;위 링크를 보면, ‘jsp:include 특징 중 서블릿 컨테이너에 따라 HTML 페이지는 include가 안될 수 있다.’ 고 한다. 사실 기존에 되던 방식이기 때문에(서블릿 컨테이너가 바뀐것이 없기 때문에) 이걸로 될까 싶어 &lt;code&gt;&amp;lt;%@ include &amp;gt;&lt;/code&gt; 방식으로 진행해봤지만 결과는 똑같았다.&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;그러다 문득 servlet 이라는 힌트까 떠올랐다.&lt;/p&gt;
+
+&lt;p&gt;app engine에 올릴때 설정을하는 &lt;code&gt;appengine-web-app&lt;/code&gt; 의 구성이 의심되었다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;appengine-web-app&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://appengine.google.com/ns/1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;v1-snapshot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;runtime&amp;gt;&lt;/span&gt;java8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/runtime&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;threadsafe&amp;gt;&lt;/span&gt;true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/threadsafe&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;use-google-connector-j&amp;gt;&lt;/span&gt;true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/use-google-connector-j&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;warmup-requests-enabled&amp;gt;&lt;/span&gt;false&lt;span class=&quot;nt&quot;&gt;&amp;lt;/warmup-requests-enabled&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;env-variables&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;env-var&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;DEFAULT_ENCODING&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/env-variables&amp;gt;&lt;/span&gt;
+
+    
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;resource-files&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.xml&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/resource-files&amp;gt;&lt;/span&gt;
+    
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;system-properties&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cloudsql&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${mysql_url}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/system-properties&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;static-files&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/include&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.json&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/include&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/include&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.png&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.ico&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.gif&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.woff&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.woff2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.svg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.eot&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.ttf&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/static-files&amp;gt;&lt;/span&gt;
+
+   ...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/appengine-web-app&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;대략적으로 이와 같이 구현되어있었는데…&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;resource-files&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.xml&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/resource-files&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 부분은 내가 myBatis를 도입하면서 resources/ 하위에 mapper를 사용하기 위해 설정해놓은 것이다.&lt;/p&gt;
+
+&lt;p&gt;사실 jsp/html 쪽에 관련된 작업을 한 것이 아무것도 없는데, 그쪽에서 문제가 난다는 것은 배포 설정에 문제가 있다는 것밖에 안된다.&lt;/p&gt;
+
+&lt;p&gt;지워봤다.&lt;/p&gt;
+
+&lt;p&gt;그리고 다시 &lt;code&gt;mvn clean package&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;일단 메이븐 패키징은 문제없이 된다.&lt;/p&gt;
+
+&lt;p&gt;혹시 myBatis가 mapper를 찾지 못할까 걱정되었다. 하지만 전혀 문제없이 쿼릴르 날리고 있다.&lt;/p&gt;
+
+&lt;p&gt;허무했지만 침착하게 dev deploy를 진행했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;-Pdev clean appengine:deploy&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;역시 정상적으로 실행되었고. 팝업창도 정상적으로 출력된다.&lt;/p&gt;
+
+&lt;p&gt;당연히 html도 문제없이 include되었다..&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;resource-files&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/**.xml&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/resource-files&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;resource파일 중 xml만 사용하고 나머지는 제외시키는 것일까?&lt;/p&gt;
+
+&lt;p&gt;이 설정이 jsp:include 자체를 막아버린 것일까?&lt;/p&gt;
+
+&lt;p&gt;문제는 해결했지만, 근본적인 원인은 파악되지 않아 여전히 찜찜한 상황이다.&lt;/p&gt;
+
+&lt;p&gt;우선 기록해두고, 계속 트래킹해보리라.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Google Cloud Platform" /><category term="Google App Engine" /><category term="JSP" /><summary type="html">황당한 일을 겪었다.</summary></entry><entry><title type="html">Connection pool</title><link href="http://localhost:4000/notes/1811_6/" rel="alternate" type="text/html" title="Connection pool" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_6</id><content type="html" xml:base="http://localhost:4000/notes/1811_6/">&lt;p&gt;징그러운 삽질의 시간이었다.&lt;/p&gt;
 
 &lt;p&gt;사건의 발단을 이러했다.&lt;/p&gt;
 
