@@ -1,4 +1,445 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-28T01:35:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">Open Source 활용기</title><link href="http://localhost:4000/java/OpenSource/" rel="alternate" type="text/html" title="Open Source 활용기" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/java/OpenSource</id><content type="html" xml:base="http://localhost:4000/java/OpenSource/">&lt;h2 id=&quot;오픈소스깃헙-사용하기&quot;&gt;오픈소스/깃헙 사용하기&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-30T01:58:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">[Git] Commit과 Add</title><link href="http://localhost:4000/git/git_commit_add/" rel="alternate" type="text/html" title="[Git] Commit과 Add" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/git/git_commit_add</id><content type="html" xml:base="http://localhost:4000/git/git_commit_add/">&lt;p&gt;&lt;code&gt;git add -p&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;git-add--p-options&quot;&gt;git add -p options&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://blog.outsider.ne.kr/1247&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Git" /><summary type="html">git add -p</summary></entry><entry><title type="html">[GCP] zsh in iTerm</title><link href="http://localhost:4000/gcp/gcp_in_zsh/" rel="alternate" type="text/html" title="[GCP] zsh in iTerm" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gcp_in_zsh</id><content type="html" xml:base="http://localhost:4000/gcp/gcp_in_zsh/">&lt;p&gt;iTerms2를 이용 중에 zsh를 설치했다.&lt;/p&gt;
+
+&lt;p&gt;지루했던 쉘의 인터페이스를 입맛에 맞춰 바꾸는 재미를 느끼며 혼자 좋아하고 있었다.&lt;/p&gt;
+
+&lt;p&gt;그리고 잠시 후 쉘을 통해 gcloud에 접속했다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  gcloud compute --project ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그런데 결과는…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	gcloud not found
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;어제까지만해도 문제없이 접속을 했는데 갑자기 못찾는다니, 황당했다.&lt;/p&gt;
+
+&lt;p&gt;확인해보니 zsh을 설치하면서 기존에 환경을 잡아놓았던 것이 모두 틀어진 모양이다.&lt;/p&gt;
+
+&lt;p&gt;다시 gcloud sdk를 설치해야한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;gcloud-sdk-설치&quot;&gt;gcloud sdk 설치&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;curl https://sdk.cloud.google.com&lt;/td&gt;
+        &lt;td&gt;bash&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;내 경우 완료 후 /Users/[user] 경로에 들어와있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_gcp_sdk.png&quot; alt=&quot;gcp_sdk&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;설치가 정상적으로 진행됐으면, zsh 내에 옵션을 추가해준다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  vi .zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;내 경우 가장 하단에 아래의 옵션을 추가해주면된다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# The next line updates PATH for the Google Cloud SDK.
+source '/Users/betterfly/google-cloud-sdk/path.bash.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/betterfly/google-cloud-sdk/completion.bash.inc'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;현재 설정을 한 후 bash에서 ‘gcloud’ 를 실행하면 정상적으로 실행된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;위와-같이-설정을-했지만-여전히-진행이-안되는-경우&quot;&gt;위와 같이 설정을 했지만 여전히 진행이 안되는 경우.&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  vi .zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다시 zsh config 내용을 열어보면 중간 아래쪽에&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;source $ZSH/oh-my-zsh.sh &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;해당 소스가 보일 것이다.&lt;/p&gt;
+
+&lt;p&gt;이 소스 앞에다가 위에 입력한 내용을 다시 입력해주자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_zsh_config.png&quot; alt=&quot;gcp_sdk&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;설정 후 gcloud가 정상적으로 실행된다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="zsh" /><category term="iTerm" /><summary type="html">iTerms2를 이용 중에 zsh를 설치했다.</summary></entry><entry><title type="html">[Git] Add가 되지 않는 이슈</title><link href="http://localhost:4000/git/git_cached/" rel="alternate" type="text/html" title="[Git] Add가 되지 않는 이슈" /><published>2018-11-29T00:00:00+09:00</published><updated>2018-11-29T00:00:00+09:00</updated><id>http://localhost:4000/git/git_cached</id><content type="html" xml:base="http://localhost:4000/git/git_cached/">&lt;p&gt;최근 프로젝트 모듈을 분리하고, 디렉토리 구조를 바꾸면서 깃이 꼬여버렸다.&lt;/p&gt;
+
+&lt;p&gt;분리한 파일들이 깃에 add자체가 되지 않고, 로그에서도 특별한 상황을 확인하기 어려웠다.&lt;/p&gt;
+
+&lt;p&gt;파일을 옮겨서 다시 root 경로를 잡은 후 작업을 했지만 결과는 마찬가지였다.&lt;/p&gt;
+
+&lt;p&gt;add가 정상적으로 진행되지 않을 때, 확인해볼 것들이 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  // 로컬 Branch 간 비교
+  git diff &amp;lt;branch명&amp;gt; &amp;lt;다른 branch명&amp;gt; 
+
+  // 로컬과 리모트Branch 간 비교
+  git diff &amp;lt;branch명&amp;gt; origin/&amp;lt;branch명&amp;gt; 
+
+  // Commit 간 비교
+  git diff &amp;lt;commit &lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &amp;lt;commit &lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 
+
+  // 마지막 커밋과 현재 수정사항 확인
+  git diff HEAD
+
+  // 현재 unstaged 된 수정사항 확인
+  git diff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;git diff&lt;/code&gt;를 통해 변경된 결과를 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;하지만 내 경우 새로 구성한 디렉토리 및 파일들이 정상적으로 git에 관리되지 않고 있었다.&lt;/p&gt;
+
+&lt;p&gt;정확히 어디서부터 꼬였는지 파악은 어려웠지만, 결과적으로 깃 캐시를 날려서 add 후 push까지 정상적으로 진행할 수 있었다.&lt;/p&gt;
+
+&lt;h3 id=&quot;cached-제거&quot;&gt;cached 제거&lt;/h3&gt;
+
+&lt;p&gt;우선 cached 된 파일을 날려주자.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cached&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git rm =&amp;gt; 원격 저장소와 로컬 저장소에 있는 파일을 삭제한다. &lt;br /&gt;
+git rm –cached =&amp;gt; 원격 저장소에 있는 파일을 삭제한다. 로컬 저장소에 있는 파일은 삭제하지 않는다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;아마도 리모트 저장소에 파일들이 잘못 적재되어 있던 모양이다.&lt;/p&gt;
+
+&lt;p&gt;위와 같이 cache를 날려주니, 정상적으로 add가 진행되었다!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이 밖에도 리모트 저장소가 아닌 로컬에서 unstaged된 파일을 깔꼼하게 정리하고 싶다면,
+다음의 명령어를 날려주면된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git clean &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;-d : 디렉토리 포함&lt;/li&gt;
+  &lt;li&gt;-x : igrnoed 파일 포함&lt;/li&gt;
+  &lt;li&gt;-f : force&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이제 로컬 git 환경이너 정도 정리된 것 같다.&lt;/p&gt;
+
+&lt;p&gt;다음은 add와 commit에 대한 활용을 다루어 보아야겠다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git add -p&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;git-add--p-options&quot;&gt;git add -p options&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://blog.outsider.ne.kr/1247&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;참고&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://gracefullight.github.io/2016/12/28/git-add-%EC%95%88-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0-%ED%99%95%EC%9D%B8%ED%95%B4%EC%95%BC%EB%90%A0-%EA%B2%83/&lt;/li&gt;
+  &lt;li&gt;https://brunch.co.kr/@hopeless/9&lt;/li&gt;
+  &lt;li&gt;http://mygumi.tistory.com/103&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Git" /><summary type="html">최근 프로젝트 모듈을 분리하고, 디렉토리 구조를 바꾸면서 깃이 꼬여버렸다.</summary></entry><entry><title type="html">SAX Parser Exception</title><link href="http://localhost:4000/java/xml_SAXParser_exception/" rel="alternate" type="text/html" title="SAX Parser Exception" /><published>2018-11-27T00:00:00+09:00</published><updated>2018-11-27T00:00:00+09:00</updated><id>http://localhost:4000/java/xml_SAXParser_exception</id><content type="html" xml:base="http://localhost:4000/java/xml_SAXParser_exception/">&lt;p&gt;driver : com.mysql.jdbc.GoogleDriver&lt;/p&gt;
+
+&lt;p&gt;Cannot create JDBC driver of class ‘com.mysql.jdbc.GoogleDriver’ for connect URL ‘jdbc:mysql://google/db_wmp_push_dev?useSSL=false&amp;amp;cloudSqlInstance=push-209809:asia-northeast1:push-wmp-dev&amp;amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;amp;user=svc_push&amp;amp;password=svc_push123!&amp;amp;autoReconnect=true&amp;amp;characterEncoding=UTF-8’&lt;/p&gt;
+
+&lt;p&gt;java.sql.SQLException: No suitable driver&lt;/p&gt;
+
+&lt;p&gt;이런 문제&lt;/p&gt;
+
+&lt;p&gt;driver : com.mysql.jdbc.Driver&lt;/p&gt;
+
+&lt;h3 id=&quot;cause-javasqlsqlexception-cannot-create-poolableconnectionfactory-communications-link-failure&quot;&gt;Cause: java.sql.SQLException: Cannot create PoolableConnectionFactory (Communications link failure&lt;/h3&gt;
+&lt;p&gt;The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.)&lt;/p&gt;
+
+&lt;p&gt;Caused by: java.net.UnknownHostException: google&lt;/p&gt;
+
+&lt;p&gt;[SAXParser]&lt;/p&gt;
+
+&lt;p&gt;Simple API for XML&lt;/p&gt;
+
+&lt;p&gt;이름만봐도 XML을 위한거다.&lt;/p&gt;
+
+&lt;p&gt;그렇다 XML과 같은 Mark-up Language에서는 특수문자를 파싱하기 위해선 인식하기 위해선 다른 방법으로 치환하여 표현한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;특히-많이-사용하는-방법은-아래와-같다&quot;&gt;특히 많이 사용하는 방법은 아래와 같다.&lt;/h2&gt;
+&lt;p&gt;특수문자   |  바꿔주어야할 문자 
+—————————-
+“        |    &quot;
+—————————-
+&amp;amp;        |    &amp;amp;amp
+—————————-
+‘        |    &amp;amp;apos
+—————————-
+&amp;lt;        |    &amp;lt;
+—————————-&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   |    &amp;amp;gt; ----------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="XML" /><category term="JDBC" /><summary type="html">driver : com.mysql.jdbc.GoogleDriver</summary></entry><entry><title type="html">Servlet환경에서 DBCP2 사용하기</title><link href="http://localhost:4000/gcp/mysql_configuration/" rel="alternate" type="text/html" title="Servlet환경에서 DBCP2 사용하기" /><published>2018-11-23T00:00:00+09:00</published><updated>2018-11-23T00:00:00+09:00</updated><id>http://localhost:4000/gcp/mysql_configuration</id><content type="html" xml:base="http://localhost:4000/gcp/mysql_configuration/">&lt;h3 id=&quot;레거시-환경에-dbcp2-적용하기-not-used-spring-framework&quot;&gt;레거시 환경에 DBCP2 적용하기 (not used Spring Framework)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;‘레거시 환경’ 이라는 표현은 Spring Framework를 사용하지 않고 진행하는 기본 웹 Servlet환경을 의미한다. (doGet / doPost 등을 이용한 API 구성)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;레거시환경에서 myBatis를 구현하는 것은 그럭저럭 구현되었다.&lt;/p&gt;
+
+&lt;p&gt;사실 개선할점이 많이 보였지만, 말그대로 그럭저럭하게 구현된 것이다.&lt;/p&gt;
+
+&lt;p&gt;그런데 소스는 리팩토링하며 수정하면되지만, 기능적으로 문제가 있으면 안될 것이다.&lt;/p&gt;
+
+&lt;p&gt;특히나 DB와 관련해선 서비스에 직접적으로 영향을 주는 아주 치명적인 문제를 일으킬 수 있다.&lt;/p&gt;
+
+&lt;p&gt;특히 그 중 Connection Pool을 관려하는 환경 구성에 대한 의구심이 끊임없이 들었다.&lt;/p&gt;
+
+&lt;p&gt;불안했다.&lt;/p&gt;
+
+&lt;p&gt;Connection Pool 인스턴스가 중구난방으로 만들어지는건 아닌지, Pool은 제대로 관리되고 있는지 SqlSession은 낭비되고 있지 않은지…&lt;/p&gt;
+
+&lt;p&gt;인터넷에서 제공하는 많은 자료들을 참고해서 필요한 설정은 해두었지만 ‘이게 맞나..?’ 라는 의심이 끊이질 않았다.&lt;/p&gt;
+
+&lt;p&gt;그러던 중 내 고민을 해결해 줄 Connection Pool을 관리해주는 Common DBCP2 라는 라이브러리를 찾게되었다.&lt;/p&gt;
+
+&lt;p&gt;마이바티스 사용시 거의 기본적으로 사용되는 라이브러리로 거의 필수로 사용되는 라이브러리이다.&lt;/p&gt;
+
+&lt;p&gt;이걸 써야겠다.&lt;/p&gt;
+
+&lt;p&gt;그런데 문제가 있다.&lt;/p&gt;
+
+&lt;p&gt;스프링에서는 &lt;code&gt;SqlSessionFactoryBean&lt;/code&gt; 이라는 녀석이 있다.&lt;/p&gt;
+
+&lt;p&gt;이 Bean에다가 DB관련 설정을 모두 주입시켜주면, 아주 맘편하게 DB환경을 구축할 수 있다.
+DataSource뿐만 아니라, Configuration, Mapper등 DB관련 객체들을 관리해주는 Bean이다.&lt;/p&gt;
+
+&lt;p&gt;문제는 DBCP를 이용하기 위해선 myBatis DataSource를 변경해줘야한다.&lt;/p&gt;
+
+&lt;p&gt;DataSource환경이 DBCP로 되어야 한다는 것이다.&lt;/p&gt;
+
+&lt;p&gt;우리가 일반적으로 사용하는 myBatis-config.xml 정도라고 네이밍하는 myBatis 환경 구성의 모습이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE configuration
+        PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;
+        &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;settings&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;logImpl&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LOG4J&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cacheEnabled&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lazyLoadingEnabled&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;multipleResultSetsEnabled&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;useColumnLabel&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;useGeneratedKeys&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;autoMappingBehavior&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PARTIAL&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;autoMappingUnknownColumnBehavior&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;WARNING&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;defaultExecutorType&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SIMPLE&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;localCacheScope&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SESSION&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jdbcTypeForNull&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;OTHER&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;setting&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lazyLoadTriggerMethods&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;equals,clone,hashCode,toString&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;environments&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;default=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;development&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;environment&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;development&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;transactionManager&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;JDBC&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;dataSource&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POOLED&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;driver&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${driver}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;url&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${mysql_url}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;username&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${user}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${password}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;poolMaximumActiveConnections&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;30&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;poolMaximumIdleConnections&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;30&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;poolTimeToWait&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20000&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;poolPingEnabled&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;poolPingQuery&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;select 1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dataSource&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/environment&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/environments&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;mappers&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;mapper&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;resource=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mybatis/mappers/com/sample-mapper.xml&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/mappers&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 환경에서 &lt;code&gt;&lt;environment&gt;&lt;code&gt;의 DBCP를 적용하기 위해선 DataSource만 변경해주면된다.&lt;/code&gt;&lt;/environment&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;역시 문제는 위 상황에서 dataSource에 DBCP를 넣는다고 인식되지 않는다.&lt;/p&gt;
+
+&lt;p&gt;우선 메이븐을 통해 dbcp2를 가져오자.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.apache.commons&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;commons-dbcp2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.5.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;깔끔하게 xml을 통해서 구현하고 싶은데, 방법을 모르겠다.&lt;/p&gt;
+
+&lt;p&gt;그래서 자바에서 구현했다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;INITIALIZE_POOL_SIZE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX_CONNECTION_POOL_SIZE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX_IDLE_POOL_SIZE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX_CONNECTION_WAIT_MS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30000L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BasicDataSource&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dbcpDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BasicDataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BasicDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDriverClassName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.mysql.jdbc.Driver&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;local&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;baseUrl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setUsername&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setPassword&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userPassword&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getJdbcConnectUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setInitialSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;INITIALIZE_POOL_SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxTotal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAX_CONNECTION_POOL_SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxIdle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAX_IDLE_POOL_SIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxWaitMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAX_CONNECTION_WAIT_MS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTestWhileIdle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setValidationQuery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SELECT 1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;source에서 사용하는 getProperties() 함수는 메이븐 프로파일별로 설정된 각각의 프로파일들을 가져오기 위한 함수이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;사실 이렇게하고 JDBC접속을 최종적으로 도와주는 SqlSessionFactory 클래스만 다루면 되는데, 문제는 myBatis-config.xml 에 있는 mapper들을 가져와야한다.&lt;/p&gt;
+
+&lt;p&gt;(사실 mapper로 쿼리 쓰자고 myBatis쓰는건데 mapper를 못가져오면 도루묵이다.)&lt;/p&gt;
+
+&lt;p&gt;중요한 SqlSessionFactory부분인데,&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataSource&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbcpDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;TransactionFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trxFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JdbcTransactionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;development&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trxFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactoryBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;벌써 뭔가 허전하다.&lt;/p&gt;
+
+&lt;p&gt;sqlSessionFactory에 ‘config’ 를 넣어줬는데 Configuration에 실제로 유효한 값은 DataSource 밖에 없다.
+나머지 TransactionFactory, Environment 등의 값은 어디에도 없다.&lt;/p&gt;
+
+&lt;p&gt;난 DataSource만 DBCP를 적용하고 나머지는 myBatis-config.xml 에 설정한 값을 사용하고 싶다.&lt;/p&gt;
+
+&lt;p&gt;그렇게 디버깅을 하며 삽질하던 중 방법을 찾을 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SqlSessionFactoryBuilder&lt;/code&gt; 결국 이 클래스에 configuration을 전달해줘야 한다는 건데, 얘가 어떻게 세팅되어야 하는지 클래스 속을 들여다 보았다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Properties&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;XMLConfigBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XMLConfigBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;var5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var14&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExceptionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;wrapException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Error building SqlSession.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var14&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ErrorContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var13&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;실제로 SqlSessionFactoryBuilder 클래스의 build 메서드의 로직이다.&lt;/p&gt;
+
+&lt;p&gt;생각보다 단순했다. xml파일 자체를 InputStream으로 읽어들여 XML Parsing을 하는 것이다.&lt;/p&gt;
+
+&lt;p&gt;똑같이 해주면된다.&lt;/p&gt;
+
+&lt;p&gt;그래서 했다.&lt;/p&gt;
+
+&lt;h3 id=&quot;configuration&quot;&gt;Configuration&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dbcpConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataSource&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dbcpDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TransactionFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trxFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JdbcTransactionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dbcp&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trxFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClassLoader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mybatis/mybatis-config.xml&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;XMLConfigBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XMLConfigBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setEnvironment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;최종-sqlsessionfactory-인스턴스-생성-모습&quot;&gt;최종 SqlSessionFactory 인스턴스 생성 모습&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactoryBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dbcpConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;정리하자면, 내가 필요했던건 myBatis에서 기본으로 사용하는 DataSource접근이 아닌, 내가 원하는 DataSource로 세팅하여 접근하는 것이었다.
+mybatis의 configuration xml내에서 직접 접근할 수 있는 방법이 떠오르질 않아,
+자바에서 직접 접근이 가능하도록 삽질을 했다.&lt;/p&gt;
+
+&lt;p&gt;꽤 오랜 삽질끝에 구현은 되었는데 좋은 방법인지는 또 다른 시행착오를 겪어봐야할 것 같다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="mybatis" /><category term="SQL" /><summary type="html">레거시 환경에 DBCP2 적용하기 (not used Spring Framework)</summary></entry><entry><title type="html">Open Source 활용기</title><link href="http://localhost:4000/java/OpenSource/" rel="alternate" type="text/html" title="Open Source 활용기" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/java/OpenSource</id><content type="html" xml:base="http://localhost:4000/java/OpenSource/">&lt;h2 id=&quot;오픈소스깃헙-사용하기&quot;&gt;오픈소스/깃헙 사용하기&lt;/h2&gt;
 
 &lt;p&gt;https://medium.com/hbsmith/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%9D%BC%EA%B8%B0-git-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%8B%A4%EB%A3%A8%EA%B8%B0-9f66c98c1cb5&lt;/p&gt;
 
@@ -6,7 +447,35 @@
 
 &lt;p&gt;https://www.popit.kr/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-pull-request-%EB%B3%B4%EB%82%B4%EA%B8%B0/&lt;/p&gt;
 
-&lt;p&gt;http://sanghaklee.tistory.com/30&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Open Source" /><category term="github" /><summary type="html">오픈소스/깃헙 사용하기</summary></entry><entry><title type="html">[Google App Engine] include HTML in JSP</title><link href="http://localhost:4000/gcp/gae_resources/" rel="alternate" type="text/html" title="[Google App Engine] include HTML in JSP" /><published>2018-11-21T00:00:00+09:00</published><updated>2018-11-21T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gae_resources</id><content type="html" xml:base="http://localhost:4000/gcp/gae_resources/">&lt;p&gt;황당한 일을 겪었다.&lt;/p&gt;
+&lt;p&gt;http://sanghaklee.tistory.com/30&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Open Source" /><category term="github" /><summary type="html">오픈소스/깃헙 사용하기</summary></entry><entry><title type="html">[Google App Engine] Connect Google Cloud SQL</title><link href="http://localhost:4000/gcp/gcp_sql/" rel="alternate" type="text/html" title="[Google App Engine] Connect Google Cloud SQL" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gcp_sql</id><content type="html" xml:base="http://localhost:4000/gcp/gcp_sql/">&lt;p&gt;GCP SQL instance를 생성하고 MySQL Workbench에서 접속을 하려고 하는데 계속해서 timeout 에러를 뱉어내며 접속을 할 수 없었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.google.com/sql/docs/mysql/admin-tools&quot; alt=&quot;GCP에서 제공하는 MySQL도구 연결&quot; /&gt;
+구글 가이드문서를 보고 해봤지만 별다른 설정없이 접속이 붙어야 될 것 같은데 도저히 접속이 안돼서 꽤 많은 시간을 뻘짓했다.&lt;/p&gt;
+
+&lt;p&gt;너무 기본적인것이라 나만 몰랐나보다.&lt;/p&gt;
+
+&lt;p&gt;아주 간단한 설정으로 접속이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_gcp_sql.png&quot; alt=&quot;sql&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GCP SQL인스턴스 정보 메인화면의 상단 탭 중에 &lt;strong&gt;[연결]&lt;/strong&gt;이라는 탭이 있다.&lt;/p&gt;
+
+&lt;p&gt;네트워크 설정관련한 세팅이 가능한 곳인데
+해당 메뉴로 이동하여 다음의 설정만 추가해주면 끝난다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_gcp_sql_network.png&quot; alt=&quot;network&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;공개IP를 체크 후 &lt;code&gt;+네트워크 추가&lt;/code&gt;를 선택&lt;/li&gt;
+  &lt;li&gt;자유롭게 [이름]을 기입하고 [네트워크]란에 &lt;strong&gt;0.0.0.0/0&lt;/strong&gt; 을 입력&lt;/li&gt;
+  &lt;li&gt;[저장]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;잠시 인스턴스 업데이트가 진행된다.&lt;/p&gt;
+
+&lt;p&gt;다시 workbench로 이동하여 접속 테스트를 진행하면 손쉽게 접속할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_gcp_sql_connect.png&quot; alt=&quot;workbench&quot; /&gt;&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="SQL" /><summary type="html">GCP SQL instance를 생성하고 MySQL Workbench에서 접속을 하려고 하는데 계속해서 timeout 에러를 뱉어내며 접속을 할 수 없었다.</summary></entry><entry><title type="html">[Google App Engine] include HTML in JSP</title><link href="http://localhost:4000/gcp/gae_resources/" rel="alternate" type="text/html" title="[Google App Engine] include HTML in JSP" /><published>2018-11-21T00:00:00+09:00</published><updated>2018-11-21T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gae_resources</id><content type="html" xml:base="http://localhost:4000/gcp/gae_resources/">&lt;p&gt;황당한 일을 겪었다.&lt;/p&gt;
 
 &lt;p&gt;진행 중인 웹서비스에서 Google App Engine(이하 GAE)에 배포 후 팝업화면 전체가 노출되지 않는 것이다.&lt;/p&gt;
 
@@ -516,440 +985,4 @@
   &lt;li&gt;https://novemberde.github.io/2017/04/15/String_0.html&lt;/li&gt;
   &lt;li&gt;https://www.geeksforgeeks.org/stringbuffer-class-in-java/&lt;/li&gt;
   &lt;li&gt;https://www.journaldev.com/137/stringbuffer-vs-stringbuilder&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="String" /><category term="StringBuilder" /><category term="StringBuffer" /><summary type="html">StringBuilder 와 StringBuffer</summary></entry><entry><title type="html">AWT(Abstract Window Toolkit)</title><link href="http://localhost:4000/notes/1811_5/" rel="alternate" type="text/html" title="AWT(Abstract Window Toolkit)" /><published>2018-11-16T00:00:00+09:00</published><updated>2018-11-16T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_5</id><content type="html" xml:base="http://localhost:4000/notes/1811_5/">&lt;h3 id=&quot;자바와-awt-그리고&quot;&gt;자바와 AWT 그리고…&lt;/h3&gt;
-
-&lt;p&gt;최근 자바로 비트매니아와 같은 음악 게임을 만들려고 작업을 하고 있었다.&lt;/p&gt;
-
-&lt;p&gt;순수 자바로 하기 때문에 GUI는 SWING/AWT를 이용할 수 밖에 없었다.&lt;/p&gt;
-
-&lt;p&gt;그리고 열심히 화면을 하나하나 그려갔다.&lt;/p&gt;
-
-&lt;p&gt;배경 이미지를 골랐고, 버튼이미지들, 그리고 배경음악으로 깔릴 BGM과 플레이어까지 붙였다.&lt;/p&gt;
-
-&lt;p&gt;뭐 딱히 어려운 부분도 아니고 순조롭게 그려나가는 중…&lt;/p&gt;
-
-&lt;p&gt;실행을 했는데 화면이 아무리 해도 안뜬다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/notes/2018/11/black_image.png&quot; alt=&quot;blackImage&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;실제로 이렇게 배경화면이 죽어버리고 무슨 짓을 해도 화면이 안뜬다.&lt;/p&gt;
-
-&lt;p&gt;아무리 인터넷을 뒤져봐도 큰 문제는 없어보이고.&lt;/p&gt;
-
-&lt;실제 소스=&quot;&quot; 첨가=&quot;&quot;&gt;
-&lt;/실제&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="AWT" /><summary type="html">자바와 AWT 그리고…</summary></entry><entry><title type="html">Role Playing Game</title><link href="http://localhost:4000/notes/1811_4/" rel="alternate" type="text/html" title="Role Playing Game" /><published>2018-11-14T00:00:00+09:00</published><updated>2018-11-14T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_4</id><content type="html" xml:base="http://localhost:4000/notes/1811_4/">&lt;p&gt;새로운 일을 하는 것은 언제나 즐겁다.&lt;/p&gt;
-
-&lt;p&gt;새로운 일을 하는 것은 내 머릿속에 없는 무언가가 나에게 들어오는 과정이다.&lt;/p&gt;
-
-&lt;p&gt;처음 그 기술 또는 업무를 익힐때는 숙련도가 낮아 크고 작은 실수도 반복하고, 실제로 이것이 좋은것인지 필요한것인지 판단하기 힘들다.(새로운것이라고 무조건 옳고, 좋은 것은 아닐 것이다)&lt;/p&gt;
-
-&lt;p&gt;그리고 그것이 내것이 되었을때. 비로소 똥인지 된장인지 판별이 가능하기도 하다.&lt;/p&gt;
-
-&lt;p&gt;내가 가장 좋아했던 &lt;strong&gt;WOW(World Of Warcraft)&lt;/strong&gt;라는 게임이 있다.&lt;/p&gt;
-
-&lt;p&gt;캐릭터를 새로 생성하면 기본공격밖에 없다.&lt;/p&gt;
-
-&lt;p&gt;처음 시작하는 마을에서부터 퀘스트를 부여 받으며 기본 공격만을 이용해서 레벨업을 하고, 스킬을 익히며 점점 강해진다.&lt;/p&gt;
-
-&lt;p&gt;지금은 없지만 과거의 와우에는 공격/스킬 숙련도가 있어서 처음 배웠을때(숙련도가 낮았을 때)는 ‘MISS’도 많이 나고 삽질을 하기 일쑤다.&lt;/p&gt;
-
-&lt;p&gt;하지만 거듭 같은 공격/스킬을 사용할수록 해당 숙련도가 상승하고 최대치의 숙련도까지 익히면 거의 ‘MISS’가 나는 일이 없다.&lt;/p&gt;
-
-&lt;p&gt;레벨이 높을 수록 많은 스킬을 보유할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;우리는 이 보유한 많은 스킬들을 저마다 개성에 또는 특성에 맞게 조합하여 자신만의 스킬트리를 완성한다.&lt;/p&gt;
-
-&lt;p&gt;우리는 이렇게 강해지면 던전이라는 곳에서 팀을 이루어 강한 상대를 상대한다. 그리고 그 던전을 클리어하면 좋은 보상이 떨어진다.(레이드는 더욱 큰 조직활동)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/notes/2018/11/wow.jpg&quot; alt=&quot;wow&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;어떤가?&lt;/p&gt;
-
-&lt;p&gt;저 신규 생성된 캐릭터에 ‘나’를 대입하고, 공격/스킬은 우리가 익히는 언어 또는 기술 등에 대입해보면 우리가 하는 일과 전혀 다르지 않다.&lt;/p&gt;
-
-&lt;p&gt;아니, 어쩌면 개발자를 모티브로 만든건 아닌가? 생각이 들 정도로 정확히 같은 패턴이다.&lt;/p&gt;
-
-&lt;p&gt;사실 개발자에 국한되는 것이 아니라 우리 인간의 삶과 꼭 닮아 있다.&lt;/p&gt;
-
-&lt;p&gt;(사실 우리는 ‘역할 놀이(Role Playing Game)’를 하고 있는 것이다!)&lt;/p&gt;
-
-&lt;p&gt;사실 새로운 것을 배운다는 것.&lt;/p&gt;
-
-&lt;p&gt;그 즐거운 과정이 게임내에서 케릭터를 육성하는 과정과 다르지 않다는 생각이 들어 포스팅을 시작했는데 결론을 맺기가 어렵다.&lt;/p&gt;
-
-&lt;p&gt;쉽게 생각하면 편한 것 같다.&lt;/p&gt;
-
-&lt;p&gt;어차피 새로운 것은 다 어렵다. 그래서 두렵기도하다. 때로는 계속 새로운 것들을 접하다보면 지칠 수도 있다.&lt;/p&gt;
-
-&lt;p&gt;최근에 몸으로 느끼는 것 중에 ‘롱런’할 수 있는 가장 근본적인 방법 1순위가 ‘(건강한)체력’ 그 다음으로 ‘(본질에 대한)이해’인 것 같다.&lt;/p&gt;
-
-&lt;p&gt;이 과정들을 항상 즐길 수 있는 강인한 체력을 길러야겠다.&lt;/p&gt;
-
-&lt;p&gt;이제 시작이니까.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">새로운 일을 하는 것은 언제나 즐겁다.</summary></entry><entry><title type="html">String 이야기 1부</title><link href="http://localhost:4000/java/string_1/" rel="alternate" type="text/html" title="String 이야기 1부" /><published>2018-11-11T00:00:00+09:00</published><updated>2018-11-11T00:00:00+09:00</updated><id>http://localhost:4000/java/string_1</id><content type="html" xml:base="http://localhost:4000/java/string_1/">&lt;h2 id=&quot;string의-정체&quot;&gt;String의 정체&lt;/h2&gt;
-
-&lt;p&gt;String 이라는 자료형은 자바에서 가장 많이 쓰이는 타입일 것이다.&lt;/p&gt;
-
-&lt;p&gt;그 말은 다시 말해서, 많이 쓰기 때문에 중요하다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;그리고 중요하다는 것은 제대로 알고 써야한다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;그런데 아직 String이 낯설고 어렵게 느껴진다.&lt;/p&gt;
-
-&lt;p&gt;String과 StringBuilder 그리고 StringBuffer에 대해서 꽤 많이 검색을 시도해봤다. 정말 많은 비교 글들이 있다.&lt;/p&gt;
-
-&lt;p&gt;그리고 대게는 이와 같이 표현한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;String은 immutable / StringBuilder 및 StringBuffer 는 mutable 이다.&lt;/li&gt;
-    &lt;li&gt;StringBuffer는 동기화(syncronize)를 지원한다.&lt;/li&gt;
-    &lt;li&gt;StringBuilder는 동기화 처리를 하지 않으므로 단일 스레드내에서 성능이 좋다.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;벌써 말이 어렵다. immutable/mutable은 무엇이고,&lt;/p&gt;
-
-&lt;p&gt;동기화처리를 한다는 것은 어떤 처리를 말하는 것일까? 문자열 데이터를 처리하는데 멀티 스레드 환경이라는게 어떤 영향을 미칠까?&lt;/p&gt;
-
-&lt;p&gt;우선 한가지 희소식이 있다.&lt;/p&gt;
-
-&lt;p&gt;자바(이하 라이언 갓슬링)에서 이런 고민을 하는 우리를 위해 편의를 제공해주었다.&lt;/p&gt;
-
-&lt;p&gt;StringBuilder와 StringBuffer를 얕게 알고 있다면, 문자열을 조합할때 혼란을 겪곤한다. String을 아무 생각없이 조합해서 쓰면 안된다는 것이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;world&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이런 방식을 말하는 것인데, 이렇게 문자열을 조합하는 경우 과거(JDK 1.5버전 이전)에는 각각의 String 인스턴스가 생성되면서 메모리에 부담을 주기 때문에 많은양의 데이터를 처리하는 경우 성능에 이슈를 주었다고 한다.&lt;/p&gt;
-
-&lt;p&gt;하지만 현재(JDK 1.8을 사용 중) 발전한 자바에서는 위와 같은 단순한 String 간의 조합에선 컴파일 단계에서 StringBuilder로 컴파일 되도록 자동으로 처리해준다고 한다.&lt;/p&gt;
-
-&lt;p&gt;다음과 같이 말이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StringStory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;!!!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Welcome to &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;!!!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;jdk14&quot;&gt;JDK1.4&lt;/h3&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StringStory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;!!!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Welcome to &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;!!!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;jdk15&quot;&gt;JDK1.5&lt;/h3&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StringStory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;!!!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Welcome to &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;!!!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 JDK1.4의 ‘result’ 변수를 보면 str0 과 str1 이라는 각각의 인스턴스를 조합하여 결과를 산출한다.&lt;/p&gt;
-
-&lt;p&gt;하지만 JDK1.5에서는 StringBuilder라는 하나의 인스턴스 내에서 추가되는 문자열을 append하는 형식으로 진행되기 때문에 1개의 인스턴스만 사용하므로 메모리 효율이 좋다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;이제 다시 본론으로 돌아가 근본적인 내용을 살펴보자.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;String의 중요한 성격은 &lt;strong&gt;immutable&lt;/strong&gt; 하다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;immutable이란 무엇인가?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_immutable.png&quot; alt=&quot;immutable&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;‘변하지 않는 객체’라는 것인데… 사실 잘 와닿지 않는다.&lt;/p&gt;
-
-&lt;p&gt;그럼 immutable(불변)과 mutable(가변)의 차이를 알아보면 도움이 될까 싶다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;immutableTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;immutable&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;=====change b value=======&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; add str&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;먼저 이번 주인공인 immutable한 객체. &lt;em&gt;String&lt;/em&gt;이다. 아주 심플하고 직관적인 코드다.&lt;/p&gt;
-
-&lt;p&gt;결과는 어떨까?&lt;/p&gt;
-
-&lt;p&gt;너무나 쉬운 예제이지만, 우리가 주목할 것은 ‘b’의 hashCode값이다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;hashCode는 해당 객체가 갖고 있는 고유한 ‘주소값’이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_immutable_string.png&quot; alt=&quot;immutable_string&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;b의 hashCode값이 변했다&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;당연히 a의 결과는 변함이 없으며, b라는 변수는 추가한 문자열을 얻게 되었으며 새로운 주소값을 갖게 되었다.&lt;/p&gt;
-
-&lt;p&gt;다시 말해 이것은 b라는 새로운 인스턴스가 생성된 것이다.&lt;/p&gt;
-
-&lt;p&gt;단순히 &lt;strong&gt;b = a&lt;/strong&gt; 라고 선언하여, a인스턴스를 참조할때는 둘 다 ‘1596987778’ 이라는 주소를 바라보고 있었다.&lt;/p&gt;
-
-&lt;p&gt;하지만 변수 b에 “add str” 이라는 문자열을 추가하면서 b는 새로운 주소값을 갖게되며 별도의 인스턴스를 차지하는 것이다.&lt;/p&gt;
-
-&lt;p&gt;우리는 이것을 당연하게 생각하지만, 이것이 immutable하다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;아직 이해가 힘들다면 mutable한 객체의 변화를 살펴보자.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mutableTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;=====change b value=======&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b.hashCode : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;b : &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;int 배열을 이용해서 테스트 했다.&lt;/p&gt;
-
-&lt;p&gt;이번 결과는 어떨까?&lt;/p&gt;
-
-&lt;p&gt;사실 윗 부분은 볼 것도 없을 것이고, 궁금한 것은 b배열의 변화 후 a 배열의 변화이다.&lt;/p&gt;
-
-&lt;p&gt;결과는 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_mutable_int_array.png&quot; alt=&quot;immutable_string&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이번엔 어떤가?&lt;/p&gt;
-
-&lt;p&gt;a,b 모두 hashCode(주소값)가 변하지 않았다.&lt;/p&gt;
-
-&lt;p&gt;그런데 아래쪽 a[1] 배열이 5로 바뀌었다!&lt;/p&gt;
-
-&lt;p&gt;b[1]의 값을 변화시켰는데 a[1]의 값이 변한 것이다.&lt;/p&gt;
-
-&lt;p&gt;이 역시 당연한가? 이것이 mutable한 객체이다.&lt;/p&gt;
-
-&lt;p&gt;사실 이쯤에서 눈치를 챘을 수 있지만 이것은 자바의 중요한 개념 중 하나인 Call-by-Value &amp;amp; Call-by-Reference에 해당하는 내용이다.(필자는 이것을 모르고 정리하다가 발견한 것은 함정)&lt;/p&gt;
-
-&lt;p&gt;[이전글]&lt;a href=&quot;&quot;&gt;Call by reference in Java&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;아직 StringBuilder &amp;amp;&amp;amp; StringBuffer 이야기는 꺼내지도 않았는데 이야기가 길어졌다.&lt;/p&gt;
-
-&lt;p&gt;다음 포스팅에 본격적으로 String과 StringBuilder &amp;amp;&amp;amp; StringBuffer의 차이 및 활용에 대해서 조사해보도록 하겠다.&lt;/p&gt;
-
-&lt;h3 id=&quot;참고&quot;&gt;참고&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;https://gist.github.com/benelog/b81b4434fb8f2220cd0e900be1634753&lt;/li&gt;
-  &lt;li&gt;http://limkydev.tistory.com/68&lt;/li&gt;
-  &lt;li&gt;http://egloos.zum.com/iilii/v/3809685&lt;/li&gt;
-  &lt;li&gt;https://www.slipp.net/questions/271&lt;/li&gt;
-  &lt;li&gt;http://www.mimul.com/pebble/default/2015/10/10/1444466677572.html&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="String" /><category term="immutable" /><summary type="html">String의 정체</summary></entry><entry><title type="html">ideation</title><link href="http://localhost:4000/notes/1811_3/" rel="alternate" type="text/html" title="ideation" /><published>2018-11-10T00:00:00+09:00</published><updated>2018-11-10T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_3</id><content type="html" xml:base="http://localhost:4000/notes/1811_3/">&lt;p&gt;누군가의 한마디가 큰 울림, 새로운 시발점을 불러오는 경험은 누구나 다 있다.&lt;/p&gt;
-
-&lt;p&gt;조금 전 ‘대화의 희열 - 아이유 편’을 보는데,&lt;/p&gt;
-
-&lt;p&gt;아이유가 암묵적으로 행해지고 있던 음원 시장의 규칙을 깬 이야기를 했다.&lt;/p&gt;
-
-&lt;p&gt;음원 시장은 암묵적으로 오후 12시부터 6시까지 음원발표하는 것을 관행으로 한다고 한다. 이유인즉슨,  그 시간에 스트리밍 집계를 하여 음원 순위에 반영되기 때문에 그 이전/이후에 스트리밍 하는 것은 꽤 큰 손실(Time-loss)가 있을 수 밖에 없다.&lt;/p&gt;
-
-&lt;p&gt;하지만 아이유는 ‘가을 아침’ 이라는 곡을 발매할때, 이건 누가봐도 아침 노랜데 오후에 낼 수 없다는 신념으로 모두가 반대하는, 그리고 경제적인 손실을 감수하고 아침에 발표했다고 한다.&lt;/p&gt;
-
-&lt;p&gt;(결과적으로 출근/등교 길에 이 노래를 접했던 대중들의 큰 공감을 사서 좋은 음원 순위를 기록하기도 했다고 한다.)&lt;/p&gt;
-
-&lt;p&gt;그리고 아이유는 이러한 형식적인 관행은 누군가 깨지 않으면 계속해서 같은 패러다임안에서 굴러가기 때문에, 창의적인 것이 실현되기 어렵다고 한다. 그 위험한 승부수를 내밀 수 있었던 포부와 자신감 그리고 자신의 음악에 대한 자부심까지 느껴져서 멋진 아티스트라는 생각이 들었다.&lt;/p&gt;
-
-&lt;p&gt;(아이유 음악은 좋아하지만 아이유를 찬양하는 ‘절대’ 아니다.)&lt;/p&gt;
-
-&lt;p&gt;평소 그 생각의 깊이가 얼마나 큰 지 모르겠지만, 아티스트라고 칭하는 사람들은 꽤 다른 영역에. 그리고 아이돌이라는 껍데기에 씌여져 조금은 ‘평가절하’되고 있는(어쩌면 나만 그러고 있을지 모르겠지만) 아티스트들이 많은 것 같다.&lt;/p&gt;
-
-&lt;p&gt;‘어린 친구들이 뭘 알아’ 라는 꼰대식 마인드는 사실 나에게도 있다.&lt;/p&gt;
-
-&lt;p&gt;삶의 지혜, 세상을 보는 식견은 어느정도 세월에 비례한다고 생각했지만.&lt;/p&gt;
-
-&lt;p&gt;10대 어린 나이부터 활동해온 한 가수가 정신없이 시달리는 스케줄 속에서도 세상을 바라보는 통찰과 자기 내면의 훈련을 해내가는 과정이 대단하다고 생각한다.&lt;/p&gt;
-
-&lt;p&gt;흔히 ‘공인’이라고 불리는 대중들의 인지도를 먹고 사는 인물들에 대한 잣대가 엄격하다.&lt;/p&gt;
-
-&lt;p&gt;그도 그럴 것이, 그들이 실제로 대중(국민)들에게 미치는 영향력이 생각보다 강력하기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;같은 맥락에서 아이유가 했던 저 작은 날개짓이 누군가에게 나비효과가 되어 큰 태풍을 일으킬 수도 있다.&lt;/p&gt;
-
-&lt;p&gt;그래서 난 새로운 것. 관행과 벗어난 무언가. 그리고 그것을 접근하는 과정들이 좋다.&lt;/p&gt;
-
-&lt;p&gt;같은 이유로 스터디와 같은 모임을 좋아한다. 특히 여러 사람이 모여 이야기 나누는 것이 좋다.&lt;/p&gt;
-
-&lt;p&gt;사람들이 모였을떄 재미난 경험들.&lt;/p&gt;
-
-&lt;p&gt;내가 불현듯 내뱉은 한마디에 옆에서 한마디씩 살을 붙여주어 풍성한 가지가 달린 나무가 되기도 한다.&lt;/p&gt;
-
-&lt;p&gt;예를들어, 스터디 이름을 정하는데 있어서 고민을 하던 중&lt;/p&gt;
-
-&lt;p&gt;누군가 ‘우리는 토요일마다 모이니까…’ 라는 한마디에&lt;/p&gt;
-
-&lt;p&gt;‘토모’라는 스터디명이 탄생했다.&lt;/p&gt;
-
-&lt;p&gt;1차원적이고 직관적인 이름이라고 우습게 들릴 수 있지만, 우리는 이 이름이 너무 만족스러웠고 가장 우리다운 이름이었다.&lt;/p&gt;
-
-&lt;p&gt;또, 스터디 주제에 대한 아이디어를 고민할때도 아무 얘기나 내뱉은 한마디에 불씨가 지펴져 꽤 뜨거운 토론으로 이어지기도 한다.&lt;/p&gt;
-
-&lt;p&gt;그 불씨를 누가 집히느냐 이다.&lt;/p&gt;
-
-&lt;p&gt;[어떻게, 무엇을]과 같은 형식은 중요하지 않다.&lt;/p&gt;
-
-&lt;p&gt;불씨만 집혀주면된다. 판 만 준비해주면 된다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;그것이 어떤 형태이든 그 새로운 불씨는 누군가의 심지에 불이 붙을 수 있다.&lt;/p&gt;
-
-&lt;p&gt;세상을 조금 더 주의깊게 바라보고 누군가의 소리에 귀기울이고 산다면.&lt;/p&gt;
-
-&lt;p&gt;그리고 내 마음 속에 언제든지 불이 붙을 수 있는 심지를 준비해 놓는다면.&lt;/p&gt;
-
-&lt;p&gt;언제든지 큰 폭발력을 낼 수 있지 않을까.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2018.11.10 새벽 6시에 뻘글…&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">누군가의 한마디가 큰 울림, 새로운 시발점을 불러오는 경험은 누구나 다 있다.</summary></entry><entry><title type="html">paintComponent</title><link href="http://localhost:4000/notes/1811_2/" rel="alternate" type="text/html" title="paintComponent" /><published>2018-11-08T00:00:00+09:00</published><updated>2018-11-08T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_2</id><content type="html" xml:base="http://localhost:4000/notes/1811_2/">&lt;p&gt;Java Swing component를 이용해서 간단한 음악게임을 만들고있다.&lt;/p&gt;
-
-&lt;p&gt;화면을 그리는 중인데&lt;/p&gt;
-
-&lt;p&gt;paint 와 paintComponent 간의 순서 또는 버퍼문제로 이미지가 제대로 뜨지 않는다.&lt;/p&gt;
-
-&lt;p&gt;백그라운드 이미지 위에 JLabel 또는 JButton이 위치해야하는데,&lt;/p&gt;
-
-&lt;p&gt;참고하고 있는 곳에서는 paint()를 이용해서 백그라운드 이미지를 그리고,&lt;/p&gt;
-
-&lt;p&gt;paintComponent() 를 이용해서 이미지 위에 버튼이나 레이블같은것을 뿌려준다고 하는데,&lt;/p&gt;
-
-&lt;p&gt;이 과정이 이중버퍼를 통해서 이루어지는 것으로 이해했는데&lt;/p&gt;
-
-&lt;p&gt;안된다.&lt;/p&gt;
-
-&lt;p&gt;아… 답답해&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;paint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Graphics&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;screenImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SCREEN_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SCREEN_HEIGHT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;screenGraphic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screenImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getGraphics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;screenDraw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screenGraphic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screenImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;screenDraw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Graphics&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;paintComponents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;introBackground&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//        this.revalidate();&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//        this.repaint();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;paintComponents()를 올리면, introBackground가 나오고&lt;/p&gt;
-
-&lt;p&gt;내리면 버튼이나 레이블이 나오고 어쩌라는거…&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">Java Swing component를 이용해서 간단한 음악게임을 만들고있다.</summary></entry><entry><title type="html">우선 순위</title><link href="http://localhost:4000/notes/1811_1/" rel="alternate" type="text/html" title="우선 순위" /><published>2018-11-06T00:00:00+09:00</published><updated>2018-11-06T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_1</id><content type="html" xml:base="http://localhost:4000/notes/1811_1/">&lt;p&gt;벌써 한달이 지났다.&lt;/p&gt;
-
-&lt;p&gt;꽤 많은 일들이 있었다.&lt;/p&gt;
-
-&lt;p&gt;내가 작업한 모듈이 서비스에서 활용되기도 한다.&lt;/p&gt;
-
-&lt;p&gt;그리고 최근엔 embulk를 통해 bigquery -&amp;gt; vertica 의 etl 작업을 진행하고 있다.&lt;/p&gt;
-
-&lt;p&gt;정확히는 저번주 목요일부터 진행을했다.&lt;/p&gt;
-
-&lt;p&gt;noSQL이라는 데이터도 처음 다루어 보았다.&lt;/p&gt;
-
-&lt;p&gt;여전히 많은 것들이 새롭고 낯설기만하다.&lt;/p&gt;
-
-&lt;p&gt;그런데 이제 그 낯섬에 대해선 극복이 필요할 것 같다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;이슈가 터졌기 때문이다&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;그것도 양방향에서…&lt;/p&gt;
-
-&lt;p&gt;‘이충일’이라는 스레드는 동시 작업이 들어와서 병목을 겪었다.&lt;/p&gt;
-
-&lt;p&gt;이전에 push 모듈을 만들었던 A 라는 프로세스와&lt;/p&gt;
-
-&lt;p&gt;현재 진행 중인 빅데이터 etl 하는 B 라는 프로세스의 충돌이다.&lt;/p&gt;
-
-&lt;p&gt;나라는 스레드를 관리하는 사람은 나의 사수이다. 나의 사수분께서 내 스레드의 스케줄을 관리한다. 우선순위를 선정하고, 둘 중 무엇을 해야할지 몰라서 작업이 멈춰있는 나는 사수님이 설정한 스케줄대로 잡을 진행한다.&lt;/p&gt;
-
-&lt;p&gt;A라는 모듈의 이슈를 먼저할 것으로 스케줄링되었다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;A모듈의 문제는 원 서버에서 보내는 데이터가 제대로 업데이트가 되지 않는 이슈였다.&lt;/p&gt;
-
-&lt;p&gt;이 이슈를 겪으며 가장 치명적이고 기본적인 문제를 파악했는데, 다름아닌 작업을 할때 &lt;em&gt;이 일이 어떻게 돌아가는 지 모르고 시작했다는 것이다.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;개발자가 개발을 하는데 내가 무엇을 만드는지 모르고 시작한 것이다.&lt;/p&gt;
-
-&lt;p&gt;그저 ‘돌아가기만 하는’ 모듈을 만들어 놓은 것이다. 특별히 에러는 발생하지 않았고 로그도 잘 찍혔으며, 입력한 데이터가 제대로 들어온다.&lt;/p&gt;
-
-&lt;p&gt;사실 쉽게 생각하면 그것이 전부다.&lt;/p&gt;
-
-&lt;p&gt;하지만 디비 각 필드마다 어떤 역할을 하고, 어떤 값을 키 값으로 할것인지. 또 이 디비를 사용하는 클라이언트 개발자는 어떤 필드를 필요로 하는지 등등&lt;/p&gt;
-
-&lt;p&gt;참 생각없이 개발했다. 그저 자바코드를 어떻게 짤까. 객체지향적으로 하려면 어떨까. 중복은 어떻게 제거할까.&lt;/p&gt;
-
-&lt;p&gt;틀리진 않지만. 우선순위가 잘못됐다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;내가 무엇을 만들어야 하는지&lt;/li&gt;
-  &lt;li&gt;이 서비스를 사용하는 사람은 무엇을 필요로 하는지&lt;/li&gt;
-  &lt;li&gt;그것을 어떻게 만들 것인지&lt;/li&gt;
-  &lt;li&gt;로그는 어떻게 찍을 것인지&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;등등&lt;/p&gt;
-
-&lt;p&gt;당연한 이야기지만, 모든 일에는 순서가 중요한 것 같다.&lt;/p&gt;
-
-&lt;p&gt;그 순서를 고민하고, 어떤 방향으로 어떻게 진행할지를 설계하는 모든 과정이 아키텍트겠지.&lt;/p&gt;
-
-&lt;p&gt;급하게 결과만을 좇아서 만들어 놓은 결과를 놓고 돌아보면, 결국 처음으로 다시 돌아간다.&lt;/p&gt;
-
-&lt;p&gt;처음 시작할때 쫓기는 마음으로 일단 코딩부터 해야겠다고 IDE를 켜는 순간 제대로 세우지 못한 계획 때문에 다시 처음부터 고민해봐야할때가 많다.&lt;/p&gt;
-
-&lt;p&gt;아마 그런 훈련이 몸에 익은 사람들을 &lt;strong&gt;시니어&lt;/strong&gt;라고 하지 않을까 싶다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><summary type="html">벌써 한달이 지났다.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="String" /><category term="StringBuilder" /><category term="StringBuffer" /><summary type="html">StringBuilder 와 StringBuffer</summary></entry></feed>
