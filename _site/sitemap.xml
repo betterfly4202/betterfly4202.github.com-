@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:4000/review/how_to_live/.html</loc>
+    
+    <lastmod>2018-11-30T00:00:00+09:00</lastmod>
+    
+
+    
+    <changefreq>weekly</changefreq>
+    
+
+    
+    <priority>0.5</priority>
+    
+
+  </url>
+  
+  <url>
     <loc>http://localhost:4000/git/git_commit_add/.html</loc>
     
     <lastmod>2018-11-30T00:00:00+09:00</lastmod>
@@ -247,6 +263,22 @@
     <loc>http://localhost:4000/notes/1811_1/.html</loc>
     
     <lastmod>2018-11-06T00:00:00+09:00</lastmod>
+    
+
+    
+    <changefreq>weekly</changefreq>
+    
+
+    
+    <priority>0.5</priority>
+    
+
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/review/Effective-programming_more_than_writing_code/.html</loc>
+    
+    <lastmod>2018-11-04T00:00:00+09:00</lastmod>
     
 
     

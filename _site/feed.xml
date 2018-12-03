@@ -1,26 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-30T01:58:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">[Git] Commit과 Add</title><link href="http://localhost:4000/git/git_commit_add/" rel="alternate" type="text/html" title="[Git] Commit과 Add" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/git/git_commit_add</id><content type="html" xml:base="http://localhost:4000/git/git_commit_add/">&lt;p&gt;&lt;code&gt;git add -p&lt;/code&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-04T00:24:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">어떻게 살 것인가</title><link href="http://localhost:4000/review/how_to_live/" rel="alternate" type="text/html" title="어떻게 살 것인가" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/review/how_to_live</id><content type="html" xml:base="http://localhost:4000/review/how_to_live/">&lt;h3 id=&quot;어떻게-살-것인가&quot;&gt;어떻게 살 것인가&lt;/h3&gt;
 
-&lt;h3 id=&quot;git-add--p-options&quot;&gt;git add -p options&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y - stage this hunk
-n - do not stage this hunk
-q - quit; do not stage this hunk or any of the remaining ones
-a - stage this hunk and all later hunks in the file
-d - do not stage this hunk or any of the later hunks in the file
-g - select a hunk to go to
-/ - search for a hunk matching the given regex
-j - leave this hunk undecided, see next undecided hunk
-J - leave this hunk undecided, see next hunk
-k - leave this hunk undecided, see previous undecided hunk
-K - leave this hunk undecided, see previous hunk
-s - split the current hunk into smaller hunks
-e - manually edit the current hunk
-? - print help
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/review/2018/.jpeg&quot; alt=&quot;어떻게 살것인가&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;코딩호러의 이펙티브 프로그래밍(제프 앳우드)&lt;/figcaption&gt;
 
-&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+&lt;p&gt;[내용]
+작가 유시민 삶의 흔적이 남아있는 책이다.
+지금의 나와 같은 시절에 청년 유시민이 겪었던 고민의 흔적들, 그리고 그 시대를 살아가는 유시민의 모습.
+때로는 세상과 맞서며 치열하게. 하지만 냉철하게 세상을 바라보는 모습이 담겨있다.&lt;/p&gt;
+
+&lt;p&gt;저마다 다른 ‘삶’이라는 추상적인 이야기이지만,
+작가 유시민은 자신의 이야기를 통해 독자들이 삶을 대하는 자세를 다시 한 번 돌아볼 수 있도록 도와준다.&lt;/p&gt;
+
+&lt;p&gt;[느낀점]
+평소 좋아하던 유시민작가의 자서전과 같은 이야기였다.
+평소 토론현장이나, 지식/교양프로그램에 나와서 친근하게, 때로는 강하고 논리적으로 자신의 주장을 전달하는 유시민 작가를 좋아했다.
+그래서 그가 어떤 고민을 통해서 지금의 유시민이라는 사람이 되었는지 궁금했다.
+책 한권으로 한 사람의 인생 전반을 들여다볼 순 없지만, 작가가 고민했던 흔적들을 간접적으로 느끼며 내 삶의 근간에 대해서도 다시한 번 생각해볼 수 있는 좋은 기회가 되었다.&lt;/p&gt;
+
+&lt;p&gt;특히 ‘어떻게 죽을 것인가’를 고민하면 자연스럽게 우리가 ‘어떻게 살지’에 대한 답이 나온다고 한다.
+아직 먼 미래, 또는 일어나지 않을 일이라고 생각했던 ‘죽음’이라는 물음에 대해 한번쯤 깊이있게 고민해볼 수 있는 시간이었다.&lt;/p&gt;
+
+&lt;p&gt;가족, 일, 대인관계 등 사회에 신경써야 할 것들이 너무 많아 정작 내 스스로를 돌아보거나 고민해볼 시간이 많이 없었다.
+보다 건강하게 사회에서 활약하기 위해선 내 자신에 대한 진지한 고민과 정확한 방향을 세워야 흔들리지 않고 내 삶의 자유를 만끽할 수 있을 것이다.&lt;/p&gt;
+
+&lt;p&gt;[하고 싶은 말]
+이 책은 학생, 직장인, 주부 등 직업, 성별, 나이에 관계없이 모두가 읽어볼 만한 책 인 것 같다.&lt;/p&gt;
+
+&lt;p&gt;현대와 같이 치열하고 앞만 보며 달리고 있는 세상에서 잠시 멈춰 서서 
+저마다 다른 자신의 위치/상황에서 자신의 삶을 되돌아보고,  무엇을 놓치고 있는지 한번쯤 되짚어 보는 시간도 중요한 것 같다.
+또한 과거를 돌아보면 미래가 보이듯이. 각자 현실에 맞는 목표와 미래를 그려보고 청사진을 그려본다면, 훨씬 단단한 삶을 영위할 수 있을 것이라 생각한다.&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;https://blog.outsider.ne.kr/1247&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Git" /><summary type="html">git add -p</summary></entry><entry><title type="html">[GCP] zsh in iTerm</title><link href="http://localhost:4000/gcp/gcp_in_zsh/" rel="alternate" type="text/html" title="[GCP] zsh in iTerm" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gcp_in_zsh</id><content type="html" xml:base="http://localhost:4000/gcp/gcp_in_zsh/">&lt;p&gt;iTerms2를 이용 중에 zsh를 설치했다.&lt;/p&gt;
+  &lt;li&gt;maven &amp;gt; properties &amp;gt; mysql_url 변경&lt;/li&gt;
+  &lt;li&gt;web-config &amp;gt; resource-file 제거&lt;/li&gt;
+  &lt;li&gt;스케줄 작동 시 &amp;gt; [스케줄 상태] : 대기(0) 적용&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="어떻게 살 것인가" /><summary type="html">어떻게 살 것인가</summary></entry><entry><title type="html">[GCP] zsh in iTerm</title><link href="http://localhost:4000/gcp/gcp_in_zsh/" rel="alternate" type="text/html" title="[GCP] zsh in iTerm" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gcp_in_zsh</id><content type="html" xml:base="http://localhost:4000/gcp/gcp_in_zsh/">&lt;p&gt;iTerms2를 이용 중에 zsh를 설치했다.&lt;/p&gt;
 
 &lt;p&gt;지루했던 쉘의 인터페이스를 입맛에 맞춰 바꾸는 재미를 느끼며 혼자 좋아하고 있었다.&lt;/p&gt;
 
@@ -87,7 +101,29 @@ source '/Users/betterfly/google-cloud-sdk/completion.bash.inc'
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_zsh_config.png&quot; alt=&quot;gcp_sdk&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;설정 후 gcloud가 정상적으로 실행된다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="zsh" /><category term="iTerm" /><summary type="html">iTerms2를 이용 중에 zsh를 설치했다.</summary></entry><entry><title type="html">[Git] Add가 되지 않는 이슈</title><link href="http://localhost:4000/git/git_cached/" rel="alternate" type="text/html" title="[Git] Add가 되지 않는 이슈" /><published>2018-11-29T00:00:00+09:00</published><updated>2018-11-29T00:00:00+09:00</updated><id>http://localhost:4000/git/git_cached</id><content type="html" xml:base="http://localhost:4000/git/git_cached/">&lt;p&gt;최근 프로젝트 모듈을 분리하고, 디렉토리 구조를 바꾸면서 깃이 꼬여버렸다.&lt;/p&gt;
+&lt;p&gt;설정 후 gcloud가 정상적으로 실행된다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="zsh" /><category term="iTerm" /><summary type="html">iTerms2를 이용 중에 zsh를 설치했다.</summary></entry><entry><title type="html">[Git] Commit과 Add</title><link href="http://localhost:4000/git/git_commit_add/" rel="alternate" type="text/html" title="[Git] Commit과 Add" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/git/git_commit_add</id><content type="html" xml:base="http://localhost:4000/git/git_commit_add/">&lt;p&gt;&lt;code&gt;git add -p&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;git-add--p-options&quot;&gt;git add -p options&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://blog.outsider.ne.kr/1247&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Git" /><summary type="html">git add -p</summary></entry><entry><title type="html">[Git] Add가 되지 않는 이슈</title><link href="http://localhost:4000/git/git_cached/" rel="alternate" type="text/html" title="[Git] Add가 되지 않는 이슈" /><published>2018-11-29T00:00:00+09:00</published><updated>2018-11-29T00:00:00+09:00</updated><id>http://localhost:4000/git/git_cached</id><content type="html" xml:base="http://localhost:4000/git/git_cached/">&lt;p&gt;최근 프로젝트 모듈을 분리하고, 디렉토리 구조를 바꾸면서 깃이 꼬여버렸다.&lt;/p&gt;
 
 &lt;p&gt;분리한 파일들이 깃에 add자체가 되지 않고, 로그에서도 특별한 상황을 확인하기 어려웠다.&lt;/p&gt;
 
@@ -146,34 +182,13 @@ git rm –cached =&amp;gt; 원격 저장소에 있는 파일을 삭제한다. �
   &lt;li&gt;-f : force&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이제 로컬 git 환경이너 정도 정리된 것 같다.&lt;/p&gt;
+&lt;p&gt;이제 로컬 git 환경이 어느정도 정리된 것 같다.&lt;/p&gt;
+
+&lt;p&gt;캐쉬를 날린 후 git add 해주어 최종적으로 push를 해주면 정상적으로 등록시킬 수 있다.&lt;/p&gt;
 
 &lt;p&gt;다음은 add와 commit에 대한 활용을 다루어 보아야겠다.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;git add -p&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;git-add--p-options&quot;&gt;git add -p options&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y - stage this hunk
-n - do not stage this hunk
-q - quit; do not stage this hunk or any of the remaining ones
-a - stage this hunk and all later hunks in the file
-d - do not stage this hunk or any of the later hunks in the file
-g - select a hunk to go to
-/ - search for a hunk matching the given regex
-j - leave this hunk undecided, see next undecided hunk
-J - leave this hunk undecided, see next hunk
-k - leave this hunk undecided, see previous undecided hunk
-K - leave this hunk undecided, see previous hunk
-s - split the current hunk into smaller hunks
-e - manually edit the current hunk
-? - print help
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;https://blog.outsider.ne.kr/1247&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;참고&lt;/p&gt;
+&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;https://gracefullight.github.io/2016/12/28/git-add-%EC%95%88-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0-%ED%99%95%EC%9D%B8%ED%95%B4%EC%95%BC%EB%90%A0-%EA%B2%83/&lt;/li&gt;
   &lt;li&gt;https://brunch.co.kr/@hopeless/9&lt;/li&gt;
@@ -832,157 +847,4 @@ mybatis의 configuration xml내에서 직접 접근할 수 있는 방법이 떠�
 
 &lt;p&gt;하지만 그것이 왜, 어떤 철학으로 만들어 졌는지 이해하고 사용하는 사람. 또는 필요에 따라 내가 직접 필요한 부분을 만들어서 접목시킬 수 있는 마스터가 된다는 것은 조금 다른 이야기다.&lt;/p&gt;
 
-&lt;p&gt;조급하지않게 꼼꼼히 해결해나가보자.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="common dbcp" /><category term="jdbc" /><category term="mybatis" /><summary type="html">징그러운 삽질의 시간이었다.</summary></entry><entry><title type="html">String 이야기 2부</title><link href="http://localhost:4000/java/string_2/" rel="alternate" type="text/html" title="String 이야기 2부" /><published>2018-11-19T00:00:00+09:00</published><updated>2018-11-19T00:00:00+09:00</updated><id>http://localhost:4000/java/string_2</id><content type="html" xml:base="http://localhost:4000/java/string_2/">&lt;h2 id=&quot;stringbuilder-와-stringbuffer&quot;&gt;StringBuilder 와 StringBuffer&lt;/h2&gt;
-
-&lt;p&gt;조금 식상한 감이 있다. &lt;code&gt;StringBuilder&lt;/code&gt;와 &lt;code&gt;StringBuffer&lt;/code&gt; 대한 차이 및 비교는 너무나 많은 자료가 많기 떄문이다.&lt;/p&gt;
-
-&lt;p&gt;조금 더 의미있는 기록을 남기기 위해서, 그리고 내 것으로 소화하기 위해선 단순히 사실만을 나열할 것이 아니라&lt;/p&gt;
-
-&lt;p&gt;실제로 어떻게 사용되고, 적용되는지 조금 더 세밀히 들여다 봐야겠다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;우선 앞선 &lt;a href=&quot;https://betterfly88.github.io/java/string_1/&quot;&gt;String 이야기 1부&lt;/a&gt;에서 언급했던 Sting문자열을 합칠 때 컴파일 과정을 다시 확인해 볼 필요가 있다.&lt;/p&gt;
-
-&lt;p&gt;다시 정리하자면, 단순 String만을 활용하여 문자열을 합친다면 immutable한 속성의 String클래스는 그 자체로 연산이 불가능하기 때문에 계속해서 새로운 String 인스턴스를 생성시킬 것이고, 이것이 결과적으로 메모리 효율을 떨어뜨린다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;그리고 JDK1.5 버전 이후로는 이러한 문제를 돕고자 JVM이 컴파일 과정에서 StringBuilder로 처리해준다는 것까지 살펴보았다.&lt;/p&gt;
-
-&lt;p&gt;이를 통해 String을 쓰지 않고 StringBuilder를 사용했는지는 이해됐다.&lt;/p&gt;
-
-&lt;p&gt;그렇다면 왜 StringBuffer가 아닌 StringBuilder를 사용했을까?&lt;/p&gt;
-
-&lt;p&gt;Java docs의 API문서를 통해 두 클래스간 성격을 파악해봐야겠다.&lt;/p&gt;
-
-&lt;h3 id=&quot;stringbuffer&quot;&gt;StringBuffer&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_StirngBuffer.png&quot; alt=&quot;StringBuffer&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;밑줄친 부분이 StringBuffer의 중요한 특징을 설명해주는 것 같다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;mutable한 객체이다
-    &lt;ul&gt;
-      &lt;li&gt;String과 유사하지만 수정이 가능하다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;thread-safe하다
-    &lt;ul&gt;
-      &lt;li&gt;multiple-threads환경에서 사용하기에 안전하다.(method에 synchronized가 되어 있기 때문에!)&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;mutable/immuntable에 대한 개념은 지난 String에 대한 고찰에서 살펴보았으니 이해가 된다.&lt;/p&gt;
-
-    &lt;p&gt;하지만 thread-safe하다는 것은 아직 이해가 되지 않는다.&lt;/p&gt;
-
-    &lt;p&gt;그 궁금증은 잠시 후 해결하기로 하고 StringBuilder의 특징을 보자.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;stringbuilder&quot;&gt;StringBuilder&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_StringBuilder.png&quot; alt=&quot;StringBulder&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;mutable한 객체이다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;StringBuffer와 호환되는 API를 사용하지만! synchronization을 보장하지 않는다&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;StringBuffer 대신 단일 스레드에서 사용하기 위해 설계되었다.
-    &lt;ul&gt;
-      &lt;li&gt;StringBuffer는 synchronization을 지원하기 때문에 멀티스레드에서 안전하지만, StringBuilder는 synchronization을 지원하지 않기 떄문에 단일 스레드에서 효율적이라는 것이다.(Single/Multi thread에 대한 내용은 하단에 다시 정리하겠다.)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;마지막 문장이 중요한데, &lt;strong&gt;StringBuffer보다 수행속도가 빠르므로 가능하다면 StringBuilder를 사용하는 것을 추천한다.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;스레드에 대한 이야기는 차츰 정리하고,&lt;/p&gt;
-
-&lt;p&gt;왜 자바에서 String문자열을 조합할때 컴파일과정에서 StringBuffer 대신 StringBuilder를 사용하는지 밝혀졌다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;StringBuilder가 StringBuffer보다 속도가 빠르다는 것이다! &lt;br /&gt;
-&lt;em&gt;단! Single Thread에서만 유효하다는 거!&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;그러면 잠깐 테스트를 좀 해봐야겠다. 실제로 얼마나 성능이 차이가 나는지를.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;compareWithBuilderNBuffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GregorianCalendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTimeInMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;startMemory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Runtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRuntime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;freeMemory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;StringBuffer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//        StringBuilder sb = new StringBuilder();&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hi&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GregorianCalendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTimeInMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endMemory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Runtime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRuntime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;freeMemory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Time Taken:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Memory used:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startMemory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endMemory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_compare_performance.png&quot; alt=&quot;compare&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;실패다. 거의 차이가 없거나 StringBuffer가 더 빠르기도 하다.&lt;/p&gt;
-
-&lt;p&gt;테스트 수치가 잘못되었나 싶다.&lt;/p&gt;
-
-&lt;p&gt;실제 성능을 비교한 블로그가 있어 링크를 참고한다. &lt;a href=&quot;http://egloos.zum.com/deblan2/v/419830&quot;&gt;String속도측정&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;블로그에 따르면 163,840,000번 (약 1억 6천번) append를 하는데 2.65초밖에 걸리지 않는다.(StringBuffer가 2.65초 시간이 더 걸렸다는 것.)&lt;/p&gt;
-
-&lt;p&gt;뭐 정석대로 싱글 스레드라면, StringBuilder를 사용하지 않을 이유가 없겠지만. 사실상 드라마틱한 차이 정도는 아닌 것을 알 수 있다.&lt;/p&gt;
-
-&lt;p&gt;자 이제 마지막으로 Single/Multi Thread에 대한 이야기다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;StringBuffer&lt;/code&gt;의 내부를 들어가보면 append() 메서드가 다음과 같이 선언되어있다.&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuffer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;toStringCache&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuffer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;toStringCache&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;다음은 &lt;code&gt;StringBuilder&lt;/code&gt;의 apeend 메서드이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이전에 API문서처럼 동일한 메서드와 파라미터를 받고 있다. 하지만 그 성격이 다르다.(당연하게도 똑같다면 굳이 두 클래스가 존재할 이유가 없다.)&lt;/p&gt;
-
-&lt;p&gt;StringBuffer는 &lt;em&gt;synchronized&lt;/em&gt; 를 지원하는 것이다!&lt;/p&gt;
-
-&lt;p&gt;thread에 대한 기본 개념은 과거포스팅을 참고하시라! &lt;a href=&quot;https://betterfly88.github.io/java/Proces_Thread/&quot;&gt;Process와 Thread
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;정리하자면 쉽게 말해 메서드 하나에서 하나의 기능만 순차적으로(동기) 수행할 것이라면(싱글 스레드) StringBuilder를 사용하는 것이 효율적이다.&lt;/p&gt;
-
-&lt;p&gt;하지만 멀티스레드 환경에서 비동기적으로 문자열 처리를 한다면 StringBuffer를 처리하면 된다는 간단한 결론이 나온다.&lt;/p&gt;
-
-&lt;p&gt;또한 JDK1.5이상의 버전을 사용한다면, String연산에서 굳이 StringBuilder를 고민할 필요도 없다.&lt;/p&gt;
-
-&lt;p&gt;즉 우리가 고밀한 것은 문자열 처리를 하는데, 이 환경이 싱글 스레드냐 멀티 스레드냐만을 고민하여 StringBuffer를 적재 적소에 사용하면 된다는 개념만 탑재하면 될 것이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;참고&quot;&gt;참고&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;https://novemberde.github.io/2017/04/15/String_0.html&lt;/li&gt;
-  &lt;li&gt;https://www.geeksforgeeks.org/stringbuffer-class-in-java/&lt;/li&gt;
-  &lt;li&gt;https://www.journaldev.com/137/stringbuffer-vs-stringbuilder&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="String" /><category term="StringBuilder" /><category term="StringBuffer" /><summary type="html">StringBuilder 와 StringBuffer</summary></entry></feed>
+&lt;p&gt;조급하지않게 꼼꼼히 해결해나가보자.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="common dbcp" /><category term="jdbc" /><category term="mybatis" /><summary type="html">징그러운 삽질의 시간이었다.</summary></entry></feed>
