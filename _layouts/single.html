@@ -24,6 +24,9 @@ layout: default
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
 
     <div class="page__inner-wrap">
+
+      {% include sidebar__right.html %}
+
       <!--
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
@@ -71,7 +74,7 @@ layout: default
         {{ content }}
 
 
-        <div style="margin-top:2em; margin-bottom:2em;">
+        <div style="margin-top:2em;">
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <ins class="adsbygoogle"
               style="display:block; text-align:center;"
