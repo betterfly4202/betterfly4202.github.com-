@@ -71,25 +71,25 @@ layout: default
           </aside>
         {% endif %}
         {{ content }}
+
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-8666816230009966"
+             data-ad-slot="3248749212"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
       <!-- 소셜 공유 공간 -->
       <!-- {% if page.share %}{% include social-share.html %}{% endif %} -->
-      <div style="margin-top:2em; margin-bottom:2em;">
-
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- 반응형 관리 -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-8666816230009966"
-            data-ad-slot="5405312725"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
 
       {% include post_pagination.html %}
     </div>
