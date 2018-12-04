@@ -61,8 +61,6 @@ layout: default
         <hr style="border: solid 0.5px; margin-top:25px;">
       </footer>
 
-      
-
       <section class="page__content" itemprop="text">
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
@@ -75,8 +73,6 @@ layout: default
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
-
-      
 
       <!-- 소셜 공유 공간 -->
       <!-- {% if page.share %}{% include social-share.html %}{% endif %} -->
