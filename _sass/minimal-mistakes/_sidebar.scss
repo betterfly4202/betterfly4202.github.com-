@@ -75,7 +75,7 @@
   margin-bottom: 1em;
 
   @include breakpoint($large) {
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
     width: $right-sidebar-width-narrow;
@@ -86,8 +86,9 @@
     &.sticky {
       @include clearfix();
       position: -webkit-sticky;
-      position: sticky;
-      top: 2em;
+      position: absolute;
+      top: 15em;
+      left: 58em;
       float: right;
     }
   }
@@ -100,7 +101,7 @@
 
 .splash .sidebar__right {
   @include breakpoint($large) {
-    position: relative;
+    position: absolute;
     float: right;
     margin-right: 0;
   }
