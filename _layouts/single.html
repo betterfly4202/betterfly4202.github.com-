@@ -25,7 +25,7 @@ layout: default
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
 
     {% include sidebar_right.html %}
-    
+
     <div class="page__inner-wrap">
       <!--
       {% unless page.header.overlay_color or page.header.overlay_image %}
@@ -81,8 +81,11 @@ layout: default
 
       <!-- 소셜 공유 공간 -->
       <!-- {% if page.share %}{% include social-share.html %}{% endif %} -->
+      <div style="padding-top: 10px; padding-bottom: 10px;"></div>
+      
       <!-- 구글 애드 -->
       {% include ad.html %}
+
       {% include post_pagination.html %}
     </div>
 
