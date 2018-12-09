@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-04T21:59:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">어떻게 살 것인가</title><link href="http://localhost:4000/review/how_to_live/" rel="alternate" type="text/html" title="어떻게 살 것인가" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/review/how_to_live</id><content type="html" xml:base="http://localhost:4000/review/how_to_live/">&lt;h3 id=&quot;어떻게-살-것인가&quot;&gt;어떻게 살 것인가&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-09T18:52:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">효자손 개발자</title><subtitle>주니어 개발자의 성장 과정</subtitle><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><entry><title type="html">뒤로 걷기</title><link href="http://localhost:4000/notes/1812_2/" rel="alternate" type="text/html" title="뒤로 걷기" /><published>2018-12-07T00:00:00+09:00</published><updated>2018-12-07T00:00:00+09:00</updated><id>http://localhost:4000/notes/1812_2</id><content type="html" xml:base="http://localhost:4000/notes/1812_2/">&lt;p&gt;개발을 하다보면, 아니 우리가 살면서 하나의 생각에 깊이 빠질때가 있다.&lt;/p&gt;
+
+&lt;p&gt;개발을 하던 중 어떤 한 지점에서 막혀버리고, 근본적인 원인을 찾지 못할 때. 계속 같은 방식으로 문제해결을 시도하고 있는 내 자신을 발견할 때가 있다.&lt;/p&gt;
+
+&lt;p&gt;A라는 방법을 시도하고, A가 아니면 B를 시도하고… 퍼즐에서 보면&lt;/p&gt;
+
+&lt;p&gt;이렇게 문제를&lt;/p&gt;
+
+&lt;h2 id=&quot;참고&quot;&gt;[참고]&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://www.vobour.com/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%B2%98%EB%9F%BC-%EC%83%9D%EA%B0%81%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0%EC%9D%98-%EA%B5%90%ED%9B%88-how-to-think-l&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="똥멍청이" /><summary type="html">개발을 하다보면, 아니 우리가 살면서 하나의 생각에 깊이 빠질때가 있다.</summary></entry><entry><title type="html">디버깅</title><link href="http://localhost:4000/notes/1812_1/" rel="alternate" type="text/html" title="디버깅" /><published>2018-12-06T00:00:00+09:00</published><updated>2018-12-06T00:00:00+09:00</updated><id>http://localhost:4000/notes/1812_1</id><content type="html" xml:base="http://localhost:4000/notes/1812_1/">&lt;p&gt;DB 에러로그는 너무나 명료하다.&lt;/p&gt;
+
+&lt;p&gt;너무 명료하고 명확하게 문제를 짚어주기 때문에 놀랄 지경이다.&lt;/p&gt;
+
+&lt;p&gt;아니 사실 모든 로그가 그렇다. 로그 속에 모든 답이 나와있다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry APA91bHdNs2EYoFVrmya6w_cK0By9DxNJUzBOCMAxp_ZTkNnE-Uq
+
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2490)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
+	at com.***.push.dao.***.insertUserToken(***.java:182)
+	at com.***.push.dao.***.executeUserToken(***.java:87)
+	at com.***.push.dao.***.start(***.java:60)
+	at com.***.push.main.***.main(***.java:30)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;심지어 아래 4번쨰 줄 부터 보면, 몇번째 라인 어떤 메서드에서 이런 문제가 발생했는지도 알려준다.&lt;/p&gt;
+
+&lt;p&gt;대단히 친절하고, 명확하다.&lt;/p&gt;
+
+&lt;p&gt;그러면 다시 로그를 보면, ***클래스의 insertUserToken 메서드에서 예외가 발생했다. 해당 클래스의 182번쨰 라인이랜다.&lt;/p&gt;
+
+&lt;p&gt;발생시킨 예외는 ‘MySQLIntegrityConstraintViolationException’ 이다.&lt;/p&gt;
+
+&lt;p&gt;뻔한 에러다. insert하는데 unique key로 설정한 값이 또 들어왔다는 것이다.&lt;/p&gt;
+
+&lt;p&gt;얼마나 간단하고 명료한가.&lt;/p&gt;
+
+&lt;p&gt;그러면 무엇을 봐야하나?&lt;/p&gt;
+
+&lt;p&gt;내가 짜놓은 소스코드를 봐야하나?&lt;/p&gt;
+
+&lt;p&gt;그렇다. 봐야한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;중복된-키값이-들어왔을때-예외처리가-제대로-되어있는지-확인해봐야-한다&quot;&gt;중복된 키값이 들어왔을때 예외처리가 제대로 되어있는지 확인해봐야 한다.&lt;/h3&gt;
+
+&lt;p&gt;그래 되어있다.&lt;/p&gt;
+
+&lt;p&gt;그러면 무얼 확인해야하나?&lt;/p&gt;
+
+&lt;h3 id=&quot;데이터를-전달받을-때-왜-중복된-값이-들어오는지-확인해봐야-한다&quot;&gt;데이터를 전달받을 때 왜 중복된 값이 들어오는지 확인해봐야 한다.&lt;/h3&gt;
+
+&lt;p&gt;지금 이 작업은 서로 다른 서버에 있는 DB를 ETL하는 데몬이다.&lt;/p&gt;
+
+&lt;p&gt;A라는 서버의 데이터를 B라는 서버의 디비에 적재하는 것인데, 그 과정에서 이런 문제를 일으켰다.&lt;/p&gt;
+
+&lt;p&gt;너무나 명확하다. 지금 생각해봐도 어이가없다.&lt;/p&gt;
+
+&lt;p&gt;A서버에 키값으로 설정해놓은 해당 값이 2개 이상있는지 확인해보면 된다.&lt;/p&gt;
+
+&lt;p&gt;그리고나서 그게 왜 2개 이상존재하는지 어디서부터 잘못되었는지는 그 다음 작업이다.&lt;/p&gt;
+
+&lt;p&gt;그런데 그 생각을 못하고있었다.&lt;/p&gt;
+
+&lt;p&gt;A서버에선 당연히 제대로 값을 주겠지 라고 생각한 것이다. 의심조차 하지 않았다.&lt;/p&gt;
+
+&lt;p&gt;그리고 하나 더.&lt;/p&gt;
+
+&lt;p&gt;해당 키 값은 굉장히 긴 해쉬 문자열이다.&lt;/p&gt;
+
+&lt;p&gt;그러면 이것이 내 디비 테이블에 존재하는지 검색할때&lt;/p&gt;
+
+&lt;p&gt;where hash = ‘APA91bHdNs2EYoFVrmya6w_cK0By9DxNJUzBOCMAxp_ZTkNnE-Uq’&lt;/p&gt;
+
+&lt;p&gt;이렇게 검색하면 될까?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;예외로그를 100% 맹신하지 마라.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이 글의 서두에 언급했던 내용에 맞지 않는 얘기지만, 로그를 100% 맹신하면 안된다.&lt;/p&gt;
+
+&lt;p&gt;이 경우 해쉬값이 굉장히 길기 때문에 축약된 중간 어느 지점의 문자열만 나온 것이다.&lt;/p&gt;
+
+&lt;p&gt;그래서 내 테이블에 이 데이터가 존재하지 않는 것으로 확인되었고, 그래서 내 삽질은 더욱 깊어졌다.&lt;/p&gt;
+
+&lt;p&gt;반드시, 이런 중복 오류가 발생했을때는 like 검색을 잊지말자.&lt;/p&gt;
+
+&lt;p&gt;퇴근못하고 테스트 돌려놓고 이 글을 쓰고 있는&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;똥 멍청&lt;/strong&gt;했던 하루다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="똥멍청이" /><summary type="html">DB 에러로그는 너무나 명료하다.</summary></entry><entry><title type="html">어떻게 살 것인가</title><link href="http://localhost:4000/review/how_to_live/" rel="alternate" type="text/html" title="어떻게 살 것인가" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/review/how_to_live</id><content type="html" xml:base="http://localhost:4000/review/how_to_live/">&lt;h3 id=&quot;어떻게-살-것인가&quot;&gt;어떻게 살 것인가&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/study/review/2018/.jpeg&quot; alt=&quot;어떻게 살것인가&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;코딩호러의 이펙티브 프로그래밍(제프 앳우드)&lt;/figcaption&gt;
@@ -101,29 +207,7 @@ source '/Users/betterfly/google-cloud-sdk/completion.bash.inc'
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_zsh_config.png&quot; alt=&quot;gcp_sdk&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;설정 후 gcloud가 정상적으로 실행된다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="zsh" /><category term="iTerm" /><summary type="html">iTerms2를 이용 중에 zsh를 설치했다.</summary></entry><entry><title type="html">[Git] Commit과 Add</title><link href="http://localhost:4000/git/git_commit_add/" rel="alternate" type="text/html" title="[Git] Commit과 Add" /><published>2018-11-30T00:00:00+09:00</published><updated>2018-11-30T00:00:00+09:00</updated><id>http://localhost:4000/git/git_commit_add</id><content type="html" xml:base="http://localhost:4000/git/git_commit_add/">&lt;p&gt;&lt;code&gt;git add -p&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;git-add--p-options&quot;&gt;git add -p options&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y - stage this hunk
-n - do not stage this hunk
-q - quit; do not stage this hunk or any of the remaining ones
-a - stage this hunk and all later hunks in the file
-d - do not stage this hunk or any of the later hunks in the file
-g - select a hunk to go to
-/ - search for a hunk matching the given regex
-j - leave this hunk undecided, see next undecided hunk
-J - leave this hunk undecided, see next hunk
-k - leave this hunk undecided, see previous undecided hunk
-K - leave this hunk undecided, see previous hunk
-s - split the current hunk into smaller hunks
-e - manually edit the current hunk
-? - print help
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;https://blog.outsider.ne.kr/1247&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Git" /><summary type="html">git add -p</summary></entry><entry><title type="html">[Git] Add가 되지 않는 이슈</title><link href="http://localhost:4000/git/git_cached/" rel="alternate" type="text/html" title="[Git] Add가 되지 않는 이슈" /><published>2018-11-29T00:00:00+09:00</published><updated>2018-11-29T00:00:00+09:00</updated><id>http://localhost:4000/git/git_cached</id><content type="html" xml:base="http://localhost:4000/git/git_cached/">&lt;p&gt;최근 프로젝트 모듈을 분리하고, 디렉토리 구조를 바꾸면서 깃이 꼬여버렸다.&lt;/p&gt;
+&lt;p&gt;설정 후 gcloud가 정상적으로 실행된다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="zsh" /><category term="iTerm" /><summary type="html">iTerms2를 이용 중에 zsh를 설치했다.</summary></entry><entry><title type="html">[Git] Add가 되지 않는 이슈</title><link href="http://localhost:4000/git/git_cached/" rel="alternate" type="text/html" title="[Git] Add가 되지 않는 이슈" /><published>2018-11-29T00:00:00+09:00</published><updated>2018-11-29T00:00:00+09:00</updated><id>http://localhost:4000/git/git_cached</id><content type="html" xml:base="http://localhost:4000/git/git_cached/">&lt;p&gt;최근 프로젝트 모듈을 분리하고, 디렉토리 구조를 바꾸면서 깃이 꼬여버렸다.&lt;/p&gt;
 
 &lt;p&gt;분리한 파일들이 깃에 add자체가 되지 않고, 로그에서도 특별한 상황을 확인하기 어려웠다.&lt;/p&gt;
 
@@ -454,15 +538,7 @@ DataSource뿐만 아니라, Configuration, Mapper등 DB관련 객체들을 관�
 mybatis의 configuration xml내에서 직접 접근할 수 있는 방법이 떠오르질 않아,
 자바에서 직접 접근이 가능하도록 삽질을 했다.&lt;/p&gt;
 
-&lt;p&gt;꽤 오랜 삽질끝에 구현은 되었는데 좋은 방법인지는 또 다른 시행착오를 겪어봐야할 것 같다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="mybatis" /><category term="SQL" /><summary type="html">레거시 환경에 DBCP2 적용하기 (not used Spring Framework)</summary></entry><entry><title type="html">Open Source 활용기</title><link href="http://localhost:4000/java/OpenSource/" rel="alternate" type="text/html" title="Open Source 활용기" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/java/OpenSource</id><content type="html" xml:base="http://localhost:4000/java/OpenSource/">&lt;h2 id=&quot;오픈소스깃헙-사용하기&quot;&gt;오픈소스/깃헙 사용하기&lt;/h2&gt;
-
-&lt;p&gt;https://medium.com/hbsmith/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%9D%BC%EA%B8%B0-git-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%8B%A4%EB%A3%A8%EA%B8%B0-9f66c98c1cb5&lt;/p&gt;
-
-&lt;p&gt;https://json.postype.com/post/210431&lt;/p&gt;
-
-&lt;p&gt;https://www.popit.kr/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-pull-request-%EB%B3%B4%EB%82%B4%EA%B8%B0/&lt;/p&gt;
-
-&lt;p&gt;http://sanghaklee.tistory.com/30&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Open Source" /><category term="github" /><summary type="html">오픈소스/깃헙 사용하기</summary></entry><entry><title type="html">[Google App Engine] Connect Google Cloud SQL</title><link href="http://localhost:4000/gcp/gcp_sql/" rel="alternate" type="text/html" title="[Google App Engine] Connect Google Cloud SQL" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gcp_sql</id><content type="html" xml:base="http://localhost:4000/gcp/gcp_sql/">&lt;p&gt;GCP SQL instance를 생성하고 MySQL Workbench에서 접속을 하려고 하는데 계속해서 timeout 에러를 뱉어내며 접속을 할 수 없었다.&lt;/p&gt;
+&lt;p&gt;꽤 오랜 삽질끝에 구현은 되었는데 좋은 방법인지는 또 다른 시행착오를 겪어봐야할 것 같다.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="mybatis" /><category term="SQL" /><summary type="html">레거시 환경에 DBCP2 적용하기 (not used Spring Framework)</summary></entry><entry><title type="html">[Google App Engine] Connect Google Cloud SQL</title><link href="http://localhost:4000/gcp/gcp_sql/" rel="alternate" type="text/html" title="[Google App Engine] Connect Google Cloud SQL" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gcp_sql</id><content type="html" xml:base="http://localhost:4000/gcp/gcp_sql/">&lt;p&gt;GCP SQL instance를 생성하고 MySQL Workbench에서 접속을 하려고 하는데 계속해서 timeout 에러를 뱉어내며 접속을 할 수 없었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://cloud.google.com/sql/docs/mysql/admin-tools&quot; alt=&quot;GCP에서 제공하는 MySQL도구 연결&quot; /&gt;
 구글 가이드문서를 보고 해봤지만 별다른 설정없이 접속이 붙어야 될 것 같은데 도저히 접속이 안돼서 꽤 많은 시간을 뻘짓했다.&lt;/p&gt;
@@ -490,7 +566,15 @@ mybatis의 configuration xml내에서 직접 접근할 수 있는 방법이 떠�
 
 &lt;p&gt;다시 workbench로 이동하여 접속 테스트를 진행하면 손쉽게 접속할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_gcp_sql_connect.png&quot; alt=&quot;workbench&quot; /&gt;&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="SQL" /><summary type="html">GCP SQL instance를 생성하고 MySQL Workbench에서 접속을 하려고 하는데 계속해서 timeout 에러를 뱉어내며 접속을 할 수 없었다.</summary></entry><entry><title type="html">[Google App Engine] include HTML in JSP</title><link href="http://localhost:4000/gcp/gae_resources/" rel="alternate" type="text/html" title="[Google App Engine] include HTML in JSP" /><published>2018-11-21T00:00:00+09:00</published><updated>2018-11-21T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gae_resources</id><content type="html" xml:base="http://localhost:4000/gcp/gae_resources/">&lt;p&gt;황당한 일을 겪었다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/study/dev/2018/11_gcp_sql_connect.png&quot; alt=&quot;workbench&quot; /&gt;&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="GCP" /><category term="SQL" /><summary type="html">GCP SQL instance를 생성하고 MySQL Workbench에서 접속을 하려고 하는데 계속해서 timeout 에러를 뱉어내며 접속을 할 수 없었다.</summary></entry><entry><title type="html">Open Source 활용기</title><link href="http://localhost:4000/java/OpenSource/" rel="alternate" type="text/html" title="Open Source 활용기" /><published>2018-11-22T00:00:00+09:00</published><updated>2018-11-22T00:00:00+09:00</updated><id>http://localhost:4000/java/OpenSource</id><content type="html" xml:base="http://localhost:4000/java/OpenSource/">&lt;h2 id=&quot;오픈소스깃헙-사용하기&quot;&gt;오픈소스/깃헙 사용하기&lt;/h2&gt;
+
+&lt;p&gt;https://medium.com/hbsmith/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%9D%BC%EA%B8%B0-git-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%8B%A4%EB%A3%A8%EA%B8%B0-9f66c98c1cb5&lt;/p&gt;
+
+&lt;p&gt;https://json.postype.com/post/210431&lt;/p&gt;
+
+&lt;p&gt;https://www.popit.kr/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-pull-request-%EB%B3%B4%EB%82%B4%EA%B8%B0/&lt;/p&gt;
+
+&lt;p&gt;http://sanghaklee.tistory.com/30&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Open Source" /><category term="github" /><summary type="html">오픈소스/깃헙 사용하기</summary></entry><entry><title type="html">[Google App Engine] include HTML in JSP</title><link href="http://localhost:4000/gcp/gae_resources/" rel="alternate" type="text/html" title="[Google App Engine] include HTML in JSP" /><published>2018-11-21T00:00:00+09:00</published><updated>2018-11-21T00:00:00+09:00</updated><id>http://localhost:4000/gcp/gae_resources</id><content type="html" xml:base="http://localhost:4000/gcp/gae_resources/">&lt;p&gt;황당한 일을 겪었다.&lt;/p&gt;
 
 &lt;p&gt;진행 중인 웹서비스에서 Google App Engine(이하 GAE)에 배포 후 팝업화면 전체가 노출되지 않는 것이다.&lt;/p&gt;
 
@@ -614,237 +698,4 @@ mybatis의 configuration xml내에서 직접 접근할 수 있는 방법이 떠�
 
 &lt;p&gt;문제는 해결했지만, 근본적인 원인은 파악되지 않아 여전히 찜찜한 상황이다.&lt;/p&gt;
 
-&lt;p&gt;우선 기록해두고, 계속 트래킹해보리라.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Google Cloud Platform" /><category term="Google App Engine" /><category term="JSP" /><summary type="html">황당한 일을 겪었다.</summary></entry><entry><title type="html">Connection pool</title><link href="http://localhost:4000/notes/1811_6/" rel="alternate" type="text/html" title="Connection pool" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/notes/1811_6</id><content type="html" xml:base="http://localhost:4000/notes/1811_6/">&lt;p&gt;징그러운 삽질의 시간이었다.&lt;/p&gt;
-
-&lt;p&gt;사건의 발단을 이러했다.&lt;/p&gt;
-
-&lt;p&gt;Spring을 쓰지 않는, 그리고 다른 프레임워크에 의존하지 않는 레거시환경에서 내가 맡고 있는 도메인이 운영되고 있고,&lt;/p&gt;
-
-&lt;p&gt;해당 도메인의 낡은 쿼리 방식을 걷어내고 myBatis를 도입하는 미션이 주어졌다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;cm&quot;&gt;/**
-     SELECT * FROM sample_table
-     */&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@Multiline&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlSelectSampleTable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이와 같은 방싱그로 전체 쿼리가 구성되어 있었고, 이를 걷어내고 myBatis를 도입시키는 것이다.&lt;/p&gt;
-
-&lt;p&gt;Spring을 쓰지 않는 환경에서 myBatis를 활용하는것 자체가 낯설었다.&lt;/p&gt;
-
-&lt;p&gt;기존대로 xml에 jdbc configuration파일은 만들었지만, 커넥션이 붙을때 이 환경파일을 어떻게 읽어야 하는지, 그 뿐만 아니라 전체적으로 어떻게 DAO에 쿼리를 주입시킬 것인지 등등 직접 컨트롤해줘야하는 환경은 낯설고 쉽지 않았다.&lt;/p&gt;
-
-&lt;p&gt;우선 DB커넥션 환경을 제공하는 SqlSessionFactory 클래스를 다음과 같이 만들었다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.ibatis.session.SqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.ibatis.session.SqlSessionFactoryBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;javax.servlet.http.HttpServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.InputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;cm&quot;&gt;/**
- * Created by betterFLY on 2018. 11. 09
- */&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyBatisConfig&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServlet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClassLoader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mybatis/mybatis-config.xml&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactoryBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getSqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;행여나 connection pool 이 여러개 생성되면 문제가 발생할까 싶어 싱글턴으로 만들었다.&lt;/p&gt;
-
-&lt;p&gt;쿼리시 사용될 SqlSession은 이 클래스에서 생성한 커넥션풀을 가져다 사용하도록 설계했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.ibatis.session.SqlSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;cm&quot;&gt;/**
- * Created by betterFLY on 2018. 11. 13
- */&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SampleService&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SampleDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSession&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SampleService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;openSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleDAO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;selectTestToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;query&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sqlSelectSampleCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;insertSampleCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sqlInsertSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;대략적으로 위와 같은데,&lt;/p&gt;
-
-&lt;p&gt;내가 JDBC에 대해서 이해한 바로는&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;쿼리를 수행하기 위해선 Connection Pool에서 세션을 열어야 쿼리를 날릴 수 있고&lt;/li&gt;
-  &lt;li&gt;그렇게 할당받은 SqlSession에서 어떤 mapper에 선언된 쿼리를 수행할 것인지 맵핑하여&lt;/li&gt;
-  &lt;li&gt;DAO를 통해 해당 쿼리를 수행한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;정도로 이해했다.&lt;/p&gt;
-
-&lt;p&gt;그리고 위와같이 설계한 이유는 각각의 메서드마다 세션을 열고, 매퍼를 주입할 경우 중복이 발생하므로, 어차피 해당 클래스 인스턴스가 생성될때마다 새로운 쿼리가 수행될테니, 생성자에서 처리해주면 될 것이라고 생각했다.&lt;/p&gt;
-
-&lt;p&gt;그리고 개발하며 &lt;em&gt;Postman&lt;/em&gt;과 같은 도구를 이용하여 API를 테스트해보니 정상적으로 처리 결과를 확인할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;이런식으로 로컬환경에서 하나의 API를 만들고, 테스트하는 방식으로 전체 쿼리를 문제없이 적용했다.&lt;/p&gt;
-
-&lt;p&gt;그리고 이제 드디어 메인 소스와 merge를 진행했고, 웹에서 본격적인 테스트를 진행했다.&lt;/p&gt;
-
-&lt;p&gt;우리 도메인의 메인 서비스는 &lt;strong&gt;‘푸시 서비스’&lt;/strong&gt;이다. 잡을 걸어 놓으면 스케줄러는 1분마다 쓰레드를 실행하며 스케줄에 해당하는 푸쉬를 발송하는 것이다.&lt;/p&gt;
-
-&lt;p&gt;그런데 이 푸시 서비스만 실행하면 다음와 같은 에러가 발생하는 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/notes/2018/11/PooledConnection.png&quot; alt=&quot;pooledConnection&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;대충봐도 DB Connection에 문제가 있다. connection이 유효하지 않다는 것인데 ‘도대체 왜?’ 커넥션에 문제가 발생했는지 알 수 없었다.&lt;/p&gt;
-
-&lt;p&gt;구글링을 수도없이 해봤지만 찾을 수 있는 대답은 
-‘SqlSession을 제대로 닫았는지 확인해라’ 정도의 답변만 눈에 띄었다.&lt;/p&gt;
-
-&lt;p&gt;그래서 session.close를 쿼리 수행 후 바로바로 진행했지만 결과는 같았다.&lt;/p&gt;
-
-&lt;p&gt;정확한 원인을 파악하지 못하고 있는 것이었다.&lt;/p&gt;
-
-&lt;p&gt;이틀간 수도 없이 디비 커녁센에 관하여 서칭하며 조금 근접해보이는 해결책을 찾을 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/5102792&quot;&gt;Naver D2; Commons DBCP 이해하기&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Connection Pool을 관리해주는 라이브러리다. 커넥션 구성 환경을 설정하여 커넥션 풀의 생명주기를 컨트롤하는 것을 돕는 라이브러리로 보인다.&lt;/p&gt;
-
-&lt;p&gt;그런데 이 적용 방법이 모두 스프링프레임워크 환경에 관한 예제밖에없다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;synchronized&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactory&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-           &lt;span class=&quot;n&quot;&gt;DataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataSource&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDBCPDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-           &lt;span class=&quot;n&quot;&gt;TransactionFactory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trxFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JdbcTransactionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-           &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Environment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;development&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trxFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-           &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-           &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SqlSessionFactoryBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BasicDataSource&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDBCPDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;BasicDataSource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BasicDataSource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDriverClassName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.mysql.jdbc.Driver&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;connectUrl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;?autoReconnect=true&amp;amp;amp;useSSL=false&amp;amp;amp;characterEncoding=UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setUsername&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setPassword&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getProperties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userPassword&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxTotal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxIdle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMinIdle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setInitialSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setValidationQuery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SELECT 1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setPoolPreparedStatements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbcp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이와같이 커넥션 환경을 주입시켜주려고 했지만, 이렇게 할 경우 mapper 클래스에 대한 접근이 불가능하다.&lt;/p&gt;
-
-&lt;p&gt;생각처럼 진행이되질 않았다.&lt;/p&gt;
-
-&lt;p&gt;그리고 무엇보다 내가 이렇게 삽질을 하는데에는 이유가 있었다.&lt;/p&gt;
-
-&lt;p&gt;실제로 쿼리를 요청하는 메서드 각각에서 SqlSession을 하나씩 할당하는 노가다를 하기 싫었던 것이다.&lt;/p&gt;
-
-&lt;p&gt;가장 단순한 해결방법이 될 것 같았지만, 중복된 코드를 덕지덕지 붙여넣는 지저분한 코드를 생산하기 싫었다.&lt;/p&gt;
-
-&lt;p&gt;그런데…&lt;/p&gt;
-
-&lt;p&gt;이건 실제로 이슈가 발생하면 바로 대응해야한다. 실제로 중요한 작업이고 언제 어떤 이슈가 발생할지 모르니 일단은 제대로 돌아가는 환경이 필요하다.&lt;/p&gt;
-
-&lt;p&gt;그래서 결국 일단은 해결했다.&lt;/p&gt;
-
-&lt;p&gt;이렇게 말이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SampleService&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SampleDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;selectTestToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SqlSession&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;openSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleDAO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-            &lt;span class=&quot;n&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;query&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-            &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sqlSelectSampleCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;insertSampleCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleVO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SqlSession&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyBatisConfig&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSqlSessionFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;openSession&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SampleDAO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sqlInsertSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;생성자를 없앴고, 전역적으로 처리했던 SqlSession도 제거하여 해당 메서드가 생성될때만 하나씩 세션을 열도록 하여 처리했다.&lt;/p&gt;
-
-&lt;p&gt;허무하지만 문제없이 돌아간다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;무엇이 정확한 문제였을까 고민해보면,&lt;/p&gt;
-
-&lt;p&gt;멀티쓰레드 환경에서, 먼저 생성되어 사용한 SqlSession을 같은 인스턴스에서 해당 session에 접근하면서 커넥션 상태를 잃어버리는 것이었을까.&lt;/p&gt;
-
-&lt;p&gt;SqlSession은 커넥션풀에 한번 접근 한 후 스스로 소멸되는 것일까?&lt;/p&gt;
-
-&lt;p&gt;그래서 그 세션이 접근할 수 있는 connection pool을 잃어버려 ‘Error Accessing PooledConnection’과 같은 문제가 발생한게 아닐까 생각이든다.&lt;/p&gt;
-
-&lt;p&gt;참 공부할게 많다.&lt;/p&gt;
-
-&lt;p&gt;스프링이 알아서 해주던, 그리고 스프링 사용시 참고할만한 레퍼런스가 많아 비교적 이슈트래킹이 쉬웠는데&lt;/p&gt;
-
-&lt;p&gt;로우레벨로 기본 개념을 이해하며 문제를 해결하는 과정이 쉽지 않다.&lt;/p&gt;
-
-&lt;p&gt;하지만 이것은 정말 좋은 기회이다.&lt;/p&gt;
-
-&lt;p&gt;잘 만들어진 제품을 사용하는 ‘Consumer’는 관련 레퍼런스 문서를 읽으면 누구나 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;하지만 그것이 왜, 어떤 철학으로 만들어 졌는지 이해하고 사용하는 사람. 또는 필요에 따라 내가 직접 필요한 부분을 만들어서 접목시킬 수 있는 마스터가 된다는 것은 조금 다른 이야기다.&lt;/p&gt;
-
-&lt;p&gt;조급하지않게 꼼꼼히 해결해나가보자.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="common dbcp" /><category term="jdbc" /><category term="mybatis" /><summary type="html">징그러운 삽질의 시간이었다.</summary></entry></feed>
+&lt;p&gt;우선 기록해두고, 계속 트래킹해보리라.&lt;/p&gt;</content><author><name>@betterFLY</name><email>betterfly4202@gmail.com</email></author><category term="Google Cloud Platform" /><category term="Google App Engine" /><category term="JSP" /><summary type="html">황당한 일을 겪었다.</summary></entry></feed>
