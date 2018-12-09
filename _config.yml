@@ -19,7 +19,7 @@ locale                   : "en-US" #ko-KR
 title                    : "효자손 개발자"
 title_separator          : "-"
 name                     : "betterFLY"
-description              : "주니어 개발자의 성장 과정"
+description              : "주니어 개발자의 성장통"
 url                      : "https://betterfly88.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "/betterfly88/betterfly88.github.com"
@@ -282,9 +282,9 @@ defaults:
       path: ""
       type: posts
     values:
-      # layout: single
+      layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
