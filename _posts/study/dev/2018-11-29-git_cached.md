@@ -69,6 +69,8 @@ git rm --cached => 원격 저장소에 있는 파일을 삭제한다. 로컬 저
 
 다음은 add와 commit에 대한 활용을 다루어 보아야겠다.
 
+[[Git] Add와 Commit](https://betterfly88.github.io/git/git_commit_add)
+
 ## 참고
 - https://gracefullight.github.io/2016/12/28/git-add-%EC%95%88-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0-%ED%99%95%EC%9D%B8%ED%95%B4%EC%95%BC%EB%90%A0-%EA%B2%83/
 - https://brunch.co.kr/@hopeless/9
