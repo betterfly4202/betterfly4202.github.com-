@@ -59,6 +59,7 @@ tags:
 
 하지만 보안을 염려하여 다음의 키워드로 준비하면 최소한의 준비는 될 것이다.
 
+
 - XSS/CSRF 공격
 - SQL/COmmand Injection
 - 검증되지 않은 Redirect forward
