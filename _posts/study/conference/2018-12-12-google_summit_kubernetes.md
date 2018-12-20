@@ -218,4 +218,4 @@ Open Source
 ---
 
 - www.coursera.org
-GCP 강의 : 유료
+GCP 강의(유료)
