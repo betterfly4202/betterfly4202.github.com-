@@ -74,7 +74,6 @@ public class SystemSpeaker {
 
 ### 여기까지는 Single Thread 상에선 문제가 되지 않을 것이다.
 
-하지만 Multi Thread 환경에서는   
-
+하지만 Multi Thread 환경에서는 다음과 같이 작동한다.  
 
 http://asfirstalways.tistory.com/335  

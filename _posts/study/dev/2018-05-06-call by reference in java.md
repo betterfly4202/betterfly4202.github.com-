@@ -191,7 +191,7 @@ subRef.id를 변경하였는데 ref.id의 결과가 바뀌었다. 여기서 우�
 
 <pre>
     RefClass subRef = ref;
-</pre<
+</pre>
 
 이것은 ref 와 subRef 두 변수가 모두 같은 인스턴스를 **참조** 하고 있다는 것이다.
 
