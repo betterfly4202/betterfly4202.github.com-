@@ -1,6 +1,6 @@
 ---
-title: "쉼"
-categories: "notes"
+title: "[Shell Script] 변수 선언"
+categories: "dev"
 tags:
   - 
 ---
