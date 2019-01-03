@@ -78,6 +78,7 @@ public class ListClientExample {
 
 
 [교재 예제 삽입]
+https://github.com/yudong80/ThinkDataStructures/blob/master/code/src/com/allendowney/thinkdast/LinkedListExample.java
 
 [참고]
 - https://www.holaxprogramming.com/2014/02/12/java-list-interface/
