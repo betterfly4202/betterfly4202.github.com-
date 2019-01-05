@@ -48,5 +48,6 @@ ETL작업을 위하여 쉘 스크립트를 작업해야했다.
 
 오늘도 여전히 황당한 삽질은 진행중이다.
 
-[휄 스크립트에서 변수 사용](https://zetawiki.com/wiki/%EC%89%98_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EB%B3%80%EC%88%98)
-[Bash 입문](https://blog.gaerae.com/2015/01/bash-hello-world.html)
+## 참고
+- [휄 스크립트에서 변수 사용](https://zetawiki.com/wiki/%EC%89%98_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EB%B3%80%EC%88%98)
+- [Bash 입문](https://blog.gaerae.com/2015/01/bash-hello-world.html)
