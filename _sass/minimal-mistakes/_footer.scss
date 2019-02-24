@@ -4,7 +4,7 @@
 
 .page__footer {
   @include clearfix;
-  float: left;
+  float: right;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
@@ -21,6 +21,8 @@
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
   background-color: $footer-background-color;
+
+  
 
   footer {
     @include clearfix;
