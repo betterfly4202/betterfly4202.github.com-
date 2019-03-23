@@ -35,7 +35,7 @@ author_profile: true
 
 그리고 지난 18년 10월에 스타트업으로 이직하여 Back-end 개발자로 새로운 개발 인생을 걸을 수 있게 되었습니다.
 
-이 곳에서는 GCP(Google Cloud Platform) 환경 아래에서 주로 **ETL <sub>Extraction, Transformation, Loading</sub>**과 사용자에게 전달되는 **Push 서비스**의 백엔드 개발자로서의 역할을 수행하게 되었습니다.
+이 곳에서는 GCP<sub>(Google Cloud Platform)</sub> 환경 아래에서 주로 **ETL<sub>(Extraction, Transformation, Loading)</sub>**과 사용자에게 전달되는 **Push 서비스**의 백엔드 개발자로서의 역할을 수행하게 되었습니다.
 
 ---
 
@@ -135,7 +135,7 @@ author_profile: true
 
  누군가는 개발자를 '작가(Author)'라고 표현하기도 합니다.
 
- ![author](/assets/images/about/author.jpeg)
+ ![author](/assets/images/about/author.jpg)
 
  우리는 코드를 작성하는 '작가'입니다.<br/>
  그리고 우리는 혼자 코딩하는 것이 아니기 때문에 나의 코드를 보는 '독자'들이 존재합니다.<br/>
