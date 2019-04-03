@@ -1,5 +1,5 @@
 ---
-title: "[Think Data Structures]Linked List 구현하기"
+title: "[Think Data Structures]Linked List 구현하기 (indexOf)"
 categories: "dev"
 tags:
   - Think Data Structures
@@ -9,9 +9,7 @@ tags:
 
 ![tds_book](/assets/images/study/dev/2019/tds_book.jpg){: .center}
 >이 포스팅은 한빛미디어의 '자바로 배우는 핵심 자료구조와 알고리즘'의 내용을 참고 정리한 내용입니다.
-
-
-https://github.com/yudong80/ThinkDataStructures/blob/master/solutions/src/com/allendowney/thinkdast/MyLinkedList.java
+> 소스 참고: https://github.com/yudong80/ThinkDataStructures/blob/master/solutions/src/com/allendowney/thinkdast/MyLinkedList.java
 
 * 목차
 {:toc}
@@ -65,13 +63,11 @@ public class MyArrayList<T> implements List<T> {
 
 각 클래스의 멤버 변수를 비교해보면 size라는 요소의 개수를 확인할 수 있는 변수는 공통으로 사용된 모습이다.
 
-하지만 ArrayList는 타입 파라미터의 배열을 변수로 사용하여, 생성자를 통해 해당 배열을 초기화 해주는 모습이다.
-
-그래서 최초 크기가 **10**인 배열을 생성한다.
+하지만 **ArrayList**는 `배열`을 컨셉으로 하여, 생성자를 통해 해당 배열을 초기화 해주는 모습(최초 사이즈가 '10'인 배열)이다.
 
 그리고 앞선 ArrayList구현시 set(), indexOf() 등의 메서드를 구현시 `array`라는 변수의 배열을 핸들링했다.
 
-하지만 LinkedList는 다르다. Node라는 객체를 선언하여, 해당 객체는 LinkedList의 생성자를 통해 null로 초기화된다.
+하지만 **LinkedList**는 다르다. Node라는 객체를 선언하여, 해당 객체는 LinkedList의 생성자를 통해 null로 초기화된다.
 
 정리하면 ArrayList는 `배열` 을, LinkedList는 `Node` 라는 객체를 다룬다는 것이다.
 
@@ -105,7 +101,7 @@ public class MyLinkedList<E> implements List<E>{
             this.data = data;
             this.next = null;
         }
-        
+
         public Node(E data, Node next){
             this.data = data;
             this.next = next;
