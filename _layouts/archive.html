@@ -2,24 +2,28 @@
 layout: default
 ---
 
-{% include page-intro.html %}
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
 
-<main id="main" class="page__main" aria-label="Main content">
-  {% if page.introduction %}
-    {{ page.introduction | markdownify }}
-  {% elsif page.layout == 'autopage_tags' %}
-    {% if tag.description %}
-      {{ tag.description | markdownify }}
-    {% else %}
-      <p>An archive of posts tagged <em>{{ page.autopages.display_name }}</em>.</p>
-    {% endif %}
-  {% endif %}
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
 
-  {{ content }}
+<div id="main" role="main">
+  {% include sidebar.html %}
 
-  {% include posts-paginated.html %}
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+    {% endunless %}
 
-  {% if page.support == true %}
-    {% include_cached support.html %}
-  {% endif %}
-</main>
+    {{ content }}
+
+    {% include sidebar_right.html %}
+  </div>  
+</div>

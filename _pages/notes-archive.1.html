@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Dairy"
+permalink: /notes/
+author_profile: false
+---
+
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in postsByYear %}
+  <h2 id="{{ year.name | slugify }}" class="archive__subtitle">{{ year.name }}</h2>
+  {% for post in year.items %}
+    {%- if post.categories contains 'notes' -%}
+      {% include archive-single.html %}
+    {%- endif -%}
+  {% endfor %}
+{% endfor %}
