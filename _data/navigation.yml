@@ -2,7 +2,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Dev"
+  - title: "Programming"
     url: /dev/
   - title: "Notes"
     url: /notes/
