@@ -1,3 +1,5 @@
+please	:wq
+
 # [Made Mistakes](https://mademistakes.com) Source Code
 
 This is the source code of Made Mistakes, a personal blog and portfolio built 
