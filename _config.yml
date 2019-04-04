@@ -1,6 +1,6 @@
 # Site wide configuration
-source: .tmp/src
-destination: .tmp/dist
+# source: .tmp/src
+# destination: .tmp/dist
 
 title: "Made Mistakes"
 description: "Personal website of designer Michael Rose (@mmistakes)"
