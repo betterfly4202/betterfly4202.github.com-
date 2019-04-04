@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% include page-intro.html %}
+
+<main id="main" class="page__main" aria-label="Main content">
+  {% include gallery.html %}
+
+  {{ content }}
+
+  {% if page.comments == true %}
+    {% include comments.html %}
+  {% endif %}
+</main>
+
+<div class="page__aside">
+  {% if page.toc %}
+    <div class="page__toc">
+      <h3 class="title">On this page:</h3>
+      {{ content | toc_only }}
+    </div>
+  {% endif %}
+  <p><a class="back-to-top" href="#nav-primary">↑ back to top</a></p>
+</div>

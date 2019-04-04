@@ -1,0 +1,12 @@
+{% if page.breadcrumbs %}
+  <div class="breadcrumbs" itemtype="https://schema.org/BreadcrumbList">
+    {% for crumb in page.breadcrumbs %}
+      <span class="breadcrumb" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+        <a href="{{ crumb.url | relative_url }}" itemscope itemtype="https://schema.org/Thing" itemprop="item">
+          <span itemprop="name">{{ crumb.label }}</span>
+          <meta itemprop="position" content="{{ forloop.index | plus: 1 }}" />
+        </a>
+      </span>
+    {% endfor %}
+  </div>
+{% endif %}
