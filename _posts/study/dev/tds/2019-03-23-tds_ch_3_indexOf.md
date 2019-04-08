@@ -5,6 +5,7 @@ tags:
   - Think Data Structures
   - data structure
   - linked list
+toc: true
 ---
 
 ![tds_book](/assets/images/study/dev/2019/tds_book.jpg){: .center}
