@@ -1,9 +1,13 @@
 ---
 title: "[디자인 패턴] Prototype pattern (Shallow Copy & Deep Copy)"
-categories: "dev"
-tags:
+categories: "JAVA"
   - design pattern
   - prototype
+toc: true
+header:
+  overlay_image: /assets/images/header/pattern.jpg
+  overlay_filter: 0.5
+  show_overlay_excerpt: false
 ---
 
 앞서 [프로토타입 패턴](https://betterfly88.github.io/dev/prototype_pattern/)의 기본적인 사용법과 특징에 대해서 알아보았다.
@@ -13,6 +17,7 @@ tags:
 바로 **얕은복사(Shallow Copy)와 깊은복사(Deep Copy)**이다.
 
 ## 얕은복사와 깊은복사(Shallow Copy & Deep Copy)
+
 소위 얕은(Shallow) 복사라하면, 객체의 주소값(?)만을 복사하여 객체를 복사하는 것을 말한다.
 때문에 A라는 객체와 A를 복사한 A' 라는 2개의 객체가 존재할 때.
 A' 객체의 어떤 값을 변화시키면, A객체도 같이 바뀌게 된다.
@@ -45,7 +50,7 @@ public class Demo{
         System.out.println(bs);
         System.out.println(bs2);
     }
-} 
+}
 ~~~
 
 bs(Books Shop 1)의 도서리스트(getBooks())의 1번째 index만 제거해주었다.
@@ -167,7 +172,6 @@ public BookShop clone() {
 
 ![deep_copy](/assets/images/study/dev/2019/1_deep_copy.png)
 
-
 > 포토로타입 패턴을 사용시 얕은 복사와 깊은 복사 중에 무엇을 사용해야할까?  <br/>
 그것은 전적으로 요구사항에 달려있습니다. <br/>
 만약 객체가 primitive 필드거나 immutable 객체라면(whose state cannot change, once crated; 생성되면 바꿀수 없는) 얕은 복사를 사용하세요. <br/>
@@ -185,7 +189,8 @@ GoF의 디자인 패턴 책 말머리에도 언급되었지만, 모든 패턴을
 
 그런데 나는 아직 책을 한번 읽거나, 인터넷 어딘가에서 누가 정리한 글을 대충 읽어서는 절대 기억도 못하고, 응용하지 못한다.
 
-그래서 내용을 제대로 이해하고 싶어 이렇게 장황하게 정리하게 되었다. 
+그래서 내용을 제대로 이해하고 싶어 이렇게 장황하게 정리하게 되었다.
 
 ## 관련 패턴
+
 <code>Abstract Factory</code>

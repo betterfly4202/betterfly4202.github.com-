@@ -1,9 +1,14 @@
 ---
 title: "[디자인 패턴] Prototype pattern"
-categories: "dev"
+categories: "JAVA"
 tags:
   - design pattern
   - prototype
+toc: true
+header:
+  overlay_image: /assets/images/header/pattern.jpg
+  overlay_filter: 0.5
+  show_overlay_excerpt: false
 ---
 
 * 목차

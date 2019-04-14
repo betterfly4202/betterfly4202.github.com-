@@ -17,11 +17,12 @@ last_modified_at: 2018-11-23T15:22:24-04:00
 author_profile: true
 ---
 
-무역학을 전공하고, 뒤늦게 개발의 매력에 빠진 2년차 개발자입니다.
+무역학을 전공하고, 뒤늦게 개발의 매력에 빠진 3년차 개발자입니다.
 
-첫 직장에서는 동영상 스트리밍 솔루션을 제공하기 위하여 필요한 CMS(Contents Management System) 웹 플랫폼을 개발하는 업무를 맡았습니다.
+첫 직장에서는 회사의 솔루션 제품을 제공하기 위하여 필요한 웹 어플리케이션(CMS 서비스)을 개발했습니다.
 
 주로 사용한 기술은 다음과 같습니다.
+
 - <code>Spring Framework</code>
 - <code>Vue.js</code> 
 - <code>Oracle / MySql</code>
@@ -35,7 +36,7 @@ author_profile: true
 
 그리고 지난 18년 10월에 스타트업으로 이직하여 Back-end 개발자로 새로운 개발 인생을 걷게 되었습니다.
 
-이 곳에서는 GCP<sub>(Google Cloud Platform)</sub> 환경 아래에서 주로 **ETL<sub>(Extraction, Transformation, Loading)</sub>**과 사용자에게 전달되는 **Push 서비스**의 백엔드 개발을 담당하게 되었습니다.
+이 곳에서는 GCP<sub>(Google Cloud Platform)</sub> 환경 아래에서 주로 **ETL<sub>(Extraction, Transformation, Loading)</sub>**과 사용자에게 전달되는 **Push 메세지 서비스**의 백엔드 개발을 담당하게 되었습니다.
 
 ---
 
