@@ -11,9 +11,6 @@ header:
   show_overlay_excerpt: false
 ---
 
-* 목차
-{: toc}
-
 # Prototype Pattern
 
 아직 개발에 쓰이는 키워드들에 혼동되는 것들이 많아, 단어의 본질적인 의미가 떠오르지 않을때

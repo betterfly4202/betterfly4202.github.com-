@@ -1,6 +1,7 @@
 ---
 title: "[디자인 패턴] Prototype pattern (Shallow Copy & Deep Copy)"
 categories: "JAVA"
+tags:
   - design pattern
   - prototype
 toc: true
