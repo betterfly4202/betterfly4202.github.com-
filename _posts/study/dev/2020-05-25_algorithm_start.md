@@ -28,4 +28,4 @@ header:
 [참고]
 - https://janghw.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Greedy-Algorithm-%ED%83%90%EC%9A%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
 - https://www.zerocho.com/category/Algorithm/post/584ba5c9580277001862f188
-- http://ivis.kr/images/4/46/4%EC%9E%A5%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.pdf
+- https://ratsgo.github.io/data%20structure&algorithm/2017/11/22/greedy/
