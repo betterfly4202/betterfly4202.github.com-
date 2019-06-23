@@ -23,7 +23,7 @@ description              : "주니어 개발자의 성장통"
 url                      : "https://betterfly88.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "/betterfly88/betterfly88.github.com"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/main/main_teaser.jpeg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -102,7 +102,7 @@ analytics:
 # Site Author
 author:
   name             : "@betterFLY"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/main/main_teaser.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "주니어 개발자의 성장과정"
   location         : "Seoul, Korea"
   email            : "betterfly4202@gmail.com"
