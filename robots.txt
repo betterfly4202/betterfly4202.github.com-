@@ -1,6 +1,5 @@
+---
+---
 User-agent: *
-Allow: /
-User-agent: *
-Disallow: /privateData/
-
-Sitemap: https://betterfly88.github.io/sitemap.xml
+Disallow: /cdn-cgi/
+Sitemap: {{ site.url }}/sitemap.xml

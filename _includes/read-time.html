@@ -7,9 +7,7 @@
 {% endif %}
 
 {% if words < words_per_minute %}
-  {{ site.data.ui-text[site.locale].less_than | default: "less than" }} 1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
-{% elsif words == words_per_minute %}
-  1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
+  <span class="entry__read-time">~1&nbsp;min&nbsp;read</span>
 {% else %}
-  {{ words | divided_by:words_per_minute }} {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
+  <span class="entry__read-time">{{ words | divided_by:words_per_minute }}&nbsp;min&nbsp;read</span>
 {% endif %}
