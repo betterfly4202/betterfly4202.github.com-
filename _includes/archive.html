@@ -1,30 +1,55 @@
----
-layout: default
----
+<section id="posts" class="posts-collapse" hidden>
+  <span class="archive-move-on"></span>
 
-{% include page-intro.html %}
+  <span class="archive-page-counter">
+    {% assign posts_length = site.posts.size %}
+    {% if posts_length > 210 %} {% assign cheers = 'excellent' %}
+      {% elsif posts_length > 130 %} {% assign cheers = 'great' %}
+      {% elsif posts_length > 80 %} {% assign cheers = 'good' %}
+      {% elsif posts_length > 50 %} {% assign cheers = 'nice' %}
+      {% elsif posts_length > 30 %} {% assign cheers = 'ok' %}
+    {% else %}
+      {% assign cheers = 'um' %}
+    {% endif %}
+    {{ __.cheers[cheers] }}!
+    {% if site.posts.size == 0 %}
+      {{ __.counter.archive_posts.zero }}
+    {% elsif site.posts.size == 1 %}
+      {{ __.counter.archive_posts.one }}
+    {% else %}
+      {{ __.counter.archive_posts.other | replace: '%d', site.posts.size }}
+    {% endif %}
+    {{ __.keep_on }}
+  </span>
 
-<main id="main" class="page-content" aria-label="Content">
-  <div class="index inner">
-    <div>{{ content }}</div>
+  {% assign paginate = site.archive.paginate | default: site.paginate  %}
+  {% assign paginate_path = site.archive.paginate_path | default: site.paginate_path  %}
 
-    <div>
-      <header class="section-title">
-        <h2>
-          {% if page.alt_title %}
-            {{ page.alt_title | markdownify | remove: '<p>' | remove: '</p>' }}
-          {% elsif page.autopages %}
-            {{ page.autopages.display_name }}
-          {% else %}
-            {{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
-          {% endif %}
-        </h2>
-      </header>
-      <div class="entries">
-        {% include posts-paginated.html %}
+  {% for post in site.posts %}
+    {% if paginate > 0 %}
+      {% assign page_num = forloop.index0 | divided_by: paginate | plus: 1 %}
+      {% if page_num == 1 %}
+        {% assign route = '/' %}
+      {% else %}
+        {% assign route = paginate_path | replace: ':num', page_num %}
+      {% endif %}
+      {% assign index0_modulo_paginate = forloop.index0 | modulo: paginate %}
+    {% endif %}
+
+    {% comment %} Show year {% endcomment %}
+    {% assign post_year = post.date | date: '%Y' %}
+    {% if post_year != year or index0_modulo_paginate == 0 and index0_modulo_paginate %}
+      {% assign year = post_year %}
+      <div class="collection-title" {% if route %}route="{{ route }}"{% endif %}>
+        <h2 class="archive-year motion-element" id="archive-year-{{ year }}">{{ year }}</h2>
       </div>
-    </div>
+    {% endif %}
+    {% comment %} endshow {% endcomment %}
 
-    {% include_cached footer.html %}
-  </div>
-</main>
+    {% include _macro/post-collapse.html %}
+
+  {% endfor %}
+
+</section>
+
+<nav class="pagination"></nav>
