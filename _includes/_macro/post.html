@@ -262,9 +262,21 @@
             {% endif %}
           {% endunless %}
 
+          <!-- [S]Post Tags -->
+          {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              {% assign tag_url_encode = tag | url_encode | replace: '+', '%20' %}
+              <a href="{{ '/tag/#/' | relative_url | append: tag_url_encode }}" rel="tag"># {{ tag }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <!-- [E]Post Tags -->
         </div>
       </header>
     {% endunless %}
+
+
 
     <div class="post-body{% if site.han %} han-init-context{% endif %}" itemprop="articleBody">
 
@@ -350,14 +362,7 @@
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false %}
-        <div class="post-tags">
-          {% for tag in post.tags %}
-            {% assign tag_url_encode = tag | url_encode | replace: '+', '%20' %}
-            <a href="{{ '/tag/#/' | relative_url | append: tag_url_encode }}" rel="tag"># {{ tag }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
+
 
       {% unless is_index %}
       {% if site.vkontakte_api.enable and site.vkontakte_api.like %}
