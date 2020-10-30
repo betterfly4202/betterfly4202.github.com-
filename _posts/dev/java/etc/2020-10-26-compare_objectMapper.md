@@ -305,7 +305,8 @@ public class Starter {
 
 130만건 정도를 실행하니까 조금 더 분별력있는 결과가 나왔다.
 
-### 실행 결과 분석 및 결과
+### 실행 결과 분석 및 결과  
+
 [](!/assets/images/study/dev/2020/10/1026_result_orika.jpeg)
 [](!/assets/images/study/dev/2020/10/1026_result_modelMapper.jpeg)
 [](!/assets/images/study/dev/2020/10/1026_result_mapStruct.jpeg)
@@ -318,6 +319,7 @@ public class Starter {
 ModelMapper가 Orika보다는 조금 더 나은 실행속도를 보이고, CPU사용률도 비교적 안정적으로 사용하는 모습이다.(하지만 Memory를 많이 사용한다.)  
 
 `ModelMapper`나 `Orika`에서 메모리를 많이 활용하고 성능이 저하되는 것은 **runtime 시점에 reflection**을 통해 맵핑을 하기 떄문에 맵핑 객체의 사이즈가 커질수록 선형적으로 메모리를 많이 사용하게 될 것이며 성능도 저하될 수 밖에 없다.(비효율)  
+
 ~~~java
   // ModelMapper에서 reflect를 활용
   public <S, D> void addConverter(Converter<S, D> converter) {
@@ -334,6 +336,13 @@ ModelMapper가 Orika보다는 조금 더 나은 실행속도를 보이고, CPU�
 ~~~
 
 `MapStruct`의 성능이 우수한 이유는 Lombok과 같이 *annotation processor*를 통해서 **compile 시점**에 객체간 맵핑이 이루어지기 떄문에 매우 월등한 성능을 보일 수 있다.
+
+## 정리
+
+처음 큰 고민없이 사용했던 `ModelMapper`에서 발생한 문제가 나비효과가 되어 여기까지 오게 되었다.  
+결과적으로 좋은 경험이었고, 나름 의미 있는 결과와 교훈이 되었다.  
+단순히 *남들이 쓰기 때문에*, *레퍼런스가 많아서*, *좋다고하니까* 사용하는 기술이 아닌,  
+직접 체득해보는 과정에서 앞으로 사용할 기술을 선정할 때 어떤 부분을 신경쓰는게 좋을지, 특징이 무엇인지를 파악해보는 습관을 기를 수 있는 기회가 된 것 같다.
 
 ---
 
