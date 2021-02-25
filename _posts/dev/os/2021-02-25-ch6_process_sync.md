@@ -8,8 +8,6 @@ tags:
 
 # Process Synchronization
 
-TEST 
- dddd
 ---
 
 *Reference*
