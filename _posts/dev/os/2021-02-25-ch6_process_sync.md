@@ -7,7 +7,6 @@ tags:
 ---
 
 # Process Synchronization
-aa
 
 ---
 
