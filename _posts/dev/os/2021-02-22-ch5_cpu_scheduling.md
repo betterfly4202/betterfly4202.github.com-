@@ -53,6 +53,137 @@ I/O 바운드 잡이 문제인데, I/O 잡은 사람 또는 외부와 interactio
 > 1,4 스케줄링은 CPU를 갖고 있어도 사용할 필요가 없기 때문에 **자진 반납하는경우** `nonpreemptive`  
 > 그 외 모든 스케줄링은 **강제로 CPU점유를 빼앗음** `preemptive`
 
+## Scheduling Criteria
+**Performance Index(= Performance Measure, 성능 척도)**
+
+### 시스템 관점
+시스템입장에서는 하나의 CPU자원으로 최대한 일을 많이 시키는 것이 효율적임(CPU utilization, Throughput)
+#### CPU Utilization(이용률)
+- Keep the *CPU as busy as possible*
+- 전체 시간 중에 CPU가 사용되는 시간의 비율
+
+#### Throughput(처리량)
+- *#of processes* that *complete* their execution per time unit
+- 주어진 시간안에 몇 개의 일(작업)을 해냈는지의 수치
+
+### 프로세스 관점(사용자 관점)
+CPU를 빠르게 획득하여 짧은 시간안에 프로세스를 마치는 것에 초점(Turnaroung time, Waiting time, Response time)
+#### Turnaround time(소요시간, 반환시간)
+- amount of time to *execute a particular process*
+- CPU를 모두 사용한 후 I/O를 빠져나갈때까지의 시간
+
+#### Waiting time(대기시간)
+- amount of time a process has been *waiting in the ready queue*
+- CPU를 쓰기 위해서 기다리는 시간(Ready queue에서 CPU작업을 대기)
+
+#### Response time(응답 시간)
+- amount of time it takes *from when a request was submitted until the first response is produced.* **not** output
+- Ready Queue에서 CPU를 얻기까지 걸리는 시간
+- *for time-sharing environment*
+
+
+#### Waiting time과 Response time의 비교
+
+![](/assets/images/study/dev/2021/os/ch5_Preemptive-Scheduling-vs-Non-Preemptive-Scheduling.png)
+선점형 스케줄링`preemptive scheduling`의 경우 CPU를 획득 후 interrupt에 의해 CPU를 뺏기고 획득하고의 과정을 반복한다.(상단 그림 참고)  
+이 경우 한번의 CPU burst기간에 CPU를 여러차례 선점하거나 양도하는 과정에서 많은 `대기시간`이 발생한다. 이떄 발상하는 모든 대기시간을 합친 시간을 `waiting time`이라고 한다.  
+
+`Response time`은 이 과정에서 처음으로 CPU를 획득하기 까지 걸리는 시간을 의미한다.
+
+### Scheduling Criteria examples
+#### 중국집을 운영하면서 주방장을 한명 고용했다 => CPU 1개
+
+- 사장입장에서는 주방장이 근무시간 중에 놀지않고 **최대한 많은 시간** 일을 해줬으면 좋겠다 -> `CPU Utilization`
+- 중국집에 단위 시간당 최대한 **많은 양**의 손님이 방문하면 좋겠다 -> `Throughput`
+- 중국집의 고객입장에서, 식사가 나오면 다 먹고 나갈때까지 걸리는 시간 -> `Turnaround time`
+- 중국집에서 손님이 밥을 먹는 시간이 아닌, 식사가 나오기 전까지 기다리는 시간 -> `Waiting time`
+- 첫번째 음식이 나올때까지 기다리는 시간 -> `Response time`
+
+## Scheduling Algorithms
+### FCFS(First-Come First-Served)
+먼저 온 *순서대로* 처리한다.
+
+- 프로세스의 도착순서 P1, P2, P3 스케줄 순서를 `Gantt Chart`로 보면 다음과 같다.
+![](/assets/images/study/dev/2021/os/ch5_fcfs.png)
+
+- Waiting time P1 = 0, P2 = 24, P3 = 27
+- Average waiting time : (0+24+27)/3 = **17**
+
+하지만, 프로세스의 도착 순서가 다음과 같이 된다면 어떨까?  
+P2 -> P3 -> P1
+
+![](/assets/images/study/dev/2021/os/ch5_fcfs_convoy_effect.png)
+
+- Waiting time P2 = 0, P3 = 3, P1 = 6
+- Average waiting time : (0+3+6)/3 = **3**
+
+이 전의 순서에 비해 월등히 짧은 waiting time을 갖게 된다. 
+이처럼 `FCFS`는 어떤 순서냐에 따라 기다리는 시간이 상당히 영향받는 것을 볼 수 있다.
+
+이처럼 긴 대기를 부르는 프로세스를 수행하느라, 상대적으로 짧은 시간의 프로세스에 영향을 주는 현상을 `Convoy Effect`라고 한다.
+
+### SJF(Shortest-Job-First)
+- 각 프로세스의 다음번 `CPU burst time`을 가지고 스케줄링에 활용
+- CPU burst time이 가장 짧은 프로세스를 제일 먼저 스케줄
+- Two schemes:
+  - Nonpreemptive
+    - 일단 CPU를 선점하면 이번 CPU burst가 완료될 때까지 CPU를 선점(preemption)당하지 않음
+    - ![](/assets/images/study/dev/2021/os/ch5_sjf_non-preemptive.png)
+    - Average waiting time = (0+6+3+7)/4 =4
+    - **CPU를 다 쓰고 나가는 시점에 다음 프로세스의 스케줄링을 결정한다**
+  - Preemptive
+    - 현재 수행중인 프로세스의 남은 burst time보다 **더 짧은 CPU burst time**을 가지는 새로운 프로세스가 도착하면 CPU를 빼앗김
+    - 이 방법을 `Shortest-Remaining-Time-First(SRTF)`라고 부름
+    - ![](/assets/images/study/dev/2021/os/ch5_sjf_preemptive.png)
+    - arrival time이 0인 P1부터 CPU를 얻었지만, 더 짧은 수행시간(burst time)의 프로세스가 들어오면 CPU를 양도한다. 
+    때문에 2.0초가 지난 시점에 도착한 P2의 수행속도는 4초 이므로, P1은 전체 7초에서 2초를 사용했기 때문에 5초, P2는 4초 이므로 burst time이 짧은 P2에게 CPU를 양도한다.
+    - 이런식으로 매 시점마다 CPU를 선점적하여 가장 짧은 수행시간을 순서대로 스케줄링이 되면 다음과 같은 `Waiting time`이 발생한다.
+    - Average waiting time = (9+1+0+2)/4 = 3
+    - **새로운 프로세스가 도착할때마다 스케줄링을 결정한다.**
+  - **SJF is optiomal**
+    - 주어진 프로세스에 대해 *minimum average waiting time*을 보장
+
+#### SJF의 문제점
+이렇게 **Preemptive SJF** 알고리즘을 이용하면 최선의 효율적인 스케줄링을 할 수 있을 것 같은데, 여기 두가지 문제점이 존재한다.
+1. SJF는 극단적으로 CPU사용 시간이 짧은 잡을 선호한다. 때문에 CPU 사용 시간이 긴 프로세스는 영원히 CPU할당을 받지 못하게 될 수 있다. `Starvation`
+   - 예를들어 CPU 1초 짜리 프로세스 `A`와 10초짜리 `B`가 있는데, A종료 후 B를 실행하려는데 그 사이에 2초짜리 프로세스가 끼어들고... 이런식으로 계속해서 중간에 짧은 시간의 프로세스가 계속해서 개입된다면 가장 긴 수행시간의 프로세스는 영원히 실행되지 못할수도 있다.
+2. CPU 사용시간을 미리 알기가 어렵다.
+   - 프로그램 내부의 다양한 로직들과 연결 단계가 있는데, 이것을 실행하지 않고 ready queue상태에서 프로세스의 수행시간을 정확히 예측하는 것이 어렵다.
+
+이처럼 미리 사용시간을 예측하는 것은 어렵지만, 비슷한 잡들의 과거 수행시간을 견주어봐서 *대략적인* 수행시간을 예측해서 스케줄링에 반영할 수 있다.
+
+### Priority Scheduling
+- 우선순위가 높은 프로세스에게 CPU를 할당한다. (**smallest integer = highest priority**)
+  - Preemptive
+    - 우선순위가 높은 프로세스에 CPU를 할당했는데, 더 높은 우선순위의 프로세스가 넘어온다면 CPU를 넘겨준다.
+  - Nonpreemptive
+    - 일단 CPU를 할당했으면, 더 높은 우선순위의 프로세스가 오더라도 이전에 수행중이던 프로세스가 완료된 후 CPU를 넘겨준다.
+- SJF는 일종의 priority scheduling이다.
+  - priority = predicated next CPU burst time
+- 문제점
+  - `Starvation` : 가장 낮은 우선순위의 프로세스는 영원히 실행되지 않을 수 있음
+- 해결책
+  - `Aging` : 우선순위가 낮은 프로세스라도, 대기시간이 길어지면 우선순위를 점차 높여주는 방식
+
+### Round Robin(RR)
+- 각 프로세스는 동일한 크기의 할당시간<sub>time quantum</sub>을 가짐 (*일반적으로 10~100 milliseconds*)
+- 할당시간이 지나면 프로세스는 선점<sub>preempted</sub>당하고 ready queue의 제일 뒤에 다시 줄을 서게 된다.
+  - 어떤 프로세스든지 공평한 대기시간을 갖기 때문에, 앞서 살펴봤던 `Scheduling Criteria`의 **Response Time**이 짧다.  
+    조금씩 CPU를 줬다 뺏었다를 반복하기 떄문에 어떤 프로세스라도 짧은 시간안에 CPU를 할당받을 수 있는 기회가 주어진다.
+- n개의 프로세스가 ready queue에 있고, 할당 시간이 `q time unit`인 경우 각 프로세스는 최대 q time unit단위로 CPU시간의 **1/n**을 얻는다.
+  - 어떤 프로세스다 (n-1)q time unit 이상 기다리지 않는다.
+- Performance
+  - q large(할당시간을 길게 잡는 경우) => FCFS
+  - q small(할당시간을 짧게 잡는 경우) => 빠른 순환을 하는데는 이상적이지만, context switch가 빈번히 발생하여 오버헤드가 커짐
+
+**Round Robin에서 한가지 유의할 점은,**  
+만약 실행시간 **100초 짜리 프로세스가 4개**가 있고, **time quantum을 1초**로 설정했다고 가정하자.  
+각 프로세스는 CPU를 받고, 1초씩 실행되면서 context switch가 발생하며 프로세스가 실행된다. 이때 context switch 시간을 제외하더라도 4개의 프로세스가 종료되는 시점은 대략 400초 후에 **동시에**종료가 된다.  
+하지만 Round Robin이 아닌, Nonpreemptive 방식과 같이 하나의 프로세스씩 순차적으로 실행한다면,  
+100초 단위로 프로세스가 1개씩 순차적으로 진행되다가 최종 400초가 되는 시점에 마지막 프로세스가 종료된다.  
+
+이는 얼핏 비슷해보이지만 상당히 큰 차이를 갖는다. 400초 동안 프로세스를 4개를 동시에 메모리에 올리고있는 리소스와 1개씩 순차적으로 점유하는 리소스가 다르기 때문이다.
+
 ---
 
 *Reference*
