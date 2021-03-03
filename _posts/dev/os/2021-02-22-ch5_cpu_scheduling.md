@@ -184,6 +184,115 @@ P2 -> P3 -> P1
 
 이는 얼핏 비슷해보이지만 상당히 큰 차이를 갖는다. 400초 동안 프로세스를 4개를 동시에 메모리에 올리고있는 리소스와 1개씩 순차적으로 점유하는 리소스가 다르기 때문이다.
 
+
+## Multilevel queue  
+![](/assets/images/study/dev/2021/os/ch5_highest-priority.jpg)
+<figcaption class="caption">Multilevel Queue의 우선순위</figcaption>
+
+멀티레벨 큐는 그림과 같이 우선순위를 갖기 때문에, 하나의 CPU에서 순차적인 처리를 한다면 그림의 순서대로 CPU를 할당받게 될 것이다.
+
+### Multilevel Queue 특징
+- Ready queue를 여러 개로 분할
+  - foreground(*interactive*)
+    - 사람과 interaction이 일어나는 foreground job
+  - background(*batch - no human interaction*)
+    - batch process와 같은 CPU bounded job
+- 각 큐는 독립적인 스케줄링 알고리즘을 가짐
+  - foreground - RR
+    - interaction이 빈번히 발생하는 프로세스는 언제까지 CPU를 점유해야할지 판단하는 것이 어렵기 떄문에 `Round Robin`방식이 적용
+  - background - FCFS
+    - CPU bounded job은 큐에 들어온 순서대로 처리하는 것이 유리함
+- 큐에 대한 스케줄링이 필요
+  - Fixed priority scheduling
+    - 위 그림과 같이 우선순위를 고정할 경우 우선순위 잡들이 계속해서 들어오게 된다면, 우선순위 낮은 잡은 영원히 실행되지 못할 수 있다.(`starvation`)
+  - Time slice
+    - `Starvation`을 방지하기 위하여 각 큐에 CPU time을 적절한 비율로 할당
+      - Eg., 80% to foreground in RR, 20% to background in FCFS  
+
+## Multilevel Feedback Queue  
+Multilevel Queue와 같이 고정적인 우선순위를 갖게되는 것에 문제가 있는 것을 보완하기 위하여 `Multilevel Feedback Queue`와 같이 여러 줄로 줄을 서며, 서로 간에 이동을 할 수있는 스케줄링 방식이 나왔다.  
+![](/assets/images/study/dev/2021/os/ch5_multilevel_feedback_queue.png)
+
+### Multilevel Feedback Queue 특징
+- 프로세스가 다른 큐로 이동 가능
+- 에이징<sub>aging</sub>을 이와 같은 방식으로 구현 가능
+- Multilevel-feedback-queue scheduler를 정의하는 파라미터들
+  - Queue 수
+  - 각 큐의 scheduling algorithm
+  - Process를 상위 큐로 보내는 기준
+  - Process를 하위 큐로 내리는 기준
+  - 프로세스가 CPU서비스를 받으려 할 때 들어갈 큐를 결정하는 기준
+
+### 일반적인 Multilevel Feedback Queue 운영 방식
+- 처음 들어오는 프로세스는 우선순위가 **가장 높은 큐**에 삽입한다
+  - 우선순위가 가장 높은 큐는 `RR`을 통해 스케줄링되며 time quantum의 할당시간을 짧게 준다
+- 그 다음 프로세스가 들어올 수록 `RR`의 quantum시간을 점점 길게 준다
+- 마지막으로 세워진 큐는 `FCFS` 스케줄링을 적용한다
+
+- 그림과 같이 3개의 큐가 존재한다
+  - Q0 - time quantum 8 milliseconds
+  - Q1 - time quantum 16 milliseconds
+  - Q2 - FCFS
+- 스케줄링 순서
+  - 새로운 잡이 Q0으로 들어감
+  - CPU를 할당받은 후 8 milliseconds 동안 수행됨
+  - 8ms 동안 끝내지 못하는 경우 Q1으로 내려감
+  - Q1에서 줄을 서서 기다린 후 16ms 동안 수행
+  - 16ms동안 끝나지 못하는 경우 Q2로 내려감
+
+---
+
+## Multiple-Processor Scheduling
+지금까지 다루었던 것은 1개의 CPU를 사용한다고 가정한 방식들을 살펴보았다.  
+지금부터 CPU가 복수개 존재할 때 스케줄링을 살펴보자.
+
+- CPU가 여러 개 존재하는 경우 스케줄링은 더욱 복잡해짐
+- Homogeneous processor인 경우
+  - Queue에 한줄로 세워서 각 프로세서가 알아서 꺼내가게 할 수 있다
+  - 반드시 특정 프로세서에서 수행되어야 하는 프로세스가 있는 경우에는 문제가 더욱 복잡해짐
+- Load sharing
+  - 일부 프로세서에 job이 몰리지 않도록 부하를 적절히 공유하는 메커니즘 필요
+  - 별개의 큐를 두는 방법 vs 공동 큐를 사용하는 방법
+- Symmetric Multiprocessing(SMP)
+  - 각 프로세서가 각각 알아서 스케줄링을 결정 *(프로세스가 모두 대등하게 실행)*
+- Asymmetric multiprocessing
+  - 하나의 프로세서가 시스템 데이터의 접근과 공유를 책임지고 나머지 프로세서는 거기에 따름 *(하나의 프로세스가 역할을 분담해줌)*
+
+
+## Real-Time Scheduling
+Real-time process는 정해진 시간(dead-line)안에 프로세스가 실행되어야 하는 특징을 갖는다.
+
+- Hard real-time systems
+  - Hard real-time task는 정해진 시간안에 반드시 끝내도록 스케줄링되어야 함
+- Soft real-time computing
+  - Soft real-time task는 일반 프로세스에 비해 높은 priority를 갖도록 해야 함
+
+
+## Thread Scheduling
+Thread : 프로세스에서 CPU 수행 단위
+
+- Local Scheduling
+  - User level thread의 경우 사용자 수준의 thread library에 의해 어떤 thread를 스케줄 할지 결정
+  - OS가 결정하는 것이 아닌, 사용자 프로세스가 직접 어떤 thread에 CPU를 할당할지 결정함
+- Global Scheduling
+  - Kernel level thread의 경우 일반 프로세스와 마찬가지로 커널의 단기 스케줄러가 어떤 thread를 스케줄할지 결정
+  - 운영체제가 스케줄 알고리즘에 의해 CPU를 할당
+
+## Algorithm Evaluation
+지금까지 다양한 CPU Schedling 알고리즘을 살펴보았고, 각 알고리즘의 특징을 살펴보았다.  
+이제 그 알고리즘의 평가하는 방법에 대해서 살펴보도록 하자.
+
+- Queueing models
+  - 확률 분포로 주어지는 `arrival rate`와 `service rate`등을 통해 각종 `performance index` 값을 계산
+    - CPU 잡을 수행한 도착률 & 처리률을 계산하여 throughput을 계산한다
+    - 이론적인 방식
+- 구현 & 성능 측정(Implementation & Measurement)
+  - 실제 시스템에 알고리즘을 구현하여 실제 작업(workload)에 대한 성능을 측정 비교
+- 모의 실험(Simulation)
+  - 알고리즘을 모의 프로그램으로 작성 후 trace를 입력으로 결과 비교
+  - `trace` : 실제 프로그램에 들어갈 input data
+
+
 ---
 
 *Reference*
