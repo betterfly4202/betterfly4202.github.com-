@@ -60,8 +60,15 @@ critical section을 해결하기 위해서 위 구조처럼 critical section을 
 critical section의 작업이 완료된 후 lock을 해제하여(exit section) 다음 프로세스의 접근을 허용한다.
 
 ###  프로그램적 해결법의 충족 조건
-#### Mutual Exclusion
+#### Mutual Exclusion(Mutex)
 프로세스 P<sub>i</sub>가 critical section 부분을 수행 중이면 다른 모든 프로세스들은 그들의 critical section에 들어가면 안된다.
+
+Mutual Exclusion추가 설명
+- 0또는 1의 값을 가지는 이진 세마포어와 유사
+  - Critical Section(임계구역)을 가진 스레드들의 실행 시간을 서로 겹치지 않게 단독으로 실행하게 하는 기술
+- 프로세스들의 공유 리소스에 대한 접근을 조율하기 위해 `Locking`과 `Unlocking`을 사용
+- 뮤텍스 객체를 두 스레드가 동시에 사용할 수 없다
+
 
 #### Progress
 아무도 critical section에 있지 않은 상태에서 critical section에 들어가고자 하는 프로세스가 있으면 critical section에 들어가게 해주어야 한다.
@@ -144,6 +151,13 @@ P<sub>0</sub> 프로세스 기준으로 살펴보면,
 그림처럼 변수 `a`를 읽고<sub>read</sub> `a = true`로 바꿔주는<sub>write</sub> 행위를 하나의 instruction으로 처리하는 것이다.  
 
 ### Semaphores
+프로세스간의 시그널(신호, Signal)을 주고받기 위해 사용되는 **정수 값**으로, 리소스의 상태를 나타내는 카운터로 세마포어는 다음 세가지 원자적인<sub>atomic</sub> 연산만을 지원한다.
+- initialize : 세마포어 초기화. (음이 아닌 정수값으로 초기화)
+- decrement : 프로세스를 블록시킴(Lock)
+- increment : 블록되었던 프로세스를 깨워줌(Unlock). 이 세마포어를 `카운팅 세마포어` 또는 `범용 세마포어`라고 한다
+
+출처: https://about-myeong.tistory.com/34 [명찌의 포스트잇]
+
 #### 추상자료형
   - Object와 Operation으로 구성된다.
   - **정수 추상자료형** 이라고 하면, 정수<sub>Object</sub> 숫자들이 있고들이 있고 그 숫자에 대해서 정의된 연산<sub>Operation</sub>덧셈,뺼셈 등이 정의되어 있는 것을 말한다.
@@ -170,10 +184,197 @@ P<sub>0</sub> 프로세스 기준으로 살펴보면,
     ```
   - P,V 두 연산은 atomic연산에 의해서만 접근이 가능하다
 
-#### 내용 추가
+
+
+---
+
+### Bounded-Buffer Problem
+> **Buffer**  
+임시로 데이터를 저장하는 공간
+
+![](/assets/images/study/dev/2021/os/ch6_bounded-buffer-problem.png)
+
+그림과 같이 메모리 안에 버퍼가 존재하고 생산자(Producer)와 소비자(Consumer) 관계가 있다고 보자.  
+생산자는 **버퍼가 비어있다면** 데이터를 생산하는 주체이고, 소비자는 **버퍼안에 데이터가 존재하면** 가져다가 사용하는 주체이다.  
+
+여기에 몇가지 Synchronization 문제를 예상해 볼 수 있는데
+- 2개의 생산자<sub>Producer</sub>가 하나의 버퍼에 동시에 접근하려는 경우
+- 마찬가지로 2개의 소비자<sub>Consumer</sub>가 하나의 공유된 자원(버퍼)에 접근하려는 경우
+
+위 두 경우 먼저 도착한 생산자가 자신이 작업을 수행하기 전에 공유 자원에 `Lock`을 걸어서 다른 생산자가 접근하지 못하도록 한다.
+
+또 다른 문제는 **버퍼가 유한**하기 떄문에 발생하는 문제가 있다.
+
+**생산자 관점**  
+- 사용할 수 있는 모든 버퍼에 데이터를 생산했다.
+- 모든 버퍼에 데이터가 쓰였는데, 또 다른 생산자가 진입하여 데이터를 생산하려고 한다.
+- 사용할 수 있는 자원(데이터가 비어있는 버퍼)이 존재하지 않음
+- 소비자가 버퍼를 사용하여 가용할 버퍼가 발생할때까지 대기
+
+**소비자 관점**
+- 버퍼의 모든 데이터를 소비자가 소진했다.
+- 버퍼에 사용할 데이터가 없는데, 다시 소비자가 진입하여 데이터를 소진하려고 한다.
+- 사용할 수 있는 자원(데이터가 존재하는 버퍼)가 존재하지 않음
+- 생산자가 버퍼를 생산해줄때까지 대기
+
+#### Bounded-Buffer Problem의 동기화 변수
+- mutual exclusion : 공유 자원의 사용에 대해 Lock을 걸어주고, 풀어주는 변수
+- resource count : 생산자/소비자 관점에서 사용할 수 있는 자원(buffer)의 수
+
+**synchronization variables**  
+- semaphore full = 0; 
+- empty = n; 
+- mutex = 1;
+
+**Producer process**
+```c++
+  do{
+    ...
+    produce an item in x
+    ...
+
+    P(empty);  // 내용이 비어있는 버퍼 확인
+    P(mutext); // 버퍼에 Lock을 걸기
+    ...
+    add x to buffer
+    V(mutex);  // 작업 완료 후 Lock 풀기
+    V(full);   // 작업이 완료되어 버퍼의 내용을 채워줌(소비자 입장의 자원 알림)
+  }while(1);
+```
+
+**Consumer process**
+```c++
+  do{
+    P(full);  // 내용이 채워있는 버퍼를 확인
+    P(mutex); // 버퍼를 사용하기 위해 Lock 걸기
+    ...
+    remove an item from buffer to y
+    ...
+    V(mutex); // 작업 완료 후 Lock 풀기
+    V(empty); // 비어있는 버퍼의 내용을 1 증가시켜줌(생산자 입장의 자원 알림)
+    ...
+    consume the item in y
+  }wihle(1);
+```
+
+#### Readers-Writers Problem
+- 한 프로세스가 DB에 write 중일 때 다른 프로세스가 접근하면 안됨
+- read는 동시에 여럿이 접근이 가능함
+- solution
+  - Writer가 DB에 접근 허가를 아직 얻지 못한 상태에서는 모든 대기중인 Reader들을 다 DB에 접근하게 해준다.
+  - Writer는 대기 중인 Reader가 하나도 없을 때 DB접근이 허용된다.
+  - 일단 Writer가 DB에 접근 중이면 Reader들은 접근이 금지된다.
+  - Writer가 DB에서 빠져나가야만 Reader의 접근이 허용된다.
+
+
+**Shared data**
+- DB 자체
+- readcount : 현재 접근중인 Reader의 수
+
+**Synchronization variables**
+- semaphore mutext = 1;
+- db = 1;
+
+**Writer**
+```C++
+  P(db); // Lock걸기
+    ...
+    writing DB is performed
+    ...
+  V(db);  // Lock풀기
+```
+위 코드는 간단하다.  
+Writer가 실행되면 다음 Writer와 충돌하지 않도록 Lock을 걸어 진입을 제한하고 자신의 writing 작업을 마친 후 Lock을 풀어준다.
+
+**Reader**
+```C++
+  P(mutex);
+  readcount++;
+  if(readcount == 1){
+    P(db) // block writer, readers follow
+  }
+  V(mutex);
+    ...
+    reading DB is performed
+    ...
+  p(mutex);
+  readcount--;
+  if(readcount == 0){
+    V(db); // enable writer
+  }
+  V(mutex);
+```
+Reader는 상대적으로 복잡해 보이지만, 역시 간단 하다.  
+DB의 데이터를 읽을때 마찬가지로 Lock을 걸어준다. 이 Lock은 Read 중 Writer의 작업을 제한하지만 다른 Reader들의 접근은 허용하여 읽기 작업은 추가로 수행할 수 있다.  
+그리고 마지막의 Reader작업까지 마친 후 Lock을 풀어주어(readcount--) 다음 Writer작업을 허용하게 해준다. 
+
+**Starvation 발생 가능**  
+위와 같이 Reader를 우선순위로 작업시, Reader작업이 끊임없이 들어온다면 Writer는 무한히 대기를 하기 때문에 `Starvation`문제가 발생한다.
+
+#### Dining-Philosophers Problem
+![](/assets/images/study/dev/2021/os/ch6_dining-philosophers.png)
+이 문제는 앞서 언급했던 ![철학자와_식사를_통한_데드락](https://better-dev.netlify.app/java/2018/08/12/proces_thread/) 문제인데 부가적인 설명을 덫붙인다.
+
+- 5명의 철학자가 원탁에 둘러 앉아 있다.
+- 이들은 모여서 생가을 하거나(*think()*), 밥을 먹는다(*eat()*)
+- 식사시 자신의 왼쪽, 오른쪽의 젓가락을 순서대로 하나씩 들어야 식사가 가능하다.
+- 자신의 식사를 마친 후 들었떤 왼쪽, 오른쪽 젓가락을 순서대로 자리에 다시 놓는다.
+
+이러한 흐름대로라면 그림의 1번 철학자가 식사를 시작하면 옆에 있는 2번 철학자는 1번 철학자가 식사 마치는것을 기다려야 한다.
+
+```c++
+  do{
+    P(chopstick[i]);
+    P(chopstick[(i+1)%5]);
+      ...
+      eat();
+    V(chopstick[i]);
+    V(chopstick[i+1]%5);
+      ...
+      think();
+      ...
+  }while(1);
+```
+**DeadLock 가능성**
+- 모든 철학자가 동시에 식사를 위해 왼쪽 젓가락을 집어버리는 경우
+
+**해결책**
+- 4명(짝수)의 철학자만이 테이블에 동시에 앉을 수 있도록 한다
+- 양쪽의 젓가락을 모두 잡을 수 있을떄에만(젓가락 상태 확인) 젓가락을 잡을 수 있게 한다
+- 비대칭
+  - 짝수(혹은 홀수) 철학자는 왼쪽(혹은 오른쪽)의 젓가락을 잡도록 한다
+
+
+### Monitor
+Semaphore의 한계
+- 코딩하기 어렵다
+- 정확성(correctness)의 입증이 어렵다
+- 자발적 협력(voluntary cooperation)이 필요하다
+- 한번의 실수가 모든 시스템에 치명적으로 영향을 준다
+
+**Mutual exclusion이 깨지는 상황**
+```c++
+  V(mutex)
+  // Critical Section
+  P(mutex)
+```
+
+**Dead Lock이 발생하는 상황**
+```c++
+  P(mutex)
+  // Critical Section
+  P(mutex)
+```
+
+- 동시 수행중인 프로세스 사이에서 abstract data type의 안전한 공유를 보장하기 위한 high-level synchronization construct
+
+![](/assets/images/study/dev/2021/os/ch6_semaphore-monitor.png)
+- 모니터 안에 공유 데이터와 접근 코드를 정의함
+- 모니터를 통해 데이터와 코드를 통제하여 액티브되는 프로세스가 1개만 실행될 수 있도록 제어해줌
+
 ![](https://www.youtube.com/watch?v=PQ5aK5wLCQE)
-`세마포어`라는 낯선 개념 때문에 강의를 들으면서 이해가 안되어서 다른 자료를 찾아봤다.  
-말이 어렵고 복잡해 보였지만, 간단하다. 식당(OS)과 손님(Process)라는 예시로 이해를 했는데  
+유튜브 영상은 `세마포어`로 설명을 했지만, 강의 내용과 비추어봤을때 모니터의 내용과 일치하여 첨부한다.  
+앞서 다루었던 말들이 어렵고 복잡해 보였지만, 간단하다. 영상에서 나오는 식당(OS)과 손님(Process)의 예시로 상황을 정리해보자.
 
 **식당에 손님이 와서 식사를 한다고 가정하자**
 - 식당에 손님이 식사를 할 수 있도록 4개의 테이블이 준비되어있다.(S=4)
@@ -182,13 +383,23 @@ P<sub>0</sub> 프로세스 기준으로 살펴보면,
 - 식사를 마친 손님은 식당을 나가며, 식당에선 다음 손님을 받을 테이블이 준비된다.(S++)
 - 식당 주인은 대기중인 손님을 입장시킨다(`signal()`)
 
-위에 이야기를 **식당==OS, 손님==Process**로 대입하여 생각하면 쉽다.
+위에 이야기를 **식당=OS, 손님=Process**로 대입하여 생각하면 쉽다.
 
+앞서 세마포어로 어렵게 관리해야했던 동기화 문제를 `모니터`라는 제한 장치를 통해서, 관리한다면 개발자의 실수를 최소화하고 시스템의 제어로 비교적 간단하게 해결할 수가 있다.
 
----
-##### DeadLock & Starvation
+*wait, signal은 자바의 wait, notify를 의미한다*
 
-
+### 동기화 문제 간단 정리
+#### 동기화 문제를 위한 3가지 전략
+- Mutual Exclusion(Mutex)
+  - 일종의 Locking 매커니즘, Lock가지고 있을때만 공유 자원에 접근하고 외부에서 접근을 제한함. 자신의 처리가 끝난 경우 Unlock을 해서 다른 프로세스의 접근을 허용
+- Semaphore
+  - 동시에 리소스에 접근할 수 있는 허용 가능한 갯수를 관리함
+    - Binary Semaphore : 2개(0,1)로 허용/비허용만 카운팅 (=> mutex와 유사한 개념)
+    - Counting Semaphore : 2개 이상 다수의 프로세스 관리 카운팅
+- Monitor
+  - Mutex의 Lock기능과 Condition Variables(일종의 Queue)를 가지고 동기화를 관리
+    - 임계영역에서 Lock으로 제한하고, 그 뒤에 접근을 시도하는 프로세스는 줄을 세워(Queue) 순차적으로 접근을 관리함
 
 ---
 
@@ -197,3 +408,4 @@ P<sub>0</sub> 프로세스 기준으로 살펴보면,
 - Operating System Concepts (Paperback / 9th Ed.) Books
 - http://www.kocw.net/home/search/kemView.do?kemId=1046323
 - https://ggodong.tistory.com/97
+- https://about-myeong.tistory.com/34
