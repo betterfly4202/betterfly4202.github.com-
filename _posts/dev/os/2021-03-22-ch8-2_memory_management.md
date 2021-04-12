@@ -1,5 +1,5 @@
 ---
-title: "[Operating System] Ch8-2. Memory Management"
+title: "[Operating System] Ch8-2. Memory Management - Contiguous allocation"
 categories: "OS"
 tags:
   - Operating System
@@ -92,21 +92,6 @@ tags:
 - 매우 큰 비용이 발생함
 - 최소한의 메모리 이동으로 compaction하는 방법은 매우 복잡한 문제
 - Compaction은 프로세스의 주소가 실행 시간에 동적으로 재배치 가능한 경우에만 수행될 수 있음
-
-### Noncontiguous allocation
-하나의 프로세스가 메모리의 여러 영역에 분산되어 올라갈 수 있음
-
-- Paging
-  - 프로세스의 주소 공간을 **같은 크기로 분할**하여(페이징), 각 페이징별로 메모리 상에 올려놓음
-  - 물리적인 메모리 공간 역시 페이징 크기로 분할하여 놓음 => Page Frame
-  - 분할하여 작은단위로 메모리를 사용하기 때문에 앞서 `Contiguous allocation`에서 다루었던 **Hole**또는 **Dynamic Storage Allocation** 문제 등을 회피할 수 있다.
-- 하지만 MMU를 통한 주소 변환시, 각 페이지별로 흩어진 메모리 공간의 address binding이 복잡해지는 문제가 있다.
-
-- Segmentation
-  - 프로그램의 주소 공간을 **의미 있는 단위**로 분할하는 것
-    - 예를들어 `code`, `data`, `stack` 각 segment 별로 쪼개어서 각각 물리적으로 다른 위치에 할당한다.
-  - 의미별로 분할하기 때문에 각 segment의 크기가 균일하지 않다.
-    - 때문에 **Dynamic Storage-Allocation** 문제가 발생할 수 있다.
 
 ---
 
