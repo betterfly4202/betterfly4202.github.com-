@@ -1,5 +1,5 @@
 ---
-title: "[Operating System] Ch11. Dist Management and Scheduling"
+title: "[Operating System] Ch11. Disk Management and Scheduling"
 categories: "OS"
 tags:
   - Operating System
