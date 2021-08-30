@@ -7,23 +7,21 @@ tags:
 ---
 
 최근 사내에 MongoDB 서버를 새로 구성하면서 서버를 어떻게 구성할건지에 대한 논의가 있었다.  
-어디서 들어봤지만 이해하기 어려운 이야기가 오고 갔는데,  
-그 중 분산 시스템에서 가장(?) 중요하다고 볼 수 있는 하나인, **'디스크를 어떻게 구성할 것인지'** 에 대한 뜨거운 논의가 있었다.
+그 중 분산 시스템을 다루는 환경에서 중요한 부분인, **'디스크를 어떻게 구성할 것인지'** 에 대한 뜨거운 논의가 있었다.
 
-> **RAID 1+0  
-Mirror + Stripe 로 구성**
+> **RAID 1+0(Mirror + Stripe)로 구성하는게 어떨까요?**
 
-이게 무슨 말일까?
+이게 어떤 의미일까?
 
 # RAID와 RAID 1+0
 
 **RAID<sub>Redundant Array of Independent Disks</sub>**  
-직역하면 알 수 있듯이 독립적인 디스크<sub>independent disks</sub>를 redundant array로 구성하는 것을 말한다.  
-다시 말해, '독립적인 디스크를 연결하여 디스크를 중복으로 관리한다'는 의미일 것이다.
+직역하면 "독립적인 디스크<sub>independent disks</sub>를 여분의 배열<sub>redundant array</sub>로 구성하는 것"을 말한다.  
+다시 말해, '독립적인 디스크를 연결하여 중복으로 관리한다'는 의미일 것이다.
 
 왜 그렇게할까?
 
-바로 이전 포스팅에 이 내용을 기록해 두었는데, 그냥 이런게 있구나 라고만 적어놓고 붕어처럼 까맣게 잊어 먹고 있어서 반성을 하며 다시 공부했다.
+바로 이전 포스팅에 이 내용을 기록해 두었는데, 그냥 이런게 있구나 라고만 적어놓고 까맣게 잊어 먹고 있어서 반성을 하며 다시 공부했다.
 
 [[Operating System] Ch11. Disk Management and Scheduling](https://betterfly4202.github.io/os/2021/04/15/ch11_dist_management_and_scheduling/)
 
@@ -101,7 +99,7 @@ RAID는 이해됐다. 그러면 `RAID 1+0` 이건 뭘까?
 
 ### 안정성
 
-![](//assets/images/study/dev/2021/os/0801_raid_difference.png)
+![](/assets/images/study/dev/2021/os/0801_raid_difference.png)
 
 그림 좌측의 `RAID 0+1`의 경우 각 RAID에 첫번째 디스크(Disk 0, Disk 2)의 문제가 발생할 경우 디스크의 유실 또는 복원이 어려운 문제가 발생한다.  
 하지만 우측의 `RAID 1+0`은 각 RAID 디스크의 한 쪽씩 문제가 발생해도 문제가 발생하지 않는다.
